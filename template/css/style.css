@@ -79,7 +79,8 @@ h1, h2, h3, h4, h5,
       color: #000;
       background-color: #fff; }
   .btn.btn-primary {
-    border: 2px solid transparent; }
+    border: 2px solid transparent;
+	background-color: #1EBFA1; }
     .btn.btn-primary:hover {
       border: 2px solid #000;
       background: none !important;
@@ -291,7 +292,7 @@ h1, h2, h3, h4, h5,
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active > a {
-      color: #f89d13; }
+      color: #02A575; }
     .site-navbar .site-navigation .site-menu a {
       text-decoration: none !important;
       display: inline-block;
@@ -1223,7 +1224,7 @@ h1, h2, h3, h4, h5,
   margin-top: -100px; }
 
 .feature-1, .free-quote, .feature-3 {
-  background: #f89d13;
+  background: #1EBFA1;
   padding: 30px 50px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 15px; }
@@ -1279,7 +1280,7 @@ h1, h2, h3, h4, h5,
       font-style: italic; }
 
 .feature-3 {
-  background: #e18a07; }
+  background: #0DA596; }
 
 .border-primary {
   position: relative; }
