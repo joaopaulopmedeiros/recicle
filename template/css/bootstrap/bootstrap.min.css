@@ -18,7 +18,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #f89d13;
+  --primary: #1EBFA1;
   --secondary: #6c757d;
   --success: #8bc34a;
   --info: #17a2b8;
@@ -5067,7 +5067,7 @@ button.bg-dark:focus {
   border-right: 1px solid #dee2e6 !important; }
 
 .border-bottom {
-  border-bottom: 1px solid #dee2e6 !important; }
+  border-bottom: 1px solid #0DA596 !important; }
 
 .border-left {
   border-left: 1px solid #dee2e6 !important; }
@@ -5088,7 +5088,7 @@ button.bg-dark:focus {
   border-left: 0 !important; }
 
 .border-primary {
-  border-color: #f89d13 !important; }
+  border-color: #0DA596 !important; }
 
 .border-secondary {
   border-color: #6c757d !important; }
@@ -7193,10 +7193,10 @@ button.bg-dark:focus {
   color: #fff !important; }
 
 .text-primary {
-  color: #f89d13 !important; }
+  color: #0DA596 !important; }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #d28106 !important; }
+  color: #0DA596 !important; }
 
 .text-secondary {
   color: #6c757d !important; }
