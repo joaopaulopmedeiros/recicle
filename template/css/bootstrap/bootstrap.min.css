@@ -5067,7 +5067,7 @@ button.bg-dark:focus {
   border-right: 1px solid #dee2e6 !important; }
 
 .border-bottom {
-  border-bottom: 1px solid #0DA596 !important; }
+  border-bottom: 1px solid #44BF76 !important; }
 
 .border-left {
   border-left: 1px solid #dee2e6 !important; }
@@ -7193,10 +7193,10 @@ button.bg-dark:focus {
   color: #fff !important; }
 
 .text-primary {
-  color: #0DA596 !important; }
+  color: #44BF76  !important; }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #0DA596 !important; }
+  color: #44BF76 !important; }
 
 .text-secondary {
   color: #6c757d !important; }
