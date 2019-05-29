@@ -879,7 +879,7 @@ h1, h2, h3, h4, h5,
   .block-13 .owl-nav, .slide-one-item .owl-nav {
     position: relative;
     position: absolute;
-    bottom: 0px;
+    bottom: -40px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
