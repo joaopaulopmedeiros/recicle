@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5,
     position: absolute;
     width: 100px;
     height: 1px;
-    background: #f89d13; }
+    background: #44BF76 ; }
   .site-section-heading.text-center:after {
     content: "";
     -webkit-transform: translateX(-50%);
@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5,
           transition: 0s all;
           color: #343a40; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown .active > a {
-          color: #f89d13 !important; }
+          color: #44BF76  !important; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown > li {
           list-style: none;
           padding: 0;
@@ -468,12 +468,12 @@ h1, h2, h3, h4, h5,
       position: relative;
       color: #212529; }
       .site-mobile-menu .site-nav-wrap a:hover {
-        color: #f89d13; }
+        color: #44BF76 ; }
     .site-mobile-menu .site-nav-wrap li {
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li.active > a {
-        color: #f89d13; }
+        color: #44BF76 ; }
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;
@@ -869,7 +869,7 @@ h1, h2, h3, h4, h5,
     font-weight: bold;
     color: #cccccc; }
     .site-block-tab .nav-item > a:hover, .site-block-tab .nav-item > a.active {
-      border-bottom: 2px solid #f89d13;
+      border-bottom: 2px solid #44BF76 ;
       color: #000; }
 
 .block-13, .slide-one-item {
@@ -993,7 +993,7 @@ h1, h2, h3, h4, h5,
         width: 80px;
         height: 4px;
         margin-top: -4px;
-        background: #f89d13;
+        background: #44BF76 ;
         top: 0; }
       .block-12 .text .text-inner .heading {
         font-size: 20px;
@@ -1016,7 +1016,7 @@ h1, h2, h3, h4, h5,
     display: block;
     border-radius: 50%;
     opacity: 1;
-    color: #f89d13 !important; }
+    color: #44BF76  !important; }
     .block-16 figure .play-button:hover {
       opacity: 1; }
     .block-16 figure .play-button > span {
@@ -1054,7 +1054,7 @@ h1, h2, h3, h4, h5,
   color: #999999; }
 
 .block-25 ul li a .meta {
-  color: #f89d13; }
+  color: #44BF76 ; }
 
 .block-25 ul li a:hover img {
   opacity: .5; }
@@ -1083,7 +1083,7 @@ h1, h2, h3, h4, h5,
     position: absolute;
     width: 30px;
     height: 30px;
-    background: #f89d13;
+    background: #44BF76 ;
     border-radius: 50%;
     color: #fff; }
     .player .team-number > span {
@@ -1118,7 +1118,7 @@ h1, h2, h3, h4, h5,
     border-radius: 50%;
     border: 1px solid #ccc; }
   .site-block-27 ul li.active a, .site-block-27 ul li.active span {
-    background: #f89d13;
+    background: #44BF76 ;
     color: #fff;
     border: 1px solid transparent; }
 
@@ -1327,7 +1327,7 @@ h1, h2, h3, h4, h5,
 .how-it-work-item .number {
   width: 50px;
   height: 50px;
-  background: #f89d13;
+  background: #44BF76 ;
   color: #fff;
   line-height: 55px;
   font-weight: 300;
@@ -1382,7 +1382,7 @@ h1, h2, h3, h4, h5,
   line-height: 40px;
   border-radius: 50%;
   display: inline-block;
-  background: #f89d13;
+  background: #44BF76 ;
   color: #fff; }
 
 .custom-pagination span {
