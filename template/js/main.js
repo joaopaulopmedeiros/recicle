@@ -3,6 +3,16 @@
  	easing: 'slide',
  	once: true
  });
+ $(document).ready(function(){
+		$(window).scroll(function(){
+			 var height = $('.site-blocks-cover').height();
+			if ($(window).scrollTop()> height){
+				$('.site-navbar').addClass('color');
+			}else{
+				$('.site-navbar').removeClass('color');
+			}
+		}
+		)});
 
 jQuery(document).ready(function($) {
 
@@ -52,6 +62,7 @@ jQuery(document).ready(function($) {
       e.preventDefault();  
       
     });
+
 
 		$(window).resize(function() {
 			var $this = $(this),
@@ -240,3 +251,4 @@ jQuery(document).ready(function($) {
 	siteDatePicker();
 
 });
+

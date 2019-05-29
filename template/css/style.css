@@ -12,7 +12,10 @@ body {
 ::selection {
   background: #000;
   color: #fff; }
-
+.site-navbar.color{
+  background-color:#333333;
+  transition: background-color 0.2s ease;
+}
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -271,10 +274,9 @@ h1, h2, h3, h4, h5,
 
 /* Navbar */
 .site-navbar {
-  background-color: #333333;
   margin-bottom: 0px;
   z-index: 1999;
-  position: absolute;
+  position: fixed;
   width: 100%; }
   .site-navbar.transparent {
     background: transparent; }
