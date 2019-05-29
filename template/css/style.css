@@ -879,15 +879,15 @@ h1, h2, h3, h4, h5,
   .block-13 .owl-nav, .slide-one-item .owl-nav {
     position: relative;
     position: absolute;
-    bottom: -90px;
+    bottom: 0px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
     .block-13 .owl-nav .owl-prev, .block-13 .owl-nav .owl-next, .slide-one-item .owl-nav .owl-prev, .slide-one-item .owl-nav .owl-next {
       position: relative;
-      display: inline-block;
-      padding: 20px;
+      display: inline;
+      padding: 10px;
       font-size: 30px;
       color: #000; }
       .block-13 .owl-nav .owl-prev.disabled, .block-13 .owl-nav .owl-next.disabled, .slide-one-item .owl-nav .owl-prev.disabled, .slide-one-item .owl-nav .owl-next.disabled {
