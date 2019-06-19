@@ -59,18 +59,46 @@ CREATE TABLE IF NOT EXISTS `recicle`.`desafio` (
   `tipo_bonificacao` VARCHAR(45) NOT NULL,
   `img` BLOB NOT NULL,
   `descricao` VARCHAR(45) NOT NULL,
+  `status` TINYINT(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- View de desafio`
+-- View de desafio
 -- -----------------------------------------------------
 CREATE VIEW visao_desafio AS
 SELECT titulo , tipo_lixo, tipo_bonificacao
 FROM desafio ;
 ENGINE = InnoDB;
 
+
+-- -----------------------------------------------------
+-- Função para contagem de desafios aceitos
+-- -----------------------------------------------------
+DELIMITER $
+CREATE FUNCTION contadorDesafioAceito(status tinyint(1))
+RETURNS INT(1000)
+BEGIN
+    DECLARE qtd int;
+	IF status = 1 THEN
+		RETURN ++qtd;
+	ELSE 
+		RETURN 0;
+	END IF;
+END
+$
+
+
+-- ----------------------------------------------------------
+-- Procedimento para Alteração de dados na tabela de usuários
+-- ----------------------------------------------------------
+DELIMITER $
+CREATE PROCEDURE alterar_dados_cidadao (n VARCHAR (30) , em VARCHAR (45) ,  en VARCHAR (80), c INT(45))
+BEGIN
+	UPDATE `recicle`.`cidadao` SET nome=n,email=em,endereco=en WHERE id=c;
+END
+$
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
