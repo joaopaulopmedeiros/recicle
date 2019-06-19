@@ -63,6 +63,15 @@ CREATE TABLE IF NOT EXISTS `recicle`.`desafio` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- View de desafio`
+-- -----------------------------------------------------
+CREATE VIEW visao_desafio AS
+SELECT titulo , tipo_lixo, tipo_bonificacao
+FROM desafio ;
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
