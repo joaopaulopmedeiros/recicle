@@ -12,7 +12,10 @@ body {
 ::selection {
   background: #000;
   color: #fff; }
-
+.site-navbar.color{
+  background-color:#333333;
+  transition: background-color 0.2s ease;
+}
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -274,7 +277,7 @@ h1, h2, h3, h4, h5,
   background-color: #333333;
   margin-bottom: 0px;
   z-index: 1999;
-  position: absolute;
+  position: fixed;
   width: 100%; }
   .site-navbar.transparent {
     background: transparent; }
@@ -879,15 +882,15 @@ h1, h2, h3, h4, h5,
   .block-13 .owl-nav, .slide-one-item .owl-nav {
     position: relative;
     position: absolute;
-    bottom: -90px;
+    bottom: -40px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
     .block-13 .owl-nav .owl-prev, .block-13 .owl-nav .owl-next, .slide-one-item .owl-nav .owl-prev, .slide-one-item .owl-nav .owl-next {
       position: relative;
-      display: inline-block;
-      padding: 20px;
+      display: inline;
+      padding: 10px;
       font-size: 30px;
       color: #000; }
       .block-13 .owl-nav .owl-prev.disabled, .block-13 .owl-nav .owl-next.disabled, .slide-one-item .owl-nav .owl-prev.disabled, .slide-one-item .owl-nav .owl-next.disabled {
@@ -1389,3 +1392,10 @@ h1, h2, h3, h4, h5,
 .custom-pagination span {
   background: #e6e6e6;
   color: #000; }
+
+/*Dropdown - Menu*/
+@media screen and (min-width: 1200px) {
+  .btn-group .dropdown-toggle {
+    color: white !important;
+  }
+}
