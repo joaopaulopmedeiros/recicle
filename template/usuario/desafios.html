@@ -41,34 +41,48 @@
       <div class="container">
         <div class="row align-items-center">
           
-          <div class="col-11 col-xl-2">
+          <div class="col-11 col-md-2">
             <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Recicle</a></h1>
           </div>
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
+          <div class="col-12 col-md-10 d-none d-md-block">
+            <nav class="d-flex site-navigation position-relative text-right" role="navigation">
 
-              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="desafios.html">Desafios</a></li>
-                <li><a href="contact.html">Contato</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <div class="btn-group">
-                  <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="icon-user-circle"></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right">
-                    <button class="dropdown-item" type="button">Ação</button>
-                    <button class="dropdown-item" type="button">Another Ação</button>
-                    <button class="dropdown-item" type="button">Algo mais aqui</button>
-                  </div>
-                </div>
+              <ul class="site-menu js-clone-nav ml-auto d-none d-md-block">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="desafios.html">Desafios</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="mb-4 mb-md-0">Sobre</a></li>
               </ul>
+
+              <div class="btn-group">
+                <button type="button" class="dropdown-toggle bg-transparent border-0 text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="icon-user-circle"></i>
+                </button>
+  
+                <div class="dropdown-menu dropdown-menu-right">
+                  <div class="dropdown-item-text">Nome do usuário</div>
+                  <div class="dropdown-item-text">usuario@email.com</div>
+                  <hr style="border-top: 2px solid #1EBFA1">
+                  <a href="desafios.html" class="dropdown-item">Meus desafios</a>
+                  <a href="my-account.html" class="dropdown-item">Minha conta</a>
+                  <a href="#" class="dropdown-item">Sair</a>
+                </div>
+              </div>
             </nav>
           </div>
 
 
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+          <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
+          <nav class="d-md-none">
+            <ul class="site-menu js-clone-nav mx-auto d-none">
+              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1">Nome do usuário</li>
+              <li class="dropdown-item-text">usuario@email.com</li>
+              <li><a href="desafios.html" class="dropdown-item">Meus desafios</a></li>
+              <li><a href="my-account.html" class="dropdown-item">Minha conta</a></li>
+              <li><a href="#" class="dropdown-item">Sair</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
@@ -88,7 +102,59 @@
     </div>  
 
 
-    <div class="site-section bd-light">
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Filtrar Desafios</h2>
+          </div>
+        </div>
+      
+        <form action="">
+          <div class="form-row justify-content-around">
+            <div class="col-md-3 mb-3 mb-md-0">
+              <label for="ecoponto">Ecoponto/Empresa</label>
+              <select id="ecoponto" class="form-control">
+                <option selected>Escolher...</option>
+                <option>...</option>
+              </select>
+            </div>
+      
+            <div class="col-md-3 mb-3 mb-md-0">
+              <label for="lixo">Tipo de lixo</label>
+              <select id="lixo" class="form-control">
+                <option selected>Escolher...</option>
+                <option>Papel e papelão</option>
+                <option>Óleo de cozinha</option>
+                <option>Lixo eletrônico</option>
+                <option>Pilhas e baterias</option>
+                <option>Metal</option>
+                <option>Vidro</option>
+              </select>
+            </div>
+      
+            <div class="col-md-3 mb-3 mb-md-0">
+              <label for="bonificacao">Tipo da bonificação</label>
+              <select id="bonificacao" class="form-control">
+                <option selected>Escolher...</option>
+                <option>Em dinheiro</option>
+                <option>Spotify</option>
+                <option>Netflix</option>
+              </select>
+            </div>
+            
+            <div class="col-auto align-self-end"">
+              <button type="submit" class="btn btn-primary">Filtrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="site-section" style="background-color: #98989833;">
       <div class="container">
 
         <div class="row justify-content-center mb-5">
@@ -97,12 +163,12 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="desafios">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
           
@@ -110,7 +176,7 @@
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
 
@@ -118,7 +184,7 @@
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
         </div>
@@ -126,7 +192,7 @@
     </div>
     
   
-    <div class="site-section" style="background-color: #98989833;">
+    <div class="site-section bd-light">
       <div class="container">
 
         <div class="row justify-content-center mb-5">
@@ -140,7 +206,7 @@
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
           
@@ -148,7 +214,7 @@
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
 
@@ -156,7 +222,7 @@
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
 
@@ -164,7 +230,7 @@
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
 
@@ -172,7 +238,7 @@
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
 
@@ -180,7 +246,7 @@
             <div class="h-entry">
               <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span> Jan 18, 2019</div>
+              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
         </div>
@@ -211,10 +277,10 @@
           <div class="col-md-2">
             <h2 class="mb-4">Menu</h2>
             <ul class="list-unstyled">
-              <li><a href="login.html">Entrar</a></li>
+              <li><a href="ecopontos.html">Ecopontos</a></li>
               <li><a href="desafios.html">Desafios</a></li>
-              <li><a href="contact.html">Contato</a></li>
-              <li><a href="about.html">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Sobre</a></li>
             </ul>
           </div>
           <div class="col-md-3">
