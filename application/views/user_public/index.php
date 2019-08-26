@@ -63,7 +63,7 @@
       </div>
     </header>
 
-    <div class="site-blocks-cover overlay" style="background-image: url(../images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay" style="background-image: url('<?php echo base_url();?>assets/template/images/hero_bg_1.jpg');" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
@@ -174,7 +174,7 @@
         <div class="row align-items-stretch">
           <div class="d-flex justify-content-center">
           <figure style="width: 90%;">
-              <img src="../images/lixo.png" alt="Imagem com os lixos mais descartados" class="img-fluid">
+              <img src="<?=base_url()?>assets/template/images/lixo.png" alt="Imagem com os lixos mais descartados" class="img-fluid">
             </figure>
           </div>
 
@@ -237,18 +237,17 @@
     </footer>
   </div>
 
-  <script src="<?=base_url()?>assets/template/js/jquery-3.3.1.min.js"></script>
-  <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery-ui.js"></script>
-  <script src="<?=base_url()?>assets/template/js/popper.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/bootstrap.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/owl.carousel.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.stellar.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.countdown.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/bootstrap-datepicker.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/aos.js"></script>
-
-  <script src="../js/main.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery-3.3.1.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery-ui.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/popper.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/owl.carousel.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery.stellar.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery.countdown.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/bootstrap-datepicker.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/aos.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/main.js"></script>
   </body>
 </html>
