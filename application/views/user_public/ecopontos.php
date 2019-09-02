@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/magnific-popup.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/jquery-ui.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/aos.css">
+    <link rel="stylesheet" href="../css/aos.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
   
@@ -41,17 +41,17 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-xl-2">
-            <h1 class="mb-0"><a href="index.php" class="text-white h2 mb-0">Recicle</a></h1>
+            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Recicle</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="desafios.php">Desafios</a></li>
-                <li><a href="contact.php">Contato</a></li>
-                <li><a href="about.php">Sobre</a></li>
-                <li><a href="login.php" class="btn btn-primary px-4 py-2 text-white">Entrar</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="desafios.html">Desafios</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="login.html" class="btn btn-primary px-4 py-2 text-white">Entrar</a></li>
               </ul>
             </nav>
           </div>
@@ -133,7 +133,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="<?=base_url()?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -141,7 +141,7 @@
           
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="<?=base_url()?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -149,7 +149,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="<?=base_url()?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -158,7 +158,7 @@
 
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
-            <p class="mb-0"><a href="desafios.php" class="btn btn-primary py-3 px-5 text-white">Mais desafios</a></p>
+            <p class="mb-0"><a href="desafios.html" class="btn btn-primary py-3 px-5 text-white">Mais desafios</a></p>
           </div>
         </div>
       </div>
@@ -175,10 +175,10 @@
           <div class="col-md-2">
             <h2 class="mb-4">Menu</h2>
             <ul class="list-unstyled">
-              <li><a href="login.php">Entrar</a></li>
-              <li><a href="desafios.php">Desafios</a></li>
-              <li><a href="contact.php">Contato</a></li>
-              <li><a href="about.php">Sobre</a></li>
+              <li><a href="login.html">Entrar</a></li>
+              <li><a href="desafios.html">Desafios</a></li>
+              <li><a href="contact.html">Contato</a></li>
+              <li><a href="about.html">Sobre</a></li>
             </ul>
           </div>
           <div class="col-md-3">
@@ -204,19 +204,19 @@
     </footer>
   </div>
 
-  <script src="<?=base_url()?>assets/template/js/jquery-3.3.1.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery-ui.js"></script>
-  <script src="<?=base_url()?>assets/template/js/popper.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/bootstrap.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/owl.carousel.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.stellar.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.countdown.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/bootstrap-datepicker.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/aos.js"></script>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/jquery.countdown.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/bootstrap-datepicker.min.js"></script>
+  <script src="../js/aos.js"></script>
 
-  <script src="<?=base_url()?>assets/template/js/main.js"></script>
+  <script src="../js/main.js"></script>
     
   </body>
 </html>

@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/magnific-popup.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/jquery-ui.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/jquery-ui.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/fonts/flaticon/font/flaticon.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/aos.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/aos.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/template/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/style.css">
     
   </head>
   <body>
@@ -140,19 +140,19 @@
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="<?=base_url()?>assets/template/images/xbox.png" alt="Image">
+                <img src="../images/xbox.png" alt="Image">
               </figure>
             </div>
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="<?=base_url()?>assets/template/images/spot.png" alt="Image">
+                <img src="../images/spot.png" alt="Image">
               </figure>
             </div>
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="<?=base_url()?>assets/template/images/uber.png" alt="Image">
+                <img src="../images/uber.png" alt="Image">
               </figure>
             </div>
 
@@ -237,18 +237,18 @@
     </footer>
   </div>
 
-  <script src="<?=base_url()?>assets/template/js/jquery-3.3.1.min.js"></script>
-  <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery-ui.js"></script>
-  <script src="<?=base_url()?>assets/template/js/popper.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/bootstrap.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/owl.carousel.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.stellar.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.countdown.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/bootstrap-datepicker.min.js"></script>
-  <script src="<?=base_url()?>assets/template/js/aos.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery-3.3.1.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery-ui.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/popper.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/owl.carousel.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery.stellar.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery.countdown.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/bootstrap-datepicker.min.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/aos.js"></script>
 
-  <script src="../js/main.js"></script>
+  <script src="<?php echo base_url();?>assets/template/js/main.js"></script>
   </body>
 </html>
