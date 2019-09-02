@@ -140,19 +140,19 @@
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="../images/xbox.png" alt="Image">
+                <img src="<?=base_url()?>assets/template/images/xbox.png" alt="Image">
               </figure>
             </div>
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="../images/spot.png" alt="Image">
+                <img src="<?=base_url()?>assets/template/images/spot.png" alt="Image">
               </figure>
             </div>
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="../images/uber.png" alt="Image">
+                <img src="<?=base_url()?>assets/template/images/uber.png" alt="Image">
               </figure>
             </div>
 
