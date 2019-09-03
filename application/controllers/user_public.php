@@ -28,7 +28,7 @@ class User_public extends CI_Controller {
 	{
 		$data['title'] = 'Desafios';
 		$this->load->view('user_public/header', $data);
-		$this->load->view('desafios');
+		$this->load->view('user_public/desafios');
 		$this->load->view('footer');
 	}
 	public function login()
