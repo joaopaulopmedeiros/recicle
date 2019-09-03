@@ -38,11 +38,11 @@ class User_cooperativa extends CI_Controller {
 		$this->load->view('ecopontos');
 		$this->load->view('footer');
 	}
-	public function myaccount()
+	public function minhaConta()
 	{
 		$data['title'] = 'Minha Conta';
 		$this->load->view('user_cooperativa/header', $data);
-		$this->load->view('my-account');
+		$this->load->view('user_cooperativa/minhaconta');
 		$this->load->view('footer');
 	}
 }

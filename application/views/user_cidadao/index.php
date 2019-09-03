@@ -26,7 +26,7 @@
             <div class="icon">
               <span class="icon-settings"></span>
             </div>
-            <a href="my-account.html">
+            <a href="<?=base_url()?>user_cidadao/minhaconta">
               <h2 class="my-4 heading">Minha Conta</h2>
             </a>
             <p>Edite as configurações da sua conta do Recicle.</p>
