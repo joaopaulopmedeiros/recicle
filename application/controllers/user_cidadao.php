@@ -38,4 +38,11 @@ class User_cidadao extends CI_Controller {
 		$this->load->view('ecopontos');
 		$this->load->view('footer');
 	}
+	public function myaccount()
+	{
+		$data['title'] = 'Minha Conta';
+		$this->load->view('user_cidadao/header', $data);
+		$this->load->view('my-account');
+		$this->load->view('footer');
+	}
 }
