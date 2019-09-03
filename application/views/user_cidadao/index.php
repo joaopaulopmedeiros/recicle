@@ -15,7 +15,7 @@
             <div class="icon">
               <span class="icon-puzzle-piece"></span>
             </div>
-            <a href="desafios.html">
+            <a href="<?=base_url()?>user_cidadao/desafios">
               <h2 class="my-4 heading">Desafios</h2>
             </a>
             <p>Cumpra desafios para ser premiado. Aqui você pode saber os desafios da semana e como participar.</p>
@@ -37,7 +37,7 @@
             <div class="icon">
               <span class="icon-map-marker"></span>
             </div>
-            <a href="ecopontos.html">
+            <a href="<?=base_url()?>user_cidadao/ecopontos">
               <h2 class="my-4 heading">Ecopontos</h2>
             </a>
             <p>Veja as cooperativas proximas de você.</p>

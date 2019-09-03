@@ -1,4 +1,6 @@
-<footer class="site-footer">
+
+    
+    <footer class="site-footer">
       <div class="container">
         <div class="row justify-content-around">
           <div class="col-md-3">
@@ -9,13 +11,12 @@
           <div class="col-md-2">
             <h2 class="mb-4">Menu</h2>
             <ul class="list-unstyled">
-              <li><a href="<?php echo base_url();?>user_cooperativa/showViewecopontos">Ecopontos</a></li>
-              <li><a href="<?php echo base_url();?>user_cooperativa/showViewDesafios">Desafios</a></li>
-              <li><a href="<?php echo base_url();?>user_cooperativa/showViewContact">Contato</a></li>
-              <li><a href="<?php echo base_url();?>user_cooperativa/showViewAbout" class="mb-4 mb-md-0">Sobre</a></li>
+              <li><a href="<?php echo base_url();?>user_public/login">Entrar</a></li>
+              <li><a href="<?php echo base_url();?>user_public/desafios">Desafios</a></li>
+              <li><a href="<?php echo base_url();?>user_public/contact">Contato</a></li>
+              <li><a href="<?php echo base_url();?>user_public/about">Sobre</a></li>
             </ul>
           </div>
-
           <div class="col-md-3">
             <h2 class="mb-4">Redes Sociais</h2>
             <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
@@ -39,19 +40,17 @@
     </footer>
   </div>
 
-  <script src="<?php echo base_url();?>assets/template/js/jquery-3.3.1.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/jquery-ui.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/popper.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/bootstrap.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/owl.carousel.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/jquery.stellar.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/jquery.countdown.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/bootstrap-datepicker.min.js"></script>
-  <script src="<?php echo base_url();?>assets/template/js/aos.js"></script>
-
-  <script src="<?php echo base_url();?>assets/template/js/main.js"></script>
-    
+  <script src="<?= base_url();?>assets/template/js/jquery-3.3.1.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery-ui.js"></script>
+  <script src="<?= base_url();?>assets/template/js/popper.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/bootstrap.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/owl.carousel.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery.stellar.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery.countdown.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/bootstrap-datepicker.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/aos.js"></script>
+  <script src="<?= base_url();?>assets/template/js/main.js"></script>
   </body>
 </html>

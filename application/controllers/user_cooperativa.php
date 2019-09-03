@@ -5,38 +5,38 @@ class User_cooperativa extends CI_Controller {
 	//controller fundamental para carregar views de user_cooperativa
 	public function index()
 	{
-		$this->load->view('user_cooperativa/header');
+		$this->load->view('user_cooperativa/header', $data);
 		$this->load->view('user_cooperativa/index');
-		$this->load->view('user_cooperativa/footer');
+		$this->load->view('footer');
 	}
-	public function showViewAbout()
+	public function about()
 	{
-		$this->load->view('user_cooperativa/header');
+		$this->load->view('user_cooperativa/header', $data);
 		$this->load->view('about');
-		$this->load->view('user_cooperativa/footer');
+		$this->load->view('footer');
 	}	
-	public function showViewContact()
+	public function contact()
 	{
-		$this->load->view('user_cooperativa/header');
+		$this->load->view('user_cooperativa/header', $data);
 		$this->load->view('contact');
-		$this->load->view('user_cooperativa/footer');
+		$this->load->view('footer');
 	}
-	public function showViewDesafios()
+	public function desafios()
 	{
-		$this->load->view('user_cooperativa/header');
+		$this->load->view('user_cooperativa/header', $data);
 		$this->load->view('desafios');
-		$this->load->view('user_cooperativa/footer');
+		$this->load->view('footer');
 	}
-	public function showViewLogin()
+	public function login()
 	{
-		$this->load->view('user_cooperativa/header');
+		$this->load->view('user_cooperativa/header', $data);
 		$this->load->view('login');
-		$this->load->view('user_cooperativa/footer');
+		$this->load->view('footer');
 	}
-	public function showViewEcopontos()
+	public function ecopontos()
 	{
-		$this->load->view('user_cooperativa/header');
+		$this->load->view('user_cooperativa/header', $data);
 		$this->load->view('ecopontos');
-		$this->load->view('user_cooperativa/footer');
+		$this->load->view('footer');
 	}
 }

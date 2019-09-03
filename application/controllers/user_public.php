@@ -5,38 +5,44 @@ class User_public extends CI_Controller {
 	//controller fundamental para carregar views de user_public
 	public function index()
 	{
-		$this->load->view('user_public/header');
+		$data['title'] = 'Recicle';
+		$this->load->view('user_public/header', $data);
 		$this->load->view('user_public/index');
-		$this->load->view('user_public/footer');
+		$this->load->view('footer');
 	}
-	public function showViewAbout()
+	public function about()
 	{
-		$this->load->view('user_public/header');
+		$data['title'] = 'Sobre o Recicle';
+		$this->load->view('user_public/header', $data);
 		$this->load->view('about');
-		$this->load->view('user_public/footer');
+		$this->load->view('footer');
 	}	
-	public function showViewContact()
+	public function contact()
 	{
-		$this->load->view('user_public/header');
+		$data['title'] = 'Contato';
+		$this->load->view('user_public/header', $data);
 		$this->load->view('contact');
-		$this->load->view('user_public/footer');
+		$this->load->view('footer');
 	}
-	public function showViewDesafios()
+	public function desafios()
 	{
-		$this->load->view('user_public/header');
+		$data['title'] = 'Desafios';
+		$this->load->view('user_public/header', $data);
 		$this->load->view('desafios');
-		$this->load->view('user_public/footer');
+		$this->load->view('footer');
 	}
-	public function showViewLogin()
+	public function login()
 	{
-		$this->load->view('user_public/header');
+		$data['title'] = 'Login/Cadastro';
+		$this->load->view('user_public/header', $data);
 		$this->load->view('login');
-		$this->load->view('user_public/footer');
+		$this->load->view('footer');
 	}
-	public function showViewEcopontos()
+	public function ecopontos()
 	{
-		$this->load->view('user_public/header');
+		$data['title'] = 'Ecopontos';
+		$this->load->view('user_public/header', $data);
 		$this->load->view('ecopontos');
-		$this->load->view('user_public/footer');
+		$this->load->view('footer');
 	}
 }

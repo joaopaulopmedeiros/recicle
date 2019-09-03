@@ -49,9 +49,9 @@
 
               <ul class="site-menu js-clone-nav ml-auto d-none d-md-block">
                 <li class="active"><a href="i<?php echo base_url();?>user_cidadao/index">Home</a></li>
-                <li><a href="<?php echo base_url();?>user_cidadao/showViewDesafios">Desafios</a></li>
-                <li><a href="<?php echo base_url();?>user_cidadao/showViewContact">Contato</a></li>
-                <li><a href="<?php echo base_url();?>user_cidadao/showViewAbout" class="mb-4 mb-md-0">Sobre</a></li>
+                <li><a href="<?php echo base_url();?>user_cidadao/desafios">Desafios</a></li>
+                <li><a href="<?php echo base_url();?>user_cidadao/contact">Contato</a></li>
+                <li><a href="<?php echo base_url();?>user_cidadao/about" class="mb-4 mb-md-0">Sobre</a></li>
               </ul>
 
               <div class="btn-group">
@@ -63,7 +63,7 @@
                   <div class="dropdown-item-text">Nome do usuário</div>
                   <div class="dropdown-item-text">usuario@email.com</div>
                   <hr style="border-top: 2px solid #1EBFA1">
-                  <a href="desafios.html" class="dropdown-item">Meus desafios</a>
+                  <a href="<?php echo base_url();?>user_cidadao/desafios" class="dropdown-item">Meus desafios</a>
                   <a href="my-account.html" class="dropdown-item">Minha conta</a>
                   <a href="#" class="dropdown-item">Sair</a>
                 </div>

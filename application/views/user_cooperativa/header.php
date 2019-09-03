@@ -49,9 +49,9 @@
 
               <ul class="site-menu js-clone-nav ml-auto d-none d-md-block">
                 <li class="active"><a href="<?php echo base_url();?>user_cooperativa/index">Home</a></li>
-                <li><a href="<?php echo base_url();?>user_cooperativa/showViewDesafios">Desafios</a></li>
-                <li><a href="<?php echo base_url();?>user_cooperativa/showViewContact">Contato</a></li>
-                <li><a href="<?php echo base_url();?>user_cooperativa/showViewAbout" class="mb-4 mb-md-0">Sobre</a></li>
+                <li><a href="<?php echo base_url();?>user_cooperativa/desafios">Desafios</a></li>
+                <li><a href="<?php echo base_url();?>user_cooperativa/contact">Contato</a></li>
+                <li><a href="<?php echo base_url();?>user_cooperativa/about" class="mb-4 mb-md-0">Sobre</a></li>
               </ul>
 
               <div class="btn-group">

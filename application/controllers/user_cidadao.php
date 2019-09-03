@@ -7,36 +7,30 @@ class User_cidadao extends CI_Controller {
 	{
 		$this->load->view('user_cidadao/header');
 		$this->load->view('user_cidadao/index');
-		$this->load->view('user_cidadao/footer');
+		$this->load->view('footer');
 	}
-	public function showViewAbout()
+	public function about()
 	{
 		$this->load->view('user_cidadao/header');
 		$this->load->view('about');
-		$this->load->view('user_cidadao/footer');
+		$this->load->view('footer');
 	}	
-	public function showViewContact()
+	public function contact()
 	{
 		$this->load->view('user_cidadao/header');
 		$this->load->view('contact');
-		$this->load->view('user_cidadao/footer');
+		$this->load->view('footer');
 	}
-	public function showViewDesafios()
+	public function desafios()
 	{
-		$this->load->view('user_cooperativa/header');
+		$this->load->view('user_cidadao/header');
 		$this->load->view('desafios');
-		$this->load->view('user_cooperativa/footer');
+		$this->load->view('footer');
 	}
-	public function showViewLogin()
-	{
-		$this->load->view('user_cooperativa/header');
-		$this->load->view('login');
-		$this->load->view('user_cooperativa/footer');
-	}
-	public function showViewEcopontos()
+	public function ecopontos()
 	{
 		$this->load->view('user_cidadao/header');
 		$this->load->view('ecopontos');
-		$this->load->view('user_cidadao/footer');
+		$this->load->view('footer');
 	}
 }

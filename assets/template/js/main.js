@@ -6,7 +6,9 @@ AOS.init({
 $(document).ready(function () {
 	$(window).scroll(function () {
 		var height = $('.site-blocks-cover').height();
-		if ($(window).scrollTop() > height) {
+		var myWindow = document.getElementsByTagName("TITLE")[0].text;
+		console.log(myWindow);
+		if ($(window).scrollTop() > height || myWindow == 'Ecopontos') {
 			$('.site-navbar').addClass('color');
 		} else {
 			$('.site-navbar').removeClass('color');

@@ -16,7 +16,7 @@
             <div class="icon">
               <span class="icon-puzzle-piece"></span>
             </div>
-            <a href="showViewDesafios">
+            <a href="<?=base_url()?>user_public/desafios">
               <h2 class="my-4 heading">Desafios</h2>
             </a>
             <p>Cumpra desafios para ser premiado. Aqui você pode saber os desafios da semana e como participar.</p>
@@ -27,7 +27,7 @@
             <div class="icon">
               <span class="icon-user"></span>
             </div>
-            <a href="showViewLogin">
+            <a href="<?=base_url()?>user_public/login">
               <h2 class="my-4 heading">Cadastrar</h2>
             </a>
             <p>Faça seu cadastro e participe dos desafios para ganhar premiações e o mais importante, ajudar a natureza.</p>
@@ -38,7 +38,7 @@
             <div class="icon">
               <span class="icon-map-marker"></span>
             </div>
-            <a href="#">
+            <a href="<?=base_url()?>user_public/ecopontos">
               <h2 class="my-4 heading">Ecopontos</h2>
             </a>
             <p>Veja as cooperativas proximas de você.</p>
@@ -124,7 +124,7 @@
         <div class="row text-center">
           <div class="col-md-12">
             <h2 class="mb-5 text-black">Ainda não possui uma conta?</h2>
-            <p class="mb-0"><a href="<?php echo base_url();?>user_public/showViewLogin" class="btn btn-primary py-3 px-5 text-white">Registre-se!</a></p>
+            <p class="mb-0"><a href="<?php echo base_url();?>user_public/login" class="btn btn-primary py-3 px-5 text-white">Registre-se!</a></p>
           </div>
         </div>
       </div>
