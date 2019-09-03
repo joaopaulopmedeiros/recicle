@@ -11,7 +11,16 @@
           <div class="col-md-2">
             <h2 class="mb-4">Menu</h2>
             <ul class="list-unstyled">
-              <li><a href="<?php echo base_url();?>user_public/login">Entrar</a></li>
+              <?php
+                if (isset($footer)) {
+                  if ($footer == 'Logon') {
+                    echo '<li><a href="<?php echo base_url();?>user_public/ecopontos">Ecopontos</a></li>';
+                  }
+                }
+                else {
+                  echo '<li><a href="<?php echo base_url();?>user_public/login">Entrar</a></li>';
+                }
+              ?>
               <li><a href="<?php echo base_url();?>user_public/desafios">Desafios</a></li>
               <li><a href="<?php echo base_url();?>user_public/contact">Contato</a></li>
               <li><a href="<?php echo base_url();?>user_public/about">Sobre</a></li>
