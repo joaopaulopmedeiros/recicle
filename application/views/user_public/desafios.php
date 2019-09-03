@@ -1,4 +1,4 @@
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(../images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?php echo base_url();?>assets/template/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
@@ -75,7 +75,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url();?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -83,7 +83,7 @@
           
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url();?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -91,7 +91,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url();?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -99,7 +99,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url();?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -107,7 +107,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url();?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -115,7 +115,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="../images/blog_1.jpg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url();?>assets/template/images/blog_1.jpg" alt="Image" class="img-fluid">
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -136,7 +136,7 @@
       </div>
     </div>
 
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(../images/hero_bg_2.jpg); background-attachment: fixed;">
+    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(<?php echo base_url();?>assets/template/images/hero_bg_2.jpg); background-attachment: fixed;">
 
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
