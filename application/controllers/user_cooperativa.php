@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_cooperativa extends CI_Controller {
-	//controller fundamental para carregar views de user_public
+	//controller fundamental para carregar views de user_cooperativa
 	public function index()
 	{
 		$this->load->view('user_cooperativa/header');
