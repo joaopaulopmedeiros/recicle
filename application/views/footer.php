@@ -18,7 +18,7 @@
                   }
                 }
                 else {
-                  echo '<li><a href="<?php echo base_url();?>user_public/login">Entrar</a></li>';
+                  echo '<li><a href="login">Entrar</a></li>';
                 }
               ?>
               <li><a href="<?php echo base_url();?>user_public/desafios">Desafios</a></li>
