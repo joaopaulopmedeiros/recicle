@@ -14,7 +14,7 @@
               <?php
                 if (isset($footer)) {
                   if ($footer == 'Logon') {
-                    echo '<li><a href="<?php echo base_url();?>user_public/ecopontos">Ecopontos</a></li>';
+                    echo '<li><a href="ecopontos">Ecopontos</a></li>';
                   }
                 }
                 else {
