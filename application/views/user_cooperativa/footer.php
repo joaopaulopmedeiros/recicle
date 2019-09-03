@@ -9,10 +9,10 @@
           <div class="col-md-2">
             <h2 class="mb-4">Menu</h2>
             <ul class="list-unstyled">
-              <li><a href="ecopontos.html">Ecopontos</a></li>
-              <li><a href="desafios.html">Desafios</a></li>
-              <li><a href="contact.html">Contato</a></li>
-              <li><a href="about.html">Sobre</a></li>
+              <li><a href="<?php echo base_url();?>user_cooperativa/showViewecopontos">Ecopontos</a></li>
+              <li><a href="<?php echo base_url();?>user_cooperativa/showViewDesafios">Desafios</a></li>
+              <li><a href="<?php echo base_url();?>user_cooperativa/showViewContact">Contato</a></li>
+              <li><a href="<?php echo base_url();?>user_cooperativa/showViewAbout" class="mb-4 mb-md-0">Sobre</a></li>
             </ul>
           </div>
 

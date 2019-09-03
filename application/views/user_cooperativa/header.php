@@ -42,16 +42,16 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-md-2">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Recicle</a></h1>
+            <h1 class="mb-0"><a href="<?php echo base_url();?>user_cooperativa/index" class="text-white h2 mb-0">Recicle</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-md-block">
             <nav class="d-flex site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav ml-auto d-none d-md-block">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="desafios.html">Desafios</a></li>
-                <li><a href="contact.html">Contato</a></li>
-                <li><a href="about.html" class="mb-4 mb-md-0">Sobre</a></li>
+                <li class="active"><a href="<?php echo base_url();?>user_cooperativa/index">Home</a></li>
+                <li><a href="<?php echo base_url();?>user_cooperativa/showViewDesafios">Desafios</a></li>
+                <li><a href="<?php echo base_url();?>user_cooperativa/showViewContact">Contato</a></li>
+                <li><a href="<?php echo base_url();?>user_cooperativa/showViewAbout" class="mb-4 mb-md-0">Sobre</a></li>
               </ul>
 
               <div class="btn-group">
