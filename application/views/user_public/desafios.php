@@ -1,26 +1,25 @@
-<!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Desafios</title>
+    <title>Recicle</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
-    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/jquery-ui.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/jquery-ui.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/fonts/flaticon/font/flaticon.css">
 
-    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/aos.css">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/template/css/style.css">
     
   </head>
   <body>
@@ -258,36 +257,17 @@
       </div>
     </footer>
   </div>
-
-<<<<<<< HEAD
-  <script src="../js/jquery-3.3.1.min.js"></script>
-  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="../js/jquery-ui.js"></script>
-  <script src="../js/popper.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/owl.carousel.min.js"></script>
-  <script src="../js/jquery.stellar.min.js"></script>
-  <script src="../js/jquery.countdown.min.js"></script>
-  <script src="../js/jquery.magnific-popup.min.js"></script>
-  <script src="../js/bootstrap-datepicker.min.js"></script>
-  <script src="../js/aos.js"></script>
-
-  <script src="../js/main.js"></script>
-=======
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/aos.js"></script>
-
-  <script src="js/main.js"></script>
->>>>>>> 6610792493813149a9b758bd247fa945348612a2
-    
+  <script src="<?= base_url();?>assets/template/js/jquery-3.3.1.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery-ui.js"></script>
+  <script src="<?= base_url();?>assets/template/js/popper.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/bootstrap.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/owl.carousel.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery.stellar.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery.countdown.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/bootstrap-datepicker.min.js"></script>
+  <script src="<?= base_url();?>assets/template/js/aos.js"></script>
+  <script src="<?= base_url();?>assets/template/js/main.js"></script>    
   </body>
 </html>
