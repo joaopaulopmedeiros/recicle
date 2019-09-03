@@ -18,7 +18,7 @@ class User_public extends CI_Controller {
 	public function showViewContact()
 	{
 		$this->load->view('user_public/header');
-		$this->load->view('user_public/contaca');
+		$this->load->view('user_public/contact');
 		$this->load->view('user_public/footer');
 	}
 	public function showViewDesafios()
