@@ -28,7 +28,7 @@ class User_cidadao extends CI_Controller {
 	{
 		$data['title'] = 'Meus Desafios';
 		$this->load->view('user_cidadao/header', $data);
-		$this->load->view('desafios');
+		$this->load->view('user_cidadao/desafios');
 		$this->load->view('footer');
 	}
 	public function ecopontos()
