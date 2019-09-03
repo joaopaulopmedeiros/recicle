@@ -28,7 +28,7 @@ class User_cooperativa extends CI_Controller {
 	{
 		$data['title'] = 'Meus Desafios';
 		$this->load->view('user_cooperativa/header', $data);
-		$this->load->view('desafios');
+		$this->load->view('user_cooperativa/desafios');
 		$this->load->view('footer');
 	}
 	public function ecopontos()
