@@ -11,10 +11,10 @@
           <div class="col-md-2">
             <h2 class="mb-4">Menu</h2>
             <ul class="list-unstyled">
-              <li><a href="user_public/showViewLogin">Entrar</a></li>
-              <li><a href="user_public/showViewDesafios">Desafios</a></li>
-              <li><a href="user_public/showViewContact">Contato</a></li>
-              <li><a href="user_public/showViewAbout">Sobre</a></li>
+              <li><a href="<?php echo base_url();?>user_public/showViewLogin">Entrar</a></li>
+              <li><a href="<?php echo base_url();?>user_public/showViewDesafios">Desafios</a></li>
+              <li><a href="<?php echo base_url();?>user_public/showViewContact">Contato</a></li>
+              <li><a href="<?php echo base_url();?>user_public/showViewAbout">Sobre</a></li>
             </ul>
           </div>
           <div class="col-md-3">

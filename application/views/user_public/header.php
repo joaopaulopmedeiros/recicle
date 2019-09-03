@@ -42,16 +42,16 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-xl-2">
-            <h1 class="mb-0"><a href="user_public/index" class="text-white h2 mb-0">Recicle</a></h1>
+            <h1 class="mb-0"><a href="<?php echo base_url();?>user_public/index" class="text-white h2 mb-0">Recicle</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="user_public/index">Home</a></li>
-                <li><a href="user_public/showViewDesafios">Desafios</a></li>
-                <li><a href="user_public/showViewContact">Contato</a></li>
-                <li><a href="user_public/showViewAbout">Sobre</a></li>
-                <li><a href="user_public/showViewLogin" class="btn btn-primary px-4 py-2 text-white">Entrar</a></li>
+                <li class="active"><a href="<?php echo base_url();?>user_public/index">Home</a></li>
+                <li><a href="<?php echo base_url();?>user_public/showViewDesafios">Desafios</a></li>
+                <li><a href="<?php echo base_url();?>user_public/showViewContact">Contato</a></li>
+                <li><a href="<?php echo base_url();?>user_public/showViewAbout">Sobre</a></li>
+                <li><a href="<?php echo base_url();?>user_public/showViewLogin" class="btn btn-primary px-4 py-2 text-white">Entrar</a></li>
               </ul>
             </nav>
           </div>
