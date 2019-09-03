@@ -33,7 +33,7 @@ class User_cooperativa extends CI_Controller {
 	}
 	public function ecopontos()
 	{
-
+		$data['title'] = 'Ecopontos';
 		$this->load->view('user_cooperativa/header', $data);
 		$this->load->view('ecopontos');
 		$this->load->view('footer');
