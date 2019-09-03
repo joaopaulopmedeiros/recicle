@@ -124,7 +124,7 @@
         <div class="row text-center">
           <div class="col-md-12">
             <h2 class="mb-5 text-black">Ainda não possui uma conta?</h2>
-            <p class="mb-0"><a href="showViewLogin" class="btn btn-primary py-3 px-5 text-white">Registre-se!</a></p>
+            <p class="mb-0"><a href="<?php echo base_url();?>user_public/showViewLogin" class="btn btn-primary py-3 px-5 text-white">Registre-se!</a></p>
           </div>
         </div>
       </div>
