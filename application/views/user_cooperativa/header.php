@@ -64,7 +64,7 @@
                   <div class="dropdown-item-text">ecoponto@email.com</div>
                   <hr style="border-top: 2px solid #1EBFA1">
                   <a href="desafios.html" class="dropdown-item">Meus desafios</a>
-                  <a href="my-account.html" class="dropdown-item">Minha conta</a>
+                  <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
                   <a href="#" class="dropdown-item">Sair</a>
                 </div>
               </div>
