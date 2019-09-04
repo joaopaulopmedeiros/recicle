@@ -6,22 +6,22 @@ class User_admin extends CI_Controller {
     public function index()
     {
         $data['title'] = "Recicle";
-        $this->load->view('user_admin/production/menu', $data);
-        $this->load->view('user_admin/production/home');
-        $this->load->view('user_admin/production/footer');
+        $this->load->view('user_admin/menu', $data);
+        $this->load->view('user_admin/home');
+        $this->load->view('user_admin/footer');
     }
     public function users()
     {
         $data['title'] = "Listagem de Usuários";
-        $this->load->view('user_admin/production/menu', $data);
-        $this->load->view('user_admin/production/users');
-        $this->load->view('user_admin/production/footer');
+        $this->load->view('user_admin/menu', $data);
+        $this->load->view('user_admin/users');
+        $this->load->view('user_admin/footer');
     }
     public function desafios()
     {
         $data['title'] = "Listagem de Desafios";
-        $this->load->view('user_admin/production/menu', $data);
-        $this->load->view('user_admin/production/desafios');
-        $this->load->view('user_admin/production/footer');
+        $this->load->view('user_admin/menu', $data);
+        $this->load->view('user_admin/desafios');
+        $this->load->view('user_admin/footer');
     }
 }

@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-md-6 mb-5">
 
-            <form action="#" class="p-5 bg-white">
+            <form action="<?=base_url()?>user_cidadao/cadastrar" class="p-5 bg-white">
              
               <h3>Cadastre-se</h3>
               <p> Insira aqui seus dados para que possamos fazer o seu cadastro!</p>
