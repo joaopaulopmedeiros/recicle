@@ -69,16 +69,16 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
@@ -107,10 +107,10 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
@@ -139,13 +139,13 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
@@ -174,16 +174,16 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
@@ -212,13 +212,13 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
@@ -247,16 +247,16 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
@@ -285,10 +285,10 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
@@ -317,13 +317,13 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
@@ -352,16 +352,16 @@
                           <td>
                             <ul class="list-inline">
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                               <li>
-                                <img src="images/user.png" class="avatar" alt="Avatar">
+                                <img src="<?=base_url();?>assets/user_admin/production/images/user.png" class="avatar" alt="Avatar">
                               </li>
                             </ul>
                           </td>
