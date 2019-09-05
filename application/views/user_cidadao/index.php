@@ -108,7 +108,7 @@
         <div class="row align-items-stretch">
           <div class="d-flex justify-content-center">
           <figure style="width: 90%;">
-              <img src="<?php echo base_url();?>assets/images/lixo.png" alt="Imagem com os lixos mais descartados" class="img-fluid">
+              <img src="<?php echo base_url();?>assets /images/lixo.png" alt="Imagem com os lixos mais descartados" class="img-fluid">
             </figure>
           </div>
 
