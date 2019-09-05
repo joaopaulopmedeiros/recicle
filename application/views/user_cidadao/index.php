@@ -1,4 +1,4 @@
-   <div class="site-blocks-cover overlay" style="background-image: url(<?php echo base_url();?>assets/template/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+   <div class="site-blocks-cover overlay" style="background-image: url(<?php echo base_url();?>assets/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
@@ -74,19 +74,19 @@
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="<?php echo base_url();?>assets/template/images/xbox.png" alt="Image">
+                <img src="<?php echo base_url();?>assets/images/xbox.png" alt="Image">
               </figure>
             </div>
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="<?php echo base_url();?>assets/template/images/spot.png" alt="Image">
+                <img src="<?php echo base_url();?>assets/images/spot.png" alt="Image">
               </figure>
             </div>
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-                <img src="<?php echo base_url();?>assets/template/images/uber.png" alt="Image">
+                <img src="<?php echo base_url();?>assets/images/uber.png" alt="Image">
               </figure>
             </div>
 
@@ -108,7 +108,7 @@
         <div class="row align-items-stretch">
           <div class="d-flex justify-content-center">
           <figure style="width: 90%;">
-              <img src="<?php echo base_url();?>assets/template/images/lixo.png" alt="Imagem com os lixos mais descartados" class="img-fluid">
+              <img src="<?php echo base_url();?>assets/images/lixo.png" alt="Imagem com os lixos mais descartados" class="img-fluid">
             </figure>
           </div>
 
