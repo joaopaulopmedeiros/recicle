@@ -5,7 +5,7 @@ AOS.init({
 });
 $(document).ready(function () {
 	$(window).scroll(function () {
-		var height = ($('.caixinha').height())-185;
+		var height = ($('.site-blocks-cover').height())-185;
 		var titleWindow = document.getElementsByTagName("TITLE")[0].text;
 		var titulo;
 

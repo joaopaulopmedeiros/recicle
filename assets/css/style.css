@@ -15,8 +15,8 @@ body {
 .site-navbar.color{
   background-color:#333333;
   /*transition: background-color 2s linear;*/
-  -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-          animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: fade-in-fwd 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+          animation: fade-in-fwd 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 @-webkit-keyframes fade-in {
   0% {
