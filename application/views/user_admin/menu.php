@@ -13,23 +13,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
 
     <!-- Bootstrap -->
-    <link href="<?=base_url();?>assets/template/user_admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url();?>assets/user_admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="<?=base_url();?>assets/template/user_admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?=base_url();?>assets/user_admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="<?=base_url();?>assets/template/user_admin/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="<?=base_url();?>assets/user_admin/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="<?=base_url();?>assets/template/user_admin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="<?=base_url();?>assets/user_admin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 	
     <!-- bootstrap-progressbar -->
-    <link href="<?=base_url();?>assets/template/user_admin/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="<?=base_url();?>assets/user_admin/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="<?=base_url();?>assets/template/user_admin/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="<?=base_url();?>assets/user_admin/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="<?=base_url();?>assets/template/user_admin/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="<?=base_url();?>assets/user_admin/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="<?=base_url();?>assets/template/user_admin/build/css/custom.min.css" rel="stylesheet">
+    <link href="<?=base_url();?>assets/user_admin/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -46,7 +46,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="<?=base_url();?>assets/template/images/person_4.jpg" alt="..." class="img-circle profile_img">
+                <img src="<?=base_url();?>assets/images/person_4.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -85,7 +85,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../user_public/login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="#">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -104,7 +104,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?=base_url()?>/assets/template/images/person_4.jpg" alt="">João Paulo
+                    <img src="<?=base_url()?>/assets/images/person_4.jpg" alt="">João Paulo
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -116,7 +116,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>
