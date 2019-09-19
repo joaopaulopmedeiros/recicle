@@ -58,15 +58,7 @@ h1, h2, h3, h4, h5,
   color: rgba(0, 0, 0, 0.5); }
 
 .color-white-opacity-5 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   color: #fff; }
-=======
-  color: rgba(255, 255, 255, 0.5); }
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-  color: #fff; }
->>>>>>> 94927e0... updated layout. Real images, colors and texts
 
 .site-wrap:before {
   -webkit-transition: .3s all ease-in-out;
@@ -846,15 +838,7 @@ h1, h2, h3, h4, h5,
   transition: .2s all ease-in-out;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .match-entry .small {
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: #000;
-=======
-    color: #ccc;
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-    color: #000;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
     font-weight: normal;
     letter-spacing: .15em; }
   .match-entry:hover {
@@ -873,15 +857,7 @@ h1, h2, h3, h4, h5,
     border-radius: 4px;
     border-top: none !important; }
   .post-entry .date {
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: #000;
-=======
-    color: #ccc;
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-    color: #000;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
     font-weight: normal;
     letter-spacing: .1em; }
   .post-entry .image {
@@ -1108,15 +1084,7 @@ h1, h2, h3, h4, h5,
   color: #fff; }
 
 #date-countdown .countdown-block {
-<<<<<<< HEAD
-<<<<<<< HEAD
   color: #000; }
-=======
-  color: #b3b3b3; }
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-  color: #000; }
->>>>>>> 94927e0... updated layout. Real images, colors and texts
 
 #date-countdown .label {
   font-size: 40px;
@@ -1152,15 +1120,7 @@ h1, h2, h3, h4, h5,
     text-transform: uppercase; }
   .player .position {
     font-size: 14px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: #000;
-=======
-    color: #b3b3b3;
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-    color: #000;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
     text-transform: uppercase; }
 
 .site-block-27 ul, .site-block-27 ul li {
@@ -1269,15 +1229,7 @@ h1, h2, h3, h4, h5,
   margin-bottom: 30px; }
 
 .h-entry .meta {
-<<<<<<< HEAD
-<<<<<<< HEAD
   color: #000;
-=======
-  color: #b3b3b3;
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-  color: #000;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
   font-size: 14px; }
 
 .h-entry h2 {
@@ -1295,30 +1247,14 @@ h1, h2, h3, h4, h5,
 .feature-1, .free-quote, .feature-3 {
   background: #44BF76;
   padding: 30px 50px;
-<<<<<<< HEAD
-<<<<<<< HEAD
   color: #fff;
-=======
-  color: rgba(255, 255, 255, 0.6);
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-  color: #fff;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
   font-size: 15px; }
   .feature-1 .heading, .free-quote .heading, .feature-3 .heading {
     font-size: 22px;
     text-transform: uppercase;
     color: #fff; }
   .feature-1 .icon, .free-quote .icon, .feature-3 .icon {
-<<<<<<< HEAD
-<<<<<<< HEAD
     border: 2px solid #fff;
-=======
-    border: 2px solid rgba(255, 255, 255, 0.5);
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-    border: 2px solid #fff;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -1338,69 +1274,29 @@ h1, h2, h3, h4, h5,
 .free-quote {
   background: #eb9007; }
   .free-quote .form-control {
-<<<<<<< HEAD
-<<<<<<< HEAD
     border: 2px solid #fff;
-=======
-    border: 2px solid rgba(255, 255, 255, 0.5);
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-    border: 2px solid #fff;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
     background: none;
     color: #fff; }
     .free-quote .form-control:active, .free-quote .form-control:focus {
       border: 2px solid #fff; }
     .free-quote .form-control::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: #fff);
-=======
-      color: rgba(255, 255, 255, 0.4);
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-      color: #fff);
->>>>>>> 94927e0... updated layout. Real images, colors and texts
       font-size: 13px;
       font-style: italic; }
     .free-quote .form-control::-moz-placeholder {
       /* Firefox 19+ */
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: #fff;
-=======
-      color: rgba(255, 255, 255, 0.4);
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-      color: #fff;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
       font-size: 13px;
       font-style: italic; }
     .free-quote .form-control:-ms-input-placeholder {
       /* IE 10+ */
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: #fff;
-=======
-      color: rgba(255, 255, 255, 0.4);
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-      color: #fff;
->>>>>>> 94927e0... updated layout. Real images, colors and texts
       font-size: 13px;
       font-style: italic; }
     .free-quote .form-control:-moz-placeholder {
       /* Firefox 18- */
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: #fff);
-=======
-      color: rgba(255, 255, 255, 0.4);
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-      color: #fff);
->>>>>>> 94927e0... updated layout. Real images, colors and texts
       font-size: 13px;
       font-style: italic; }
 

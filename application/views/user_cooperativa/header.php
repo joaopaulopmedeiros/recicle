@@ -63,15 +63,7 @@
                   <div class="dropdown-item-text">Nome do ecoponto</div>
                   <div class="dropdown-item-text">ecoponto@email.com</div>
                   <hr style="border-top: 2px solid #1EBFA1">
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <a href="desafios.html" class="dropdown-item">Meus desafios</a>
-=======
-                  <a href="#" class="dropdown-item">Meus desafios</a>
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-                  <a href="desafios.html" class="dropdown-item">Meus desafios</a>
->>>>>>> 94927e0... updated layout. Real images, colors and texts
                   <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
                   <a href="#" class="dropdown-item">Sair</a>
                 </div>

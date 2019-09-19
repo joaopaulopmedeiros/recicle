@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('<?php echo base_url();?>assets/images/hero_bg_1.jpg');" data-aos="fade" data-stellar-background-ratio="0.5">
-=======
-<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?php echo base_url();?>assets/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('<?php echo base_url();?>assets/images/hero_bg_1.jpg');" data-aos="fade" data-stellar-background-ratio="0.5">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
+<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?php echo base_url();?>assets/images/hero_bg_1.jpg;" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
@@ -71,15 +63,7 @@
 
   
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div class="site-section" style="background-color: #F5F5F5;">
-=======
-    <div class="site-section" style="background-color: #98989833;">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-    <div class="site-section" style="background-color: #F5F5F5;">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
       <div class="container">
 
         <div class="row justify-content-center mb-5">
@@ -91,15 +75,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-              <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -107,15 +83,7 @@
           
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -123,15 +91,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-              <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -139,15 +99,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -155,15 +107,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-              <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -171,15 +115,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-              <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
