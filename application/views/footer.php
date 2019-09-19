@@ -6,10 +6,14 @@
           <div class="col-md-3">
             <h2 class="mb-4">Recicle</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p>O projeto Recicle consiste em um sistema que visa estimular o descarte consciente de materiais recicláveis de forma a remunerar cidadãos e empresas participantes, como também auxiliar desenvolvimento bioeconomico no município de Natal (RN).</p>
 =======
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
 >>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
+=======
+            <p>O projeto Recicle consiste em um sistema que visa estimular o descarte consciente de materiais recicláveis de forma a remunerar cidadãos e empresas participantes, como também auxiliar desenvolvimento bioeconomico no município de Natal (RN).</p>
+>>>>>>> 94927e0... updated layout. Real images, colors and texts
           </div>
 
           <div class="col-md-2">

@@ -62,10 +62,14 @@
           <div class="col-md-5 align-self-center">
             <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p align = "justify">Você pode ganhar vários prêmios descartando de forma consciente! Cadastre já para participar dos desafios lançados pelas cooperativas e pontos de coleta próximas de você. Essas premiações podem ser  Gift Cards, dinheiro e descontos em faturas. </p>
 =======
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
 >>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
+=======
+              <p align = "justify">Você pode ganhar vários prêmios descartando de forma consciente! Cadastre já para participar dos desafios lançados pelas cooperativas e pontos de coleta próximas de você. Essas premiações podem ser  Gift Cards, dinheiro e descontos em faturas. </p>
+>>>>>>> 94927e0... updated layout. Real images, colors and texts
             </div>
           </div>
 
@@ -85,6 +89,9 @@
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 94927e0... updated layout. Real images, colors and texts
                 <img src="<?=base_url()?>assets/images/tc.jpg" alt="Image">
               </figure>
             </div>
@@ -92,8 +99,11 @@
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
+<<<<<<< HEAD
 =======
 >>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
+=======
+>>>>>>> 94927e0... updated layout. Real images, colors and texts
                 <img src="<?php echo base_url();?>assets/images/spot.png" alt="Image">
               </figure>
             </div>
@@ -110,6 +120,7 @@
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="site-section" style="background-color: #F5F5F5;">
 =======
 
@@ -117,6 +128,9 @@
 
     <div class="site-section" style="background-color: #98989833;">
 >>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
+=======
+    <div class="site-section" style="background-color: #F5F5F5;">
+>>>>>>> 94927e0... updated layout. Real images, colors and texts
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
@@ -124,6 +138,9 @@
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 94927e0... updated layout. Real images, colors and texts
       <div class="container">
         <div class="row justify-content-center mb-5">
           </div>
@@ -157,6 +174,7 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
         <div class="row align-items-stretch">
           <div class="d-flex justify-content-center">
@@ -166,6 +184,8 @@
           </div>
 
 >>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
+=======
+>>>>>>> 94927e0... updated layout. Real images, colors and texts
         </div>
       </div>
     </div>
