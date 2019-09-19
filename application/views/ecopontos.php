@@ -61,7 +61,11 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
+<<<<<<< HEAD
               <img src="<?=base_url()?>assets/images/blog.jpg" alt="Image" class="img-fluid">
+=======
+              <img src="<?=base_url()?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
+>>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
@@ -69,14 +73,22 @@
           
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
+<<<<<<< HEAD
               <img src="<?=base_url()?>assets/images/blog.jpg" alt="Image" class="img-fluid">
+=======
+              <img src="<?=base_url()?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
+>>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
+<<<<<<< HEAD
               <img src="<?=base_url()?>assets/images/blog.jpg" alt="Image" class="img-fluid">
+=======
+              <img src="<?=base_url()?>assets/images/blog_1.jpg" alt="Image" class="img-fluid">
+>>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
               <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
               <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
             </div> 

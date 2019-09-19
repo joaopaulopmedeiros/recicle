@@ -102,6 +102,7 @@
           </div>
 
           <div class="col-md-6">
+<<<<<<< HEAD
             <form action="#" class="p-5 bg-white">
              
               <h3>Login</h3>
@@ -110,15 +111,45 @@
                 
                 <div class="col-md-12">
                   <label class="text-black" for="lname">E-mail</label>
+=======
+            <form action="<?= base_url()?>/login/autenticar" class="p-5 bg-white">
+
+              <h3>Login</h3>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="email">E-mail</label>
+>>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
                   <input type="email" id="email" class="form-control">
                 </div>
               </div>
 
               <div class="row form-group">
+<<<<<<< HEAD
                 
                 <div class="col-md-12">
                   <label class="text-black" for="email">Senha</label> 
                   <input type="password" id="" class="form-control">
+=======
+                <div class="col-md-12">
+                  <label class="text-black" for="senha">Senha</label> 
+                  <input type="password" id="senha" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group col-md-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="conta" id="usuario" value="usuario" checked>
+                  <label class="form-check-label" for="usuario">
+                    Cidadão 
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="conta" id="cooperativa" value="cooperativa">
+                  <label class="form-check-label" for="cooperativa">
+                    Cooperativa
+                  </label>
+>>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
                 </div>
               </div>
 

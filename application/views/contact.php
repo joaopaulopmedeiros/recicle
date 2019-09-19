@@ -70,13 +70,23 @@
             <div class="p-4 mb-3 bg-white">
 
               <p class="mb-0 font-weight-bold">Email </p>
+<<<<<<< HEAD
               <p class="mb-0"><a href="#">recicle.software@gmail.com</a></p>
+=======
+              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+>>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
 
             </div>
             
             <div class="p-4 mb-3 bg-white">
+<<<<<<< HEAD
               <h3 class="h5 text-black mb-3"> RECICLE - LOGO</h3>
               
+=======
+              <h3 class="h5 text-black mb-3">Mais informações</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
+              <p><a href="<?php echo base_url();?>user_public/login" class="btn btn-primary px-4 py-2 text-white">Leia mais</a></p>
+>>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
             </div>
 
           </div>
