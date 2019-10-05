@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS recicle.rsu(
 -- Criacao de Tabela Bonificacao, atributos, engine para transacao de dados e colecao de caracteres default
 CREATE TABLE IF NOT EXISTS recicle.bonificacao(
 	id int auto_increment,
-    tipo varchar (20) auto_increment,
+    nome varchar(20) not null,
     CONSTRAINT PK_bonificacao PRIMARY KEY(id) -- identificador de chave primaria
 )ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
