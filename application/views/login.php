@@ -20,13 +20,18 @@
               <h3>Cadastre-se</h3>
               <p>Selecione o tipo de usuário: </p>
               
-              <div class="form-check form-check-inline">
-                <div class="btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-outline-primary mt-1 form-check-label"><input class="form-check-input" type="radio" name="btn" value="cidadao" data-toggle="collapse" data-parent="#myAccordion" href="#cidadao">Cidadão</label>
-
-                  <label class="btn btn-outline-primary mt-1 form-check-label"><input class="form-check-input" type="radio" name="btn" value="criadorDesafio" data-toggle="collapse" data-parent="#myAccordion" href="#criadorDesafio">Criador de Desafios</label>
-                </div> 
+              <div data-toggle="buttons">
+                <button class="btn btn-outline-primary mt-1" id="btnCidadao" type="button" data-toggle="collapse" data-target="#cidadao" aria-expanded="false" aria-controls="cidadao">Cidadão</button>
+                <button class="btn btn-outline-primary mt-1 "id="btnCriadorDesafio" type="button" data-toggle="collapse" data-target="#criadorDesafio" aria-expanded="false" aria-controls="criadorDesafio">Criador de Desafios</button>
               </div>
+
+              
+                <!--<div class="btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-outline-primary mt-1"><input type="radio" id="btnCidadao" value="cidadao" data-toggle="collapse" data-target="#cidadao" aria-expanded="false" aria-controls="cidadao">Cidadão</label>
+
+                  <label class="btn btn-outline-primary mt-1"><input type="radio" id="btnCriadorDesafio" value="criadorDesafio" data-toggle="collapse" data-target="#criadorDesafio" aria-expanded="false" aria-controls="criadorDesafio">Criador de Desafios</label>
+                </div>-->
+              
               
               <div id="myAccordion" class="accordion">
                 <div class="collapse mt-5" id="cidadao">
@@ -182,18 +187,27 @@
       </div>
     </div>
 
-    <script>
-      (function ($) {
-        $('#cidadao, #criadorDesafio').on('click', function (e) {
-          e.stopPropagation();
-          if(this.id == 'cidadao'){
-            $('#criadorDesafio').collapse('hide');
-            console.log('oi');
-            $('#cidadao').collapse('show');
-          }else if(this.id ==  'criadorDesafio'){
-            $('#cidadao').collapse('hide');
-            $('#criadorDesafio').collapse('show');
-          }
-        })
+    <script type="text/javascript" language="javascript">
+      $('#btnCidadao').click(function() {
+        $('#btnCriadorDesafio').collapse('hide');
       });
+
+      $('#btnCriadorDesafio').click(function() {
+        $('#btnCidadao').collapse('hide');
+      });
+
+
+        /*function collapse() {
+          $('#cidadao, #criadorDesafio').click(function() {
+            console.log("aaaa");
+            if(this.id == 'cidadao'){
+              console.log('oi');
+              $('#criadorDesafio').collapse('hide');
+              $('#cidadao').collapse('show');
+            } else if(this.id ==  'criadorDesafio'){
+              $('#cidadao').collapse('hide');
+              $('#criadorDesafio').collapse('show');
+            }
+          })
+        }*/
     </script>
