@@ -11,13 +11,6 @@
       </div>
     </div>
 
-    <script>
-      $('.show_hide').click(function(){
-        $(this).next('.slidingDiv').slideToggle();
-        return false;
-      });
-    </script>
-
     <div class="site-section bg-light">
       <div class="container">
         <div class="row">
@@ -27,19 +20,15 @@
               <h3>Cadastre-se</h3>
               <p>Selecione o tipo de usuário: </p>
               
-              <div class="row justify-content-around">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons" id="accordion">
-                  <label class="btn btn-primary mt-1"><input type="radio" name="btnCidadao" value="cidadao" data-toggle="collapse" data-parent="#accordion" href="#cidadao">Cidadão</label>
+              <div class="form-check form-check-inline">
+                <div class="btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-outline-primary mt-1 form-check-label"><input class="form-check-input" type="radio" name="btn" value="cidadao" data-toggle="collapse" data-parent="#myAccordion" href="#cidadao">Cidadão</label>
 
-                  <!--<button class="btn btn-primary mt-1" id="btnCidadao" type="button" data-toggle="collapse" data-target="#cidadao" aria-expanded="false" aria-controls="cidadao">Cidadão</button>-->
-
-                  <label class="btn btn-primary mt-1"><input type="radio" name="btnCriadorDesafio" value="criadorDesafio" data-toggle="collapse" data-parent="#accordion" href="#criadorDesafio">Criador de Desafios</label>
-                  
-                  <!--<button class="btn btn-primary mt-1 "id="btnCriadorDesafio" type="button" data-toggle="collapse" data-target="#criadorDesafio" aria-expanded="false" aria-controls="criadorDesafio">Criador de Desafios</button>-->
+                  <label class="btn btn-outline-primary mt-1 form-check-label"><input class="form-check-input" type="radio" name="btn" value="criadorDesafio" data-toggle="collapse" data-parent="#myAccordion" href="#criadorDesafio">Criador de Desafios</label>
                 </div> 
               </div>
               
-              <div class="accordion">
+              <div id="myAccordion" class="accordion">
                 <div class="collapse mt-5" id="cidadao">
                   <div class="row form-group">
                     <div class="col-md-12 mb-3 mb-md-0">
@@ -50,32 +39,32 @@
 
                   <div class="row form-group">
                     <div class="col-md-12">
-                      <label class="text-black" for="lname">E-mail</label>
+                      <label class="text-black" for="email">E-mail</label>
                       <input type="email" id="email" name="email" class="form-control">
                     </div>
                   </div>
 
                   <div class="row form-group">
                     <div class="col-md-12 mb-3 mb-md-0">
-                      <label class="text-black" for="fname">CPF</label>
+                      <label class="text-black" for="cpf">CPF</label>
                       <input type="text" id="cpf" name="cpf" class="form-control">
                     </div>
                   </div>
 
                   <div class="row form-group">
                     <div class="col-md-12 mb-3 mb-md-0">
-                      <label class="text-black" for="fname">CEP</label>
+                      <label class="text-black" for="cep">CEP</label>
                       <input type="text" id="cep" name="cep" class="form-control">
                     </div>
                   </div>
 
                   <div class="row form-group">
                     <div class="col-md-6">
-                      <label class="text-black" for="email">Senha</label> 
+                      <label class="text-black" for="senha">Senha</label> 
                       <input type="password" id="senha" name="senha" class="form-control">
                     </div>
                     <div class="col-md-6">
-                      <label class="text-black" for="subject">Confirmar senha</label> 
+                      <label class="text-black" for="confirmarSenha">Confirmar senha</label> 
                       <input type="password" id="confirmarSenha" name="confirmarSenha" class="form-control">
                     </div>
                   </div>
@@ -109,32 +98,32 @@
 
                   <div class="row form-group">
                     <div class="col-md-12">
-                      <label class="text-black" for="lname">E-mail</label>
+                      <label class="text-black" for="email">E-mail</label>
                       <input type="email" id="email" name="email" class="form-control">
                     </div>
                   </div>
 
                   <div class="row form-group">
                     <div class="col-md-12 mb-3 mb-md-0">
-                      <label class="text-black" for="fname">CPF ou CNPJ</label>
-                      <input type="text" id="cpf" name="cpf" class="form-control">
+                      <label class="text-black" for="doc">CPF ou CNPJ</label>
+                      <input type="text" id="doc" name="doc" class="form-control">
                     </div>
                   </div>
 
                   <div class="row form-group">
                     <div class="col-md-12 mb-3 mb-md-0">
-                      <label class="text-black" for="fname">CEP</label>
+                      <label class="text-black" for="cep">CEP</label>
                       <input type="text" id="cep" name="cep" class="form-control">
                     </div>
                   </div>
 
                   <div class="row form-group">
                     <div class="col-md-6">
-                      <label class="text-black" for="email">Senha</label> 
+                      <label class="text-black" for="senha">Senha</label> 
                       <input type="password" id="senha" name="senha" class="form-control">
                     </div>
                     <div class="col-md-6">
-                      <label class="text-black" for="subject">Confirmar senha</label> 
+                      <label class="text-black" for="confirmarSenha">Confirmar senha</label> 
                       <input type="password" id="confirmarSenha" name="confirmarSenha" class="form-control">
                     </div>
                   </div>
@@ -169,7 +158,7 @@
               <div class="row form-group">
                 
                 <div class="col-md-12">
-                  <label class="text-black" for="lname">E-mail</label>
+                  <label class="text-black" for="email">E-mail</label>
                   <input type="email" id="email" class="form-control">
                 </div>
               </div>
@@ -177,8 +166,8 @@
               <div class="row form-group">
                 
                 <div class="col-md-12">
-                  <label class="text-black" for="email">Senha</label> 
-                  <input type="password" id="" class="form-control">
+                  <label class="text-black" for="senha">Senha</label> 
+                  <input type="password" id="senha" class="form-control">
                 </div>
               </div>
 
@@ -192,3 +181,19 @@
         </div>
       </div>
     </div>
+
+    <script>
+      (function ($) {
+        $('#cidadao, #criadorDesafio').on('click', function (e) {
+          e.stopPropagation();
+          if(this.id == 'cidadao'){
+            $('#criadorDesafio').collapse('hide');
+            console.log('oi');
+            $('#cidadao').collapse('show');
+          }else if(this.id ==  'criadorDesafio'){
+            $('#cidadao').collapse('hide');
+            $('#criadorDesafio').collapse('show');
+          }
+        })
+      });
+    </script>
