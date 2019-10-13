@@ -20,10 +20,13 @@
               <h3>Cadastre-se</h3>
               <p>Selecione o tipo de usuário: </p>
               
-              <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-outline-primary mt-1"><input type="radio" id="btnCidadao" value="cidadao">Cidadão</label>
-                <label class="btn btn-outline-primary mt-1"><input type="radio" id="btnCriadorDesafio" value="criadorDesafio">Criador de Desafios</label>
+              <div class="row justify-content-center">
+                <div class="btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-outline-primary mt-1" onclick="idCidadao()"><input type="radio" id="btnCidadao" value="cidadao">Cidadão</label>
+                  <label class="btn btn-outline-primary mt-1" onclick="idCriadorDesafio()"><input type="radio" id="btnCriadorDesafio" value="criadorDesafio">Criador de Desafios</label>
+                </div>
               </div>
+              
               
               <div class="mt-5">
                 <div class="row form-group">
@@ -42,7 +45,7 @@
 
                 <div class="row form-group">
                   <div class="col-md-12 mb-3 mb-md-0">
-                    <label class="text-black" for="doc">Documento de identificação</label>
+                    <label class="text-black" for="doc" id="lblDoc">Documento de identificação</label>
                     <input type="text" id="doc" name="doc" class="form-control">
                   </div>
                 </div>
@@ -117,20 +120,12 @@
       </div>
     </div>
 
-    <script type="text/javascript" language="javascript" >
-      $(document).ready(function() {
+    <script type="text/javascript" language="javascript">
+      function idCidadao() {
+        document.getElementById('lblDoc').innerHTML = 'CPF';
+      }
 
-        function fetch_data()
-        {
-          $.ajax({
-            url:"<?php echo base_url(); ?>",
-            method:"POST",
-            data:{data_action:'fetch_all'},
-            success:function(data)
-            {
-              $('tbody').html(data);
-            }
-          });
-        }
-      });
+      function idCriadorDesafio() {
+        document.getElementById('lblDoc').innerHTML = 'CPF ou CNPJ';
+      }
     </script>
