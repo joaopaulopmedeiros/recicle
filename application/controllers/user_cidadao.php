@@ -55,6 +55,7 @@ class User_cidadao extends CI_Controller {
 	public function action() {
     if($this->input->post('data_action')) {
       $data_action = $this->input->post('data_action');
+      echo "<h1>$data_action</h1>";
 
       if($data_action == "Delete") {
         $api_url = "http://localhost/recicle-api/cidadao/delete";

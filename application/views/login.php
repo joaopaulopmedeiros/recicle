@@ -28,37 +28,36 @@
                 </div>
               </div>
               
-              
               <div class="mt-5">
-                <div class="row form-group">
+                <div class="row form-group form">
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" class="form-control">
                   </div>
                 </div>
 
-                <div class="row form-group">
+                <div class="row form-group form">
                   <div class="col-md-12">
                     <label class="text-black" for="email">E-mail</label>
                     <input type="email" id="email" name="email" class="form-control">
                   </div>
                 </div>
 
-                <div class="row form-group">
+                <div class="row form-group form">
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="doc" id="lblDoc">Documento de identificação</label>
                     <input type="text" id="doc" name="doc" class="form-control">
                   </div>
                 </div>
 
-                <div class="row form-group">
+                <div class="row form-group form">
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="cep">CEP</label>
                     <input type="text" id="cep" name="cep" class="form-control">
                   </div>
                 </div>
 
-                <div class="row form-group">
+                <div class="row form-group form">
                   <div class="col-md-6">
                     <label class="text-black" for="senha">Senha</label> 
                     <input type="password" id="senha" name="senha" class="form-control">
@@ -71,7 +70,7 @@
 
                 <div class="form-group">
                   <div class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" value="" id="termos" name="termos" required>
+                    <input class="custom-control-input" type="checkbox" value="OK" id="termos" name="termos" required>
                     <label class="custom-control-label" for="termos">
                       Concordo com os <a href="">termos e condições</a>
                     </label>
@@ -83,7 +82,7 @@
 
                 <div class="row form-group">
                   <div class="col-md-12">
-                    <input type="submit" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
+                    <input type="submit" id="data_action" value="Insert" class="btn btn-primary py-2 px-4 text-white">
                   </div>
                 </div>
               </div>
@@ -93,7 +92,6 @@
 
           <div class="col-md-6">
             <form action="#" class="p-5 bg-white">
-             
               <h3>Login</h3>
 
               <div class="row form-group">
@@ -133,31 +131,40 @@
       $(document).ready(function(){
         $(document).on('submit', '#user_form', function(event){
           event.preventDefault();
-          var url = "";
+          var url2 = "";
           if ($('#btnCidadao').is(':checked')) {
-            url = "http://localhost/recicle/user_cidadao/action";
+            url2 = "http://localhost/recicle/user_cidadao/action";
           }
           else if ($('#btnCriadorDesafio').is(":checked")) {
-            url = "http://localhost/recicle/user_cooperativa/action";
+            url2 = "http://localhost/recicle/user_cooperativa/action";
           }
 
+          console.log(url2);
+
+          var dataString = $('form').serialize();
+
+          $('#add_button').click(function(){
+            $('#data_action').val("Insert");
+          });
+
           $.ajax({
-            url:url,
+            url:url2,
             method:"POST",
-            data:$(this).serialize(),
-            data:{data_action:'Insert'},
+            data:dataString,
+            //data:{data_action:'Insert'},
             dataType:"json",
             success:function(data)
             {
+              console.log(dataString);
               console.log(data);
               if(data.success)
               {
-                console.log("uuuuuuuhuuuuuuuul deu certo amada");
+                console.log("deu certo :D");
               }
 
               if(data.error)
               {
-                console.log("deu errado parceira");
+                console.log("deu errado :(");
               }
             }
           })
