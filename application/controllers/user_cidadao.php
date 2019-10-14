@@ -57,7 +57,7 @@ class User_cidadao extends CI_Controller {
       $data_action = $this->input->post('data_action');
 
       if($data_action == "Delete") {
-        $api_url = "http://localhost/rest-api/cidadao/delete";
+        $api_url = "http://localhost/recicle-api/cidadao/delete";
 
         $form_data = array(
          'id'  => $this->input->post('user_id')
@@ -74,7 +74,7 @@ class User_cidadao extends CI_Controller {
       }
 
       if($data_action == "Edit") {
-        $api_url = "http://localhost/rest-api/cidadao/update";
+        $api_url = "http://localhost/recicle-api/cidadao/update";
 
         $form_data = array(
          'first_name'  => $this->input->post('first_name'),
@@ -93,7 +93,7 @@ class User_cidadao extends CI_Controller {
       }
 
       if($data_action == "fetch_single") {
-        $api_url = "http://localhost/rest-api/cidadao/fetch_single";
+        $api_url = "http://localhost/recicle-api/cidadao/fetch_single";
 
         $form_data = array(
          'id'  => $this->input->post('user_id')
@@ -110,11 +110,14 @@ class User_cidadao extends CI_Controller {
       }
 
       if($data_action == "Insert") {
-        $api_url = "http://localhost/rest-api/cidadao/insert";
+        $api_url = "http://localhost/recicle-api/cidadao/insert";
 
         $form_data = array(
-         'first_name'  => $this->input->post('first_name'),
-         'last_name'   => $this->input->post('last_name')
+         'nome'  => $this->input->post('nome'),
+         'email' => $this->input->post('email'),
+         'cpf'   => $this->input->post('doc'),
+         'cep'   => $this->input->post('cep'),
+         'senha' => $this->input->post('senha')
         );
 
         $client = curl_init($api_url);
@@ -128,7 +131,7 @@ class User_cidadao extends CI_Controller {
       }
 
       if($data_action == "fetch_all") {
-        $api_url = "http://localhost/rest-api/cidadao/index";
+        $api_url = "http://localhost/recicle-api/cidadao/index";
 
         $client = curl_init($api_url);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
