@@ -82,7 +82,7 @@
 
                 <div class="row form-group">
                   <div class="col-md-12">
-                    <input type="submit" id="data_action" value="Insert" class="btn btn-primary py-2 px-4 text-white">
+                    <input type="submit" id="" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
                   </div>
                 </div>
               </div>
@@ -131,27 +131,31 @@
       $(document).ready(function(){
         $(document).on('submit', '#user_form', function(event){
           event.preventDefault();
-          var url2 = "";
+
+          var url = "";
           if ($('#btnCidadao').is(':checked')) {
-            url2 = "http://localhost/recicle/user_cidadao/action";
+            url = "http://localhost/recicle/user_cidadao/inserir";
           }
           else if ($('#btnCriadorDesafio').is(":checked")) {
-            url2 = "http://localhost/recicle/user_cooperativa/action";
+            url = "http://localhost/recicle/user_cooperativa/action";
           }
 
-          console.log(url2);
+          console.log(url);
 
-          var dataString = $('form').serialize();
+          //var dataString = $('#user_form').serialize();
 
-          $('#add_button').click(function(){
-            $('#data_action').val("Insert");
-          });
+          var dataString = {
+            nome : $('#nome').serialize(),
+            email : $('#email').serialize(),
+            cpf : $('#doc').serialize(),
+            cep : $('#cep').serialize(),
+            senha : $('#senha').serialize()
+          };
 
           $.ajax({
-            url:url2,
+            url:url,
             method:"POST",
             data:dataString,
-            //data:{data_action:'Insert'},
             dataType:"json",
             success:function(data)
             {

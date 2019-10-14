@@ -50,9 +50,30 @@ class User_cidadao extends CI_Controller {
 		$this->load->view('user_cidadao/header', $data);
 		$this->load->view('user_cidadao/minhaconta');
 		$this->load->view('footer', $data);
-	}
+  }
+  
+  public function inserir() {
+    $api_url = "http://localhost/recicle-api/cidadao/insert";
 
-	public function action() {
+        $form_data = array(
+         'nome'  => $this->input->post('nome'),
+         'email' => $this->input->post('email'),
+         'cpf'   => $this->input->post('doc'),
+         'cep'   => $this->input->post('cep'),
+         'senha' => $this->input->post('senha')
+        );
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_POST, true);
+        curl_setopt($client, CURLOPT_POSTFIELDS, $form_data);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+
+        echo $response;
+  }
+
+	/*public function action() {
     if($this->input->post('data_action')) {
       $data_action = $this->input->post('data_action');
       echo "<h1>$data_action</h1>";
@@ -165,5 +186,5 @@ class User_cidadao extends CI_Controller {
         echo $output;
       }
     }
-  }
+  }*/
 }
