@@ -55,22 +55,22 @@ class User_cidadao extends CI_Controller {
   public function inserir() {
     $api_url = "http://localhost/recicle-api/cidadao/insert";
 
-        $form_data = array(
-         'nome'  => $this->input->post('nome'),
-         'email' => $this->input->post('email'),
-         'cpf'   => $this->input->post('doc'),
-         'cep'   => $this->input->post('cep'),
-         'senha' => $this->input->post('senha')
-        );
+    $form_data = array(
+      'nome'  => $this->input->post('nome'),
+      'cpf'   => $this->input->post('cpf'),
+      'email' => $this->input->post('email'),
+      'senha' => $this->input->post('senha'),
+      'cep'   => $this->input->post('cep')
+    );
 
-        $client = curl_init($api_url);
-        curl_setopt($client, CURLOPT_POST, true);
-        curl_setopt($client, CURLOPT_POSTFIELDS, $form_data);
-        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($client);
-        curl_close($client);
+    $client = curl_init($api_url);
+    curl_setopt($client, CURLOPT_POST, true);
+    curl_setopt($client, CURLOPT_POSTFIELDS, $form_data);
+    curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($client);
+    curl_close($client);
 
-        echo $response;
+    echo $response;
   }
 
 	/*public function action() {

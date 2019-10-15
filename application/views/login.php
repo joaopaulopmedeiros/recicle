@@ -140,16 +140,12 @@
             url = "http://localhost/recicle/user_cooperativa/action";
           }
 
-          console.log(url);
-
-          //var dataString = $('#user_form').serialize();
-
           var dataString = {
-            nome : $('#nome').serialize(),
-            email : $('#email').serialize(),
-            cpf : $('#doc').serialize(),
-            cep : $('#cep').serialize(),
-            senha : $('#senha').serialize()
+            nome : $('#nome').val(),
+            email : $('#email').val(),
+            cpf : $('#doc').val(),
+            cep : $('#cep').val(),
+            senha : $('#senha').val()
           };
 
           $.ajax({
@@ -159,8 +155,6 @@
             dataType:"json",
             success:function(data)
             {
-              console.log(dataString);
-              console.log(data);
               if(data.success)
               {
                 console.log("deu certo :D");
