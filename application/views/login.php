@@ -140,26 +140,21 @@
             url = "http://localhost/recicle/user_cooperativa/cadastrar";
           }
 
-          /*var dataUser = {
+          var dataUser = {
             nome : $('#nome').val(),
-            email : $('#email').val(),
+            login : $('#email').val(),
             cpf : $('#doc').val(),
             cep : $('#cep').val(),
             senha : $('#senha').val()
-          };*/
-
-          console.log(url);
-          //console.log(dataUser);
+          };
 
           $.ajax({
             url:url,
             method:"POST",
-            data:$(this).serialize(),
+            data:dataUser,
             dataType:"json",
             success:function(data)
             {
-              //console.log(dataUser);
-              console.log(data);
               if(data.success)
               {
                 console.log("deu certo :D");
