@@ -48,23 +48,6 @@
     </div>
 
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <?php if($this->session->flashdata('success')) { ?>
-      <div class="alert alert-success" role="alert">
-        <?php echo $this->session->flashdata('success'); ?>
-      </div>
-    <?php }?>
-
-    <?php if($this->session->flashdata('danger')) { ?>
-      <div class="alert alert-danger" role="alert">
-        <?php echo $this->session->flashdata('danger'); ?>
-      </div>
-    <?php }?>
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
->>>>>>> 94927e0... updated layout. Real images, colors and texts
     
     <div class="site-section">
       <div class="container">
@@ -79,17 +62,8 @@
 
           <div class="col-md-5 align-self-center">
             <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <p align = "justify">Você pode ganhar vários prêmios descartando de forma consciente! Cadastre já para participar dos desafios lançados pelas cooperativas e pontos de coleta próximas de você. Essas premiações podem ser  Gift Cards, dinheiro e descontos em faturas. 
 </p>
-=======
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-              <p align = "justify">Você pode ganhar vários prêmios descartando de forma consciente! Cadastre já para participar dos desafios lançados pelas cooperativas e pontos de coleta próximas de você. Essas premiações podem ser  Gift Cards, dinheiro e descontos em faturas. 
-</p>
->>>>>>> 94927e0... updated layout. Real images, colors and texts
             </div>
           </div>
 
@@ -114,21 +88,12 @@
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 94927e0... updated layout. Real images, colors and texts
                 <img src="<?=base_url()?>assets/images/tc.jpg" alt="Image">
               </figure>
             </div>
 
             <div class="d-flex justify-content-center">
               <figure style="width:250px;">
-<<<<<<< HEAD
-=======
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
->>>>>>> 94927e0... updated layout. Real images, colors and texts
                 <img src="<?=base_url()?>assets/images/uber.png" alt="Image">
               </figure>
             </div>
@@ -138,28 +103,13 @@
         
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div class="site-section" style="background-color: #F5F5F5;">
-=======
-
-
-
-    <div class="site-section" style="background-color: #98989833;">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
-    <div class="site-section" style="background-color: #F5F5F5;">
->>>>>>> 94927e0... updated layout. Real images, colors and texts
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
             <h2 class="font-weight-light text-primary">Lixos mais descartados</h2>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 94927e0... updated layout. Real images, colors and texts
       <div class="container">
         <div class="row justify-content-center mb-5">
           </div>
@@ -194,25 +144,6 @@
       </div>
     </div>
       <div class="site-section border-top">
-<<<<<<< HEAD
-=======
-        <div class="row align-items-stretch">
-          <div class="d-flex justify-content-center">
-          <figure style="width: 90%;">
-              <img src="<?=base_url()?>assets/images/lixo.png" alt="Imagem com os lixos mais descartados" class="img-fluid">
-            </figure>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-
-    
-    <div class="site-section border-top">
->>>>>>> a4021837810c1d5b7e06b72900b4ec4265c77caa
-=======
->>>>>>> 94927e0... updated layout. Real images, colors and texts
       <div class="container">
         <div class="row text-center">
           <div class="col-md-12">
