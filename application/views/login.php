@@ -82,7 +82,7 @@
 
                 <div class="row form-group">
                   <div class="col-md-12">
-                    <input type="submit" id="" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
+                    <input type="submit" id="enviar" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" id="enviar" value="Próximo" class="btn btn-primary py-2 px-4 text-white">
+                  <input type="submit" value="Próximo" class="btn btn-primary py-2 px-4 text-white">
                 </div>
               </div>
             </form>
@@ -140,21 +140,26 @@
             url = "http://localhost/recicle/user_cooperativa/cadastrar";
           }
 
-          var dataUser = {
+          /*var dataUser = {
             nome : $('#nome').val(),
             email : $('#email').val(),
             cpf : $('#doc').val(),
             cep : $('#cep').val(),
             senha : $('#senha').val()
-          };
+          };*/
+
+          console.log(url);
+          //console.log(dataUser);
 
           $.ajax({
             url:url,
             method:"POST",
-            data:dataUser,
+            data:$(this).serialize(),
             dataType:"json",
             success:function(data)
             {
+              //console.log(dataUser);
+              console.log(data);
               if(data.success)
               {
                 console.log("deu certo :D");
