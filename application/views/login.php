@@ -29,35 +29,35 @@
               </div>
               
               <div class="mt-5">
-                <div class="row form-group form">
+                <div class="row form-group">
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" class="form-control">
                   </div>
                 </div>
 
-                <div class="row form-group form">
+                <div class="row form-group">
                   <div class="col-md-12">
                     <label class="text-black" for="email">E-mail</label>
                     <input type="email" id="email" name="email" class="form-control">
                   </div>
                 </div>
 
-                <div class="row form-group form">
+                <div class="row form-group">
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="doc" id="lblDoc">Documento de identificação</label>
                     <input type="text" id="doc" name="doc" class="form-control">
                   </div>
                 </div>
 
-                <div class="row form-group form">
+                <div class="row form-group">
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="cep">CEP</label>
                     <input type="text" id="cep" name="cep" class="form-control">
                   </div>
                 </div>
 
-                <div class="row form-group form">
+                <div class="row form-group">
                   <div class="col-md-6">
                     <label class="text-black" for="senha">Senha</label> 
                     <input type="password" id="senha" name="senha" class="form-control">
@@ -134,13 +134,13 @@
 
           var url = "";
           if ($('#btnCidadao').is(':checked')) {
-            url = "http://localhost/recicle/user_cidadao/inserir";
+            url = "http://localhost/recicle/user_cidadao/cadastrar";
           }
           else if ($('#btnCriadorDesafio').is(":checked")) {
-            url = "http://localhost/recicle/user_cooperativa/action";
+            url = "http://localhost/recicle/user_cooperativa/cadastrar";
           }
 
-          var dataString = {
+          var dataUser = {
             nome : $('#nome').val(),
             email : $('#email').val(),
             cpf : $('#doc').val(),
@@ -151,7 +151,7 @@
           $.ajax({
             url:url,
             method:"POST",
-            data:dataString,
+            data:dataUser,
             dataType:"json",
             success:function(data)
             {

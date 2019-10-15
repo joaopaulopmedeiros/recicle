@@ -52,8 +52,8 @@ class User_cidadao extends CI_Controller {
 		$this->load->view('footer', $data);
   }
   
-  public function inserir() {
-    $api_url = "http://localhost/recicle-api/cidadao/insert";
+  public function cadastrar() {
+    $api_url = "http://localhost/recicle-api/cidadao/inserir";
 
     $form_data = array(
       'nome'  => $this->input->post('nome'),
