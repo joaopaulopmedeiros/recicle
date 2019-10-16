@@ -137,13 +137,13 @@
             url = "http://localhost/recicle/user_cidadao/cadastrar";
           }
           else if ($('#btnCriadorDesafio').is(":checked")) {
-            url = "http://localhost/recicle/user_cooperativa/cadastrar";
+            url = "http://localhost/recicle/user_criadordesafio/cadastrar";
           }
 
           var dataUser = {
             nome : $('#nome').val(),
             login : $('#email').val(),
-            cpf : $('#doc').val(),
+            doc : $('#doc').val(),
             cep : $('#cep').val(),
             senha : $('#senha').val()
           };
