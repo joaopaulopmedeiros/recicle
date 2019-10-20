@@ -8,8 +8,7 @@ function idCriadorDesafio() {
 
 $(document).ready(function(){
     $(document).on('submit', '#user_form', function(event){
-      event.preventDefault();
-
+    
       var url = "";
       if ($('#btnCidadao').is(':checked')) {
         url = "http://localhost/recicle/user_cidadao/cadastrar";
