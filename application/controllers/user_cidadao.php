@@ -50,5 +50,6 @@ class User_cidadao extends CI_Controller {
 		$this->load->view('user_cidadao/header', $data);
 		$this->load->view('user_cidadao/minhaconta');
 		$this->load->view('footer', $data);
-	}
+  }  
+
 }
