@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS recicle.cidadao(
     senha varchar (20) NOT NULL,
     nome varchar (50) NOT NULL,
     cep varchar (20) NOT NULL,
-    CONSTRAINT PK_cidadao PRIMARY KEY(cpf) -- identificador de chave primaria
+    CONSTRAINT PK_cidadao PRIMARY KEY(docCadastrado) -- identificador de chave primaria
 )ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 -- Criacao de Tabela criadorDesafio, atributos, engine para transacao de dados e colecao de caracteres default
