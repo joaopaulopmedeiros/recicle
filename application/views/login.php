@@ -119,5 +119,5 @@
       </div>
     </div>
 
-    <script src="<?= base_url();?>assets/js/ajax.js"> type="text/javascript" language="javascript">
+    <script src="<?= base_url();?>assets/js/ajax.js" type="text/javascript" language="javascript">
     </script>
