@@ -58,7 +58,7 @@ class User_cidadao extends CI_Controller {
 
     $form_data = array(
       'nome'  => $this->input->post('nome'),
-      'cpf'   => $this->input->post('doc'),
+      'docCadastrado'   => $this->input->post('doc'),
       'login' => $this->input->post('login'),
       'senha' => $this->input->post('senha'),
       'cep'   => $this->input->post('cep')
