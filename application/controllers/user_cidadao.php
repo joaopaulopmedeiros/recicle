@@ -50,28 +50,6 @@ class User_cidadao extends CI_Controller {
 		$this->load->view('user_cidadao/header', $data);
 		$this->load->view('user_cidadao/minhaconta');
 		$this->load->view('footer', $data);
-  }
-  
-  public function cadastrar() 
-  {
-    $api_url = "http://localhost/recicle-api/cidadao/inserir";
-
-    $form_data = array(
-      'nome'  => $this->input->post('nome'),
-      'docCadastrado'   => $this->input->post('doc'),
-      'login' => $this->input->post('login'),
-      'senha' => $this->input->post('senha'),
-      'cep'   => $this->input->post('cep')
-    );
-
-    $client = curl_init($api_url);
-    curl_setopt($client, CURLOPT_POST, true);
-    curl_setopt($client, CURLOPT_POSTFIELDS, $form_data);
-    curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($client);
-    curl_close($client);
-
-    echo $response;
-  }
+  }  
 
 }
