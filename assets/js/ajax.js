@@ -8,9 +8,7 @@ function idCriadorDesafio() {
 
 $(document).ready(function(){
     $(document).on('submit', '#user_form', function(event){
-    
-      var url = "http://localhost/recicle/cadastro/index";
-      
+      event.preventDefault();
       var user = "";
 
       if ($('#btnCidadao').is(':checked')) {
@@ -30,7 +28,7 @@ $(document).ready(function(){
       };
 
        $.ajax({
-            url:url,
+            url:"http://localhost/recicle/cadastro/index",
             method:"POST",
             data:dataUser,
             dataType:"json",
@@ -38,7 +36,8 @@ $(document).ready(function(){
             {
               if(data.success)
               {
-                console.log("deu certo :D");
+                alert("Você será redirecionado...")
+                location.href = "http://localhost/recicle/user_cidadao/index";
               }
 
               if(data.error)
