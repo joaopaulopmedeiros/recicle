@@ -9,12 +9,15 @@ function idCriadorDesafio() {
 $(document).ready(function(){
     $(document).on('submit', '#user_form', function(event){
     
-      var url = "";
+      var url = "http://localhost/recicle/cadastro/index";
+      
+      var user = "";
+
       if ($('#btnCidadao').is(':checked')) {
-        url = "http://localhost/recicle/user_cidadao/cadastrar";
+        user = "cidadao";
       }
       else if ($('#btnCriadorDesafio').is(":checked")) {
-        url = "http://localhost/recicle/user_criadordesafio/cadastrar";
+        user = "criador";
       }
 
       var dataUser = {
@@ -22,7 +25,8 @@ $(document).ready(function(){
         login : $('#email').val(),
         doc : $('#doc').val(),
         cep : $('#cep').val(),
-        senha : $('#senha').val()
+        senha : $('#senha').val(),
+        user_type: user 
       };
 
        $.ajax({
