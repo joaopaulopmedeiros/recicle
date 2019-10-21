@@ -29,6 +29,10 @@
               </div>
               
               <div class="mt-5">
+                <div id="alerta">
+
+                </div>
+
                 <div class="row form-group">
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="nome">Nome</label>
@@ -60,7 +64,10 @@
                 <div class="row form-group">
                   <div class="col-md-6">
                     <label class="text-black" for="senha">Senha</label> 
-                    <input type="password" id="senha" name="senha" class="form-control">
+                    <input type="password" id="senha" name="senha" class="form-control" aria-describedby="passwordHelpBlock">
+                    <small id="passwordHelpBlock" class="form-text">
+                      A senha deve ter entre 6 e 20 caracteres.
+                    </small>
                   </div>
                   <div class="col-md-6">
                     <label class="text-black" for="confirmarSenha">Confirmar senha</label> 

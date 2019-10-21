@@ -24,6 +24,7 @@ $(document).ready(function(){
       doc : $('#doc').val(),
       cep : $('#cep').val(),
       senha : $('#senha').val(),
+      confirmarSenha : $('#confirmarSenha').val(),
       user_type : user 
     };
 
@@ -41,7 +42,7 @@ $(document).ready(function(){
 
         if(data.error)
         {
-          console.log("deu errado :(");
+          $('#alerta').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
     })
