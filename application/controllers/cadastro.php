@@ -13,11 +13,12 @@ class Cadastro extends CI_Controller {
       }
   
 	  $form_data = array(
-		'nome'  => $this->input->post('nome'),
-		'docCadastrado'   => $this->input->post('doc'),
-		'login' => $this->input->post('login'),
-		'senha' => $this->input->post('senha'),
-		'cep'   => $this->input->post('cep')
+			'nome' => $this->input->post('nome'),
+			'docCadastrado' => $this->input->post('doc'),
+			'login' => $this->input->post('login'),
+			'senha' => $this->input->post('senha'),
+			'cep' => $this->input->post('cep'),
+			'confirmarSenha' => $this->input->post('confirmarSenha')
 	  );
   
 	  $client = curl_init($api_url);
