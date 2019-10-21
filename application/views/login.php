@@ -91,9 +91,11 @@
           </div>
 
           <div class="col-md-6">
-            <form action="#" class="p-5 bg-white">
+            <form id="user_login" class="p-5 bg-white">
               <h3>Login</h3>
+              <div id="alert">
 
+              </div>
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="text-black" for="lemail">E-mail</label>
@@ -110,7 +112,13 @@
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Próximo" class="btn btn-primary py-2 px-4 text-white">
+                  <a href="#">Esqueceu sua senha?</a>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Entrar" class="btn btn-primary py-2 px-4 text-white">
                 </div>
               </div>
             </form>
