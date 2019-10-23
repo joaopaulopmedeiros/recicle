@@ -72,58 +72,12 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
+        <div class="row" id="desafios">
           
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
         </div>
       </div>
 
-      <div class="container text-center pb-1">
+      <!--<div class="container text-center pb-1">
         <div class="row">
           <div class="col-12">
             <p class="custom-pagination">
@@ -133,19 +87,38 @@
             </p>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
 
     <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(<?php echo base_url();?>assets/images/hero_bg_2.jpg); background-attachment: fixed;">
-
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
-
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
             <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-single-big mb-4 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
             <h2 class="text-white font-weight-light mb-5 h1">Veja como participar do Recicle</h2>
-            
           </div>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript" language="javascript">
+      $(document).ready(function(){
+        function exibirDesafios(){
+          $.ajax({
+            url:"http://localhost/recicle/desafios/index",
+            method:"POST",
+            success:function(data)
+            {
+              if (data.success) {
+                console.log("oi, deu certo");
+                $('#desafios').html(data);
+              }
+              if (data.error) {
+                console.log(":(");
+              }
+            }
+          });
+        }
+        exibirDesafios();
+      });
+    </script>
