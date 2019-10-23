@@ -58,11 +58,11 @@ CREATE TABLE IF NOT EXISTS recicle.desafio(
 	id int auto_increment,
     titulo varchar(20) NOT NULL,
     descricao varchar (20) NOT NULL,
-    idCiadorDesafio varchar(20) NOT NULL, -- fk
+    idCriadorDesafio varchar(20) NOT NULL, -- fk
     idTipoBonificacao int NULL, -- fk pode haver bonificacao ou nao
     idTipoRSU int NOT NULL, -- fk
     dataLimite DATE NULL,
-    img BLOB NOT NULL,
+    img BLOB NULL,
     CONSTRAINT PK_desafio PRIMARY KEY(id) -- identificador de chave primaria
 )ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
