@@ -23,7 +23,7 @@ class Desafios extends CI_Controller {
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="h-entry">
                         <img src="'.base_url().'assets/images/blog_2.jpg" alt="Image" class="img-fluid">
-                        <h2 class="font-size-regular"><div class="text-primary">'.$row->titulo.'</div></h2>
+                        <a href="#" class="font-size-regular"><div class="text-primary">'.$row->titulo.'</div></a>
                         <div class="meta mb-4">'.$row->nome.'<span class="mx-2">&bullet;</span>'.$row->tipo.'<span class="mx-2">&bullet;</span>Jan 18, 2019</div>
                     </div> 
                 </div>
