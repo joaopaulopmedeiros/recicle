@@ -8,7 +8,6 @@ class Desafios extends CI_Controller {
 	    $api_url = "http://localhost/recicle-api/desafios/index";
   
         $client = curl_init($api_url);
-        curl_setopt($client, CURLOPT_POST, true);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($client);
         curl_close($client);
@@ -34,8 +33,8 @@ class Desafios extends CI_Controller {
         else
         {
             $output .= '
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                <div>Não há desafios cadastrados :(</div>
+            <div class="col-12" role="alert">
+                <h4 class="text-center">Ainda não há desafios cadastrados :(</h4>
             </div>
             ';
         }

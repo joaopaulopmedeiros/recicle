@@ -109,13 +109,7 @@
             method:"POST",
             success:function(data)
             {
-              if (data.success) {
-                console.log("oi, deu certo");
-                $('#desafios').html(data);
-              }
-              if (data.error) {
-                console.log(":(");
-              }
+              $('#desafios').html(data);
             }
           });
         }
