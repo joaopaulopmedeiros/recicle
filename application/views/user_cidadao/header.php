@@ -70,8 +70,8 @@
                 </button>
   
                 <div class="dropdown-menu dropdown-menu-right">
-                  <div class="dropdown-item-text">Nome do usuário</div>
-                  <div class="dropdown-item-text">usuario@email.com</div>
+                  <div class="dropdown-item-text"><?php echo $dataUser['nome']; ?></div>
+                  <div class="dropdown-item-text"><?php echo $dataUser['login']; ?></div>
                   <hr style="border-top: 2px solid #1EBFA1">
                   <a href="<?php echo base_url();?>user_cidadao/desafios" class="dropdown-item">Meus desafios</a>
                   <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
@@ -86,8 +86,8 @@
 
           <nav class="d-md-none">
             <ul class="site-menu js-clone-nav mx-auto d-none">
-              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1">Nome do usuário</li>
-              <li class="dropdown-item-text">usuario@email.com</li>
+              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1"><?php echo $dataUser['nome']; ?></li>
+              <li class="dropdown-item-text"><?php echo $dataUser['login']; ?></li>
               <li><a href="desafios.html" class="dropdown-item">Meus desafios</a></li>
               <li><a href="my-account.html" class="dropdown-item">Minha conta</a></li>
               <li><a href="#" class="dropdown-item">Sair</a></li>
