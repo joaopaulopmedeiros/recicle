@@ -6,6 +6,7 @@ function idCriadorDesafio() {
   document.getElementById('lblDoc').innerHTML = 'CPF ou CNPJ';
 }
 
+/* FORMULÁRIO DE CADASTRO */
 $(document).ready(function(){
   $(document).on('submit', '#user_form', function(event){
     event.preventDefault();
@@ -48,6 +49,7 @@ $(document).ready(function(){
     })
   });
 
+  /* LOGIN */
   $(document).on('submit', '#user_login', function(event){
     event.preventDefault();
 
@@ -72,7 +74,7 @@ $(document).ready(function(){
             var form = document.createElement('form');
             document.body.appendChild(form);
             form.method = 'post';
-            form.action = 'http://localhost/recicle/user_cidadao/index';
+            form.action = 'http://localhost/recicle/session/decode';
             var input = document.createElement('input');
             input.type = 'hidden';
             input.name = 'token';
