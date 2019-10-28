@@ -65,12 +65,29 @@ $(document).ready(function(){
       {
         if(data.success)
         {
-          location.href = "http://localhost/recicle/user_cidadao/index";
+          var token = data['Token'];
+
+          function redirectPost()
+          {
+            var form = document.createElement('form');
+            document.body.appendChild(form);
+            form.method = 'post';
+            form.action = 'http://localhost/recicle/user_cidadao/index';
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'token';
+            input.value = token;
+            form.appendChild(input);
+            form.submit();
+            document.body.removeChild(form);
+          }
+          
+          redirectPost();
         }
 
         if(data.error)
         {
-          $('#alert').html("<div class='alert alert-danger' role='alert'>O email ou senha digitados estão incorretos.</div>");
+          $('#alert').html("<div class='alert alert-danger' role='alert'>" + data['erro'] + "</div>");
         }
       }
     })
