@@ -70,8 +70,8 @@
                 </button>
   
                 <div class="dropdown-menu dropdown-menu-right">
-                  <div class="dropdown-item-text"><?php echo $dataUser['nome']; ?></div>
-                  <div class="dropdown-item-text"><?php echo $dataUser['login']; ?></div>
+                  <div class="dropdown-item-text"><?php echo $this->session->usuario_logado['nome']; ?></div>
+                  <div class="dropdown-item-text"><?php echo $this->session->usuario_logado['login']; ?></div>
                   <hr style="border-top: 2px solid #1EBFA1">
                   <a href="<?php echo base_url();?>user_cidadao/desafios" class="dropdown-item">Meus desafios</a>
                   <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
