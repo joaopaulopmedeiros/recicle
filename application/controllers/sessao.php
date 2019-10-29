@@ -12,14 +12,24 @@ class Sessao extends CI_Controller {
 	{
 		$token = $this->input->post('token');
         $dataUser = $this->objOfJwt->DecodeToken($token);
+
         $this->getSession($dataUser);
     }
     
     public function getSession($dataUser)
     {
-        $this->session->set_userdata('usuario_logado', $dataUser);
-        $this->session->set_flashdata('success', true);
-        redirect(base_url().'user_cidadao/index');
+        if ($dataUser['tipo'] == "cidadao")
+        {
+            $this->session->set_userdata('cidadao', $dataUser);
+            $this->session->set_flashdata('success', true);
+            redirect(base_url().'user_cidadao/index');
+        }
+        else if ($dataUser['tipo'] == "criador")
+        {
+            $this->session->set_userdata('criador', $dataUser);
+            $this->session->set_flashdata('success', true);
+            redirect(base_url().'user_criadordesafio/index');
+        }
     }
 
     public function logout()
