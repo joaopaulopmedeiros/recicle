@@ -1,7 +1,7 @@
 <?php
 require APPPATH . '/libraries/CreatorJwt.php';
 
-class Session extends CI_Controller {
+class Sessao extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
@@ -20,5 +20,11 @@ class Session extends CI_Controller {
         $this->session->set_userdata('usuario_logado', $dataUser);
         $this->session->set_flashdata('success', true);
         redirect(base_url().'user_cidadao/index');
+    }
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect(base_url().'user_public/index');
     }
 }

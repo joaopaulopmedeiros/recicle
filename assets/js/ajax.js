@@ -74,7 +74,7 @@ $(document).ready(function(){
             var form = document.createElement('form');
             document.body.appendChild(form);
             form.method = 'post';
-            form.action = 'http://localhost/recicle/session/decode';
+            form.action = 'http://localhost/recicle/sessao/decode';
             var input = document.createElement('input');
             input.type = 'hidden';
             input.name = 'token';
