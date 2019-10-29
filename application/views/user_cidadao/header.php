@@ -75,7 +75,7 @@
                   <hr style="border-top: 2px solid #1EBFA1">
                   <a href="<?php echo base_url();?>user_cidadao/desafios" class="dropdown-item">Meus desafios</a>
                   <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
-                  <a href="#" class="dropdown-item">Sair</a>
+                  <a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a>
                 </div>
               </div>
             </nav>
