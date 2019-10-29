@@ -70,8 +70,8 @@
                 </button>
   
                 <div class="dropdown-menu dropdown-menu-right">
-                  <div class="dropdown-item-text"><?php echo $this->session->usuario_logado['nome']; ?></div>
-                  <div class="dropdown-item-text"><?php echo $this->session->usuario_logado['login']; ?></div>
+                  <div class="dropdown-item-text"><?php echo $this->session->cidadao['nome']; ?></div>
+                  <div class="dropdown-item-text"><?php echo $this->session->cidadao['login']; ?></div>
                   <hr style="border-top: 2px solid #1EBFA1">
                   <a href="<?php echo base_url();?>user_cidadao/desafios" class="dropdown-item">Meus desafios</a>
                   <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
@@ -86,11 +86,11 @@
 
           <nav class="d-md-none">
             <ul class="site-menu js-clone-nav mx-auto d-none">
-              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1"><?php echo $dataUser['nome']; ?></li>
-              <li class="dropdown-item-text"><?php echo $dataUser['login']; ?></li>
-              <li><a href="desafios.html" class="dropdown-item">Meus desafios</a></li>
-              <li><a href="my-account.html" class="dropdown-item">Minha conta</a></li>
-              <li><a href="#" class="dropdown-item">Sair</a></li>
+              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1"><?php echo $this->session->cidadao['nome']; ?></li>
+              <li class="dropdown-item-text"><?php echo $this->session->cidadao['login']; ?></li>
+              <li><a href="<?php echo base_url();?>user_cidadao/desafios" class="dropdown-item">Meus desafios</a></li>
+              <li><a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a></li>
+              <li><a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a></li>
             </ul>
           </nav>
         </div>

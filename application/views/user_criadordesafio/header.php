@@ -52,16 +52,16 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-md-2">
-            <h1 class="mb-0"><a href="<?php echo base_url();?>user_cooperativa/index" class="text-white h2 mb-0">Recicle</a></h1>
+            <h1 class="mb-0"><a href="<?php echo base_url();?>user_criadordesafio/index" class="text-white h2 mb-0">Recicle</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-md-block">
             <nav class="d-flex site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav ml-auto d-none d-md-block">
-                <li class="active"><a href="<?php echo base_url();?>user_cooperativa/index">Home</a></li>
-                <li><a href="<?php echo base_url();?>user_cooperativa/desafios">Desafios</a></li>
-                <li><a href="<?php echo base_url();?>user_cooperativa/contact">Contato</a></li>
-                <li><a href="<?php echo base_url();?>user_cooperativa/about" class="mb-4 mb-md-0">Sobre</a></li>
+                <li class="active"><a href="<?php echo base_url();?>user_criadordesafio/index">Home</a></li>
+                <li><a href="<?php echo base_url();?>user_criadordesafio/desafios">Desafios</a></li>
+                <li><a href="<?php echo base_url();?>user_criadordesafio/contact">Contato</a></li>
+                <li><a href="<?php echo base_url();?>user_criadordesafio/about" class="mb-4 mb-md-0">Sobre</a></li>
               </ul>
 
               <div class="btn-group">
@@ -70,12 +70,12 @@
                 </button>
   
                 <div class="dropdown-menu dropdown-menu-right">
-                  <div class="dropdown-item-text">Nome do ecoponto</div>
-                  <div class="dropdown-item-text">ecoponto@email.com</div>
+                  <div class="dropdown-item-text"><?php echo $this->session->criador['nome']; ?></div>
+                  <div class="dropdown-item-text"><?php echo $this->session->criador['login']; ?></div>
                   <hr style="border-top: 2px solid #1EBFA1">
-                  <a href="desafios.html" class="dropdown-item">Meus desafios</a>
-                  <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
-                  <a href="#" class="dropdown-item">Sair</a>
+                  <a href="<?php echo base_url();?>user_criadordesafio/desafios" class="dropdown-item">Meus desafios</a>
+                  <a href="<?php echo base_url();?>user_criadordesafio/minhaConta" class="dropdown-item">Minha conta</a>
+                  <a href="<?php echo base_url()?>sessao/logout" class="dropdown-item">Sair</a>
                 </div>
               </div>
             </nav>
@@ -86,11 +86,11 @@
 
           <nav class="d-md-none">
             <ul class="site-menu js-clone-nav mx-auto d-none">
-              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1">Nome do ecoponto</li>
-              <li class="dropdown-item-text">ecoponto@email.com</li>
-              <li><a href="desafios.html" class="dropdown-item">Meus desafios</a></li>
-              <li><a href="my-account.html" class="dropdown-item">Minha conta</a></li>
-              <li><a href="#" class="dropdown-item">Sair</a></li>
+              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1"><?php echo $this->session->criador['nome']; ?></li>
+              <li class="dropdown-item-text"><?php echo $this->session->criador['login']; ?></li>
+              <li><a href="<?php echo base_url();?>user_criadordesafio/desafios" class="dropdown-item">Meus desafios</a></li>
+              <li><a href="<?php echo base_url();?>user_criadordesafio/minhaConta" class="dropdown-item">Minha conta</a></li>
+              <li><a href="<?php echo base_url()?>sessao/logout" class="dropdown-item">Sair</a></li>
             </ul>
           </nav>
         </div>
