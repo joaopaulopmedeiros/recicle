@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS recicle.bonificacao(
 CREATE TABLE IF NOT EXISTS recicle.desafio(	
 	id int auto_increment,
     titulo varchar(20) NOT NULL,
-    descricao varchar (500) NOT NULL,
+    descricao varchar (1500) NOT NULL,
     idCriadorDesafio varchar(20) NOT NULL, -- fk
     idTipoBonificacao int NULL, -- fk pode haver bonificacao ou nao
     idTipoRSU int NOT NULL, -- fk
