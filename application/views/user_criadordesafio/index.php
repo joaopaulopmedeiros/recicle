@@ -17,7 +17,7 @@
             <div class="icon">
               <span class="icon-puzzle-piece"></span>
             </div>
-            <a href="<?= base_url()?>user_cooperativa/desafios">
+            <a href="<?= base_url()?>user_criadordesafio/adicionardesafio">
               <h2 class="my-4 heading">Cadastrar novo desafio</h2>
             </a>
             <p>Adicione novos desafios.</p>
@@ -28,7 +28,7 @@
             <div class="icon">
               <span class="icon-settings"></span>
             </div>
-            <a href="<?= base_url()?>user_cooperativa/minhaconta">
+            <a href="<?= base_url()?>user_criadordesafio/minhaconta">
               <h2 class="my-4 heading">Minha Conta</h2>
             </a>
             <p>Edite as configurações da sua conta do Recicle.</p>
@@ -39,7 +39,7 @@
             <div class="icon">
               <span class="icon-map-marker"></span>
             </div>
-            <a href="<?= base_url()?>user_cooperativa/ecopontos">
+            <a href="<?= base_url()?>user_criadordesafio/ecopontos">
               <h2 class="my-4 heading">Ecopontos</h2>
             </a>
             <p>Veja as cooperativas proximas de você.</p>
