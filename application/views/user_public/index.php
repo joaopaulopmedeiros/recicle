@@ -62,8 +62,7 @@
 
           <div class="col-md-5 align-self-center">
             <div>
-              <p align = "justify">Você pode ganhar vários prêmios descartando de forma consciente! Cadastre já para participar dos desafios lançados pelas cooperativas e pontos de coleta próximas de você. Essas premiações podem ser  Gift Cards, dinheiro e descontos em faturas. 
-</p>
+              <p align = "justify">Você pode ganhar vários prêmios descartando de forma consciente! Cadastre já para participar dos desafios lançados pelas cooperativas e pontos de coleta próximas de você. Essas premiações podem ser  Gift Cards, dinheiro e descontos em faturas.</p>
             </div>
           </div>
 
