@@ -61,6 +61,8 @@ CREATE TABLE IF NOT EXISTS recicle.desafio(
     idCriadorDesafio int(20) NOT NULL, -- fk
     idTipoBonificacao int NULL, -- fk pode haver bonificacao ou nao
     idTipoRSU int NOT NULL, -- fk
+    qtdRSU int NOT NULL,
+    descricaoBonificacao varchar(20) NOT NULL,
     dataLimite DATE NULL,
     img BLOB NULL,
     CONSTRAINT PK_desafio PRIMARY KEY(id) -- identificador de chave primaria
