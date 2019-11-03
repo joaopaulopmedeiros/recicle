@@ -78,5 +78,16 @@ class User_criadordesafio extends CI_Controller {
 		$this->load->view('user_criadordesafio/minhaconta');
 		$this->load->view('footer', $data);
 	}
+	public function adicionarDesafio()
+	{
+		$this->verificarSessao();
+
+		$data['title'] = 'Novo Desafio';
+		$data['footer'] = 'Logon';
+		
+		$this->load->view('user_criadordesafio/header', $data);
+		$this->load->view('user_criadordesafio/adicionardesafio');
+		$this->load->view('footer', $data);
+	}
   
 }
