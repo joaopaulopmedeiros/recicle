@@ -9,7 +9,7 @@ $(document).ready(function () {
 		var titleWindow = document.getElementsByTagName("TITLE")[0].text;
 		var titulo;
 
-		if (titleWindow == 'Ecopontos' || titleWindow == 'Minha Conta' || titleWindow == 'Acesso restrito') {
+		if (titleWindow == 'Ecopontos' || titleWindow == 'Minha Conta' || titleWindow == 'Acesso restrito' || titleWindow == 'Novo Desafio') {
 			titulo = true;
 		}
 		else {
@@ -262,4 +262,23 @@ jQuery(document).ready(function ($) {
 	siteDatePicker();
 
 });
+
+function previewImage()
+{
+    const $ = document.querySelector.bind(document);
+
+    const previewImg = $('.preview-img');
+    const fileChooser = $('.file-chooser');
+    const fileButton = $('.file-button');
+
+    fileButton.onclick = () => fileChooser.click();
+
+    fileChooser.onchange = e => {
+        const fileToUpload = e.target.files.item(0);
+        const reader = new FileReader();
+        reader.onload = e => previewImg.src = e.target.result;
+        reader.readAsDataURL(fileToUpload);
+    };
+}
+
 
