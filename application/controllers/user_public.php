@@ -45,4 +45,11 @@ class User_public extends CI_Controller {
 		$this->load->view('ecopontos');
 		$this->load->view('footer');
 	}
+	public function acesso_restrito()
+	{
+		$data['title'] = 'Acesso restrito';
+		$this->load->view('user_public/header', $data);
+		$this->load->view('acessorestrito');
+		$this->load->view('footer');
+	}
 }
