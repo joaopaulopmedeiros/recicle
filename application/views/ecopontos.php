@@ -51,41 +51,46 @@
         </div>
       </div>
     </div>
-    <div class="site-section bg-light">
+    <div class="site-section bd-light">
       <div class="container">
+
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
             <h2 class="font-weight-light text-primary">Desafios Disponíveis</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?=base_url()?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
-          
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?=base_url()?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?=base_url()?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><div class="text-primary">Título</div></h2>
-              <div class="meta mb-4">Nome da empresa <span class="mx-2">&bullet;</span>Tipo de lixo <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div> 
-          </div>
+
+        <div class="row" id="desafios">
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-12 text-center">
-            <p class="mb-0"><a href="<?=base_url()?>user_cidadao/desafios" class="btn btn-primary py-3 px-5 text-white">Mais desafios</a></p>
+      </div>
+    </div>
+
+      <div class="container text-center pb-1">
+        <div class="row">
+          <div class="col-12">
+            <p class="custom-pagination">
+              <span>1</span>
+              <a href="#">2</a>
+              <a href="#">3</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript" language="javascript">
+      $(document).ready(function(){
+        function exibirDesafios(){
+          $.ajax({
+            url:"http://localhost/recicle/desafios/index",
+            method:"POST",
+            data:{data_action:"all"},
+            success:function(data)
+            {
+              $('#desafios').html(data);
+            }
+          });
+        }
+        exibirDesafios();
+      });
+    </script>
