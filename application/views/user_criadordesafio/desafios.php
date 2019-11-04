@@ -34,42 +34,27 @@
         </div>
 
         <div class="row" id="desafios">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular">
-                <div class="text-primary">Título</div>
-              </h2>
-              <div class="meta mb-4">Nome da empresa
-                <span class="mx-2">&bullet;</span>Tipo de lixo
-                <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog_2.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular">
-                <div class="text-primary">Título</div>
-              </h2>
-              <div class="meta mb-4">Nome da empresa
-                <span class="mx-2">&bullet;</span>Tipo de lixo
-                <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="<?php echo base_url();?>assets/images/blog.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular">
-                <div class="text-primary">Título</div>
-              </h2>
-              <div class="meta mb-4">Nome da empresa
-                <span class="mx-2">&bullet;</span>Tipo de lixo
-                <span class="mx-2">&bullet;</span>Jan 18, 2019</div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
+
+    <script type="text/javascript" language="javascript">
+      $(document).ready(function(){
+        function exibirDesafios(){
+          var user = "<?= $this->session->criador['doc']?>";
+          $.ajax({
+            url:"http://localhost/recicle/desafios/index",
+            method:"POST",
+            data:{data_action:"meus-desafios", user_id:user},
+            success:function(data)
+            {
+              $('#desafios').html(data);
+            }
+          });
+        }
+        exibirDesafios();
+      });
+    </script>
+
 
