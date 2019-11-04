@@ -6,8 +6,12 @@
           </div>
         </div>
 
-        <form action="">
+        <form id="add_desafio">
           <div class="form-row justify-content-around">
+            <div id="alert">
+
+            </div>
+            
             <div class="col-md-9 mb-3 mb-md-0">
               <div class="row">
                 <div class="col-md-12 mb-4">
@@ -98,11 +102,11 @@
                 </div>
 
                 <div class="col-md-3 mb-4 mb-md-0">
-                  <label for="qtdRSU">Quantidade (kg) <span class="text-danger">*</span></label>
+                  <label for="qtdRSU">Quantidade (kg)</label>
                   <input id="qtdRSU" type="number" name="qtdRSU" class="form-control">
 
-                  <label class="mt-2" for="desconto">Desconto (%) <span class="text-danger">*</span></label>
-                  <input id="desconto" type="number" name="desconto" class="form-control">
+                  <label class="mt-2" for="descricaoBonificacao">Detalhamento da bonificação</label>
+                  <input id="descricaoBonificacao" type="text" name="descricaoBonificacao" class="form-control">
                 </div>
 
                 <div class="col-md-3 mb-4 mb-md-0">
