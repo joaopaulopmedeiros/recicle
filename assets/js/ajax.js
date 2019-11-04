@@ -128,4 +128,37 @@ $(document).ready(function(){
       }
     })
   })
+
+  /* ADICIONAR TIPO DE LIXO */
+  $(document).on('submit', '#form_rsu', function(event){
+    event.preventDefault();
+
+    var dataRSU = {
+      tipo : $('#tipoRSU').val()
+    };
+
+    console.log(tipo);
+
+    $.ajax({
+      url:"http://localhost/recicle/rsu/insert",
+      method:"POST",
+      data:dataRSU,
+      dataType:"json",
+      success:function(data)
+      {
+        if(data.success)
+        {
+          $('#form_rsu')[0].reset();
+          $('#ModalRSU').modal('hide');
+          exibirTiposDeLixo();
+          console.log("deu certo :)");
+        }
+
+        if(data.error)
+        {
+          $('#alert').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+        }
+      }
+    })
+  })
 });
