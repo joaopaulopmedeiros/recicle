@@ -24,22 +24,16 @@
                 <div class="col-md-3 mb-4 mb-md-0">
                   <label for="lixo">Tipo de lixo <span class="text-danger">*</span></label>
                   <select id="lixo" class="form-control">
-                    <option selected>Escolher...</option>
-                    <option>Papel e papelão</option>
-                    <option>Óleo de cozinha</option>
-                    <option>Lixo eletrônico</option>
-                    <option>Pilhas e baterias</option>
-                    <option>Metal</option>
-                    <option>Vidro</option>
+
                   </select>
 
                   <!-- Botão para acionar modal -->
-                  <a data-toggle="modal" href="#ExemploModalCentralizado" class="small">
+                  <a data-toggle="modal" href="#ModalRSU" class="small">
                     Cadastrar novo tipo de lixo
                   </a>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                  <div class="modal fade" id="ModalRSU" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -49,7 +43,11 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          ...
+                          <div id="alert">
+
+                          </div>
+                          <label for="tipoRSU">Tipo do lixo</label>
+                          <input type="text" id="tipoRSU" class="form-control" maxlength="20" placeholder="Digite o nome do lixo (máximo de 20 caracteres)">
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -63,19 +61,16 @@
                 <div class="col-md-3 mb-4 mb-md-0">
                   <label for="bonificacao">Tipo da bonificação <span class="text-danger">*</span></label>
                   <select id="bonificacao" class="form-control">
-                    <option selected>Escolher...</option>
-                    <option>Em dinheiro</option>
-                    <option>Spotify</option>
-                    <option>Netflix</option>
+                    
                   </select>
 
                   <!-- Botão para acionar modal -->
-                  <a data-toggle="modal" href="#ExemploModalCentralizado" class="small">
+                  <a data-toggle="modal" href="#ModalBonificacao" class="small">
                     Cadastrar nova bonificação
                   </a>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                  <div class="modal fade" id="ModalBonificacao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -85,7 +80,11 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          ...
+                          <div id="alert">
+
+                          </div>
+                          <label for="tipoBonificacao">Tipo da bonificação</label>
+                          <input type="text" id="tipoBonificacao" class="form-control" maxlength="20" placeholder="Digite o tipo de bonificação (máximo de 50 caracteres)">
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -96,7 +95,7 @@
                   </div>
 
                   <div class="custom-control custom-checkbox mt-2">
-                    <input class="custom-control-input" type="checkbox" id="semBonificacao" name="semBonificacao">
+                    <input class="custom-control-input" type="checkbox" id="semBonificacao" name="semBonificacao" onclick="esconderInput()">
                     <label class="custom-control-label" for="semBonificacao">Sem bonificação</label>
                   </div>
                 </div>
@@ -105,8 +104,8 @@
                   <label for="qtdRSU">Quantidade (kg)</label>
                   <input id="qtdRSU" type="number" name="qtdRSU" class="form-control">
 
-                  <label class="mt-2" for="descricaoBonificacao">Detalhamento da bonificação</label>
-                  <input id="descricaoBonificacao" type="text" name="descricaoBonificacao" class="form-control">
+                  <label class="mt-2 detalhamentoBonus" for="descricaoBonificacao">Detalhamento da bonificação</label>
+                  <input id="descricaoBonificacao" type="text" name="descricaoBonificacao" class="form-control detalhamentoBonus">
                 </div>
 
                 <div class="col-md-3 mb-4 mb-md-0">
@@ -151,3 +150,31 @@
         </form>
       </div>
     </div>
+
+    <script type="text/javascript" language="javascript">
+      $(document).ready(function(){
+        function exibirTiposDeLixo(){
+          $.ajax({
+            url:"http://localhost/recicle/rsu/index",
+            method:"POST",
+            success:function(data)
+            {
+              $('#lixo').html(data);
+            }
+          });
+        }
+        exibirTiposDeLixo();
+
+        function exibirBonificacoes(){
+          $.ajax({
+            url:"http://localhost/recicle/bonificacao/index",
+            method:"POST",
+            success:function(data)
+            {
+              $('#bonificacao').html(data);
+            }
+          });
+        }
+        exibirBonificacoes();
+      });
+    </script>
