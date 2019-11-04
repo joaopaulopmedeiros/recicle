@@ -5,7 +5,7 @@ INSERT INTO `criadordesafio`(`docCadastrado`, `login`, `senha`, `nome`, `cep`)
 VALUES ('12365498700458','cooperativa@gmail.com','123456','Cooperativa','59110660');
 
 INSERT INTO `criadordesafio`(`docCadastrado`, `login`, `senha`, `nome`, `cep`)
-VALUES ('9876543210123','cooperativa2@gmail.com','123456','Cooperativa 2','59884330');
+VALUES ('98765432101234','cooperativa2@gmail.com','123456','Cooperativa 2','59884330');
 
 -- BONIFICAÇÃO
 INSERT INTO `bonificacao`(`id`, `nome`)
