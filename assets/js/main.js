@@ -282,3 +282,16 @@ function previewImage()
 }
 
 
+function esconderInput()
+{
+	$(document).ready(function(){
+		if ($('#semBonificacao').is(':checked'))
+		{
+			$(".detalhamentoBonus").css("display", "none");
+		}
+		else
+		{
+			$(".detalhamentoBonus").css("display", "block");
+		}
+	})
+}
