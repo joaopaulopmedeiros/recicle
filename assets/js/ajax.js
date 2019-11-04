@@ -6,8 +6,8 @@ function idCriadorDesafio() {
   document.getElementById('lblDoc').innerHTML = 'CPF ou CNPJ';
 }
 
-/* FORMULÁRIO DE CADASTRO */
 $(document).ready(function(){
+  /* FORMULÁRIO DE CADASTRO */
   $(document).on('submit', '#user_form', function(event){
     event.preventDefault();
     var user = "";
@@ -90,6 +90,40 @@ $(document).ready(function(){
         if(data.error)
         {
           $('#alert').html("<div class='alert alert-danger' role='alert'>" + data['erro'] + "</div>");
+        }
+      }
+    })
+  })
+
+  /* ADICIONAR DESAFIO */
+  $(document).on('submit', '#add_desafio', function(event){
+    event.preventDefault();
+
+    var dataDesafio = {
+      nome : $('#nome').val(),
+      login : $('#email').val(),
+      doc : $('#doc').val(),
+      cep : $('#cep').val(),
+      senha : $('#senha').val(),
+      confirmarSenha : $('#confirmarSenha').val(),
+      user_type : user 
+    };
+
+    $.ajax({
+      url:"http://localhost/recicle/desafios/insert",
+      method:"POST",
+      data:dataDesafio,
+      dataType:"json",
+      success:function(data)
+      {
+        if(data.success)
+        {
+          location.href = "http://localhost/recicle/user_criadordesafio/desafios";
+        }
+
+        if(data.error)
+        {
+          $('#alerta').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
     })
