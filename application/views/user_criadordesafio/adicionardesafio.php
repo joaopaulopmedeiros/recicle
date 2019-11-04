@@ -34,25 +34,27 @@
 
                   <!-- Modal -->
                   <div class="modal fade" id="ModalRSU" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="TituloModalCentralizado">Cadastrar resíduo sólido urbano</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <div id="alert">
-
+                    <form id="form_rsu">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="TituloModalCentralizado">Cadastrar resíduo sólido urbano</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
                           </div>
-                          <label for="tipoRSU">Tipo do lixo</label>
-                          <input type="text" id="tipoRSU" class="form-control" maxlength="20" placeholder="Digite o nome do lixo (máximo de 20 caracteres)">
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                          <button type="button" class="btn btn-primary">Salvar</button>
-                        </div>
+                          <div class="modal-body">
+                            <div id="alert">
+
+                            </div>
+                              <label for="tipoRSU">Tipo do lixo</label>
+                              <input type="text" id="tipoRSU" class="form-control" maxlength="20" placeholder="Digite o nome do lixo (máximo de 20 caracteres)">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -88,7 +90,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                          <button type="button" class="btn btn-primary">Salvar</button>
+                          <button type="submit" class="btn btn-primary">Salvar</button>
                         </div>
                       </div>
                     </div>
@@ -144,7 +146,7 @@
             </div>
 
             <div class="col-md-12 mb-3 mb-md-0">
-              <input type="button" class="btn btn-primary py-2 px-3 text-white file-button" value="Adicionar desafio">
+              <input type="submit" class="btn btn-primary py-2 px-3 text-white file-button" value="Adicionar desafio">
             </div>
           </div>
         </form>
