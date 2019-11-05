@@ -45,7 +45,7 @@
                   </a>
 
                   <div class="custom-control custom-checkbox mt-2">
-                    <input class="custom-control-input" type="checkbox" id="semBonificacao" name="semBonificacao" onclick="esconderInput()">
+                    <input class="custom-control-input" type="checkbox" id="semBonificacao" name="semBonificacao" onclick="desabilitarBonificacao()">
                     <label class="custom-control-label" for="semBonificacao">Sem bonificação</label>
                   </div>
                 </div>
@@ -63,7 +63,7 @@
                   <input id="data-limite" type="date" name="data-limite" class="form-control">
                   
                   <div class="custom-control custom-checkbox mt-2">
-                    <input class="custom-control-input" type="checkbox" id="semDataLimite" name="semDataLimite">
+                    <input class="custom-control-input" type="checkbox" id="semDataLimite" name="semDataLimite" onclick="desabilitarDataLimite()">
                     <label class="custom-control-label" for="semDataLimite">Sem data limite</label>
                   </div>
                 </div>
@@ -93,6 +93,7 @@
             </div>
 
             <div class="col-md-12 mb-4 mb-md-0">
+              <input type="text" value="<?= $this->session->criador['doc']?>" id="user_id" hidden>
               <input type="submit" class="btn btn-primary py-2 px-3 text-white file-button" value="Adicionar desafio">
             </div>
           </div>
