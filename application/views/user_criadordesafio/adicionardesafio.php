@@ -27,37 +27,10 @@
 
                   </select>
 
-                  <!-- Botão para acionar modal -->
+                  <!-- Botão para acionar modal do tipo de rsu -->
                   <a data-toggle="modal" href="#ModalRSU" class="small">
                     Cadastrar novo tipo de lixo
                   </a>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="ModalRSU" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-                    <form id="form_rsu">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="TituloModalCentralizado">Cadastrar resíduo sólido urbano</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <div id="alert">
-
-                            </div>
-                              <label for="tipoRSU">Tipo do lixo</label>
-                              <input type="text" id="tipoRSU" class="form-control" maxlength="20" placeholder="Digite o nome do lixo (máximo de 20 caracteres)">
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary">Salvar</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 <div class="col-md-3 mb-4 mb-md-0">
@@ -66,35 +39,10 @@
                     
                   </select>
 
-                  <!-- Botão para acionar modal -->
+                  <!-- Botão para acionar modal da bonificação -->
                   <a data-toggle="modal" href="#ModalBonificacao" class="small">
                     Cadastrar nova bonificação
                   </a>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="ModalBonificacao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="TituloModalCentralizado">Cadastrar bonificação</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <div id="alert">
-
-                          </div>
-                          <label for="tipoBonificacao">Tipo da bonificação</label>
-                          <input type="text" id="tipoBonificacao" class="form-control" maxlength="20" placeholder="Digite o tipo de bonificação (máximo de 50 caracteres)">
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                          <button type="submit" class="btn btn-primary">Salvar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
                   <div class="custom-control custom-checkbox mt-2">
                     <input class="custom-control-input" type="checkbox" id="semBonificacao" name="semBonificacao" onclick="esconderInput()">
@@ -120,10 +68,9 @@
                   </div>
                 </div>
               </div>
-              
             </div>
 
-            <div class="col-md-3 mb-3 mb-md-0 justify-content-center">
+            <div class="col-md-3 mb-5 mb-md-0 justify-content-center">
               <label for="preview-img">Imagem do desafio</label>
               <img src="<?= base_url()?>assets/images/desafio.png" class="img-fluid preview-img mb-3 border" alt="example placeholder">
               <div onclick="previewImage()" class="row justify-content-center file-button">
@@ -145,38 +92,68 @@
               <label class="small text-danger">* Campos obrigatórios</label>
             </div>
 
-            <div class="col-md-12 mb-3 mb-md-0">
+            <div class="col-md-12 mb-4 mb-md-0">
               <input type="submit" class="btn btn-primary py-2 px-3 text-white file-button" value="Adicionar desafio">
             </div>
           </div>
         </form>
+
+        <!-- Modal do tipo de rsu-->
+        <div class="modal fade" id="ModalRSU" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+          <form id="form_rsu">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="TituloModalCentralizado">Cadastrar resíduo sólido urbano</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" onclick="clearAlert()">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="alert-rsu">
+
+                  </div>
+
+                  <label for="tipoRSU">Tipo do lixo</label>
+                  <input type="text" id="tipoRSU" class="form-control" maxlength="20" placeholder="Digite o nome do lixo (máximo de 20 caracteres)">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="clearAlert()">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal da bonificação -->
+        <div class="modal fade" id="ModalBonificacao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+          <form id="form_bonificacao">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="TituloModalCentralizado">Cadastrar bonificação</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" onclick="clearAlert()">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="alert-bonificacao">
+
+                  </div>
+
+                  <label for="tipoBonificacao">Tipo da bonificação</label>
+                  <input type="text" id="tipoBonificacao" class="form-control" maxlength="20" placeholder="Digite o tipo de bonificação (máximo de 50 caracteres)">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="clearAlert()">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
-    <script type="text/javascript" language="javascript">
-      $(document).ready(function(){
-        function exibirTiposDeLixo(){
-          $.ajax({
-            url:"http://localhost/recicle/rsu/index",
-            method:"POST",
-            success:function(data)
-            {
-              $('#lixo').html(data);
-            }
-          });
-        }
-        exibirTiposDeLixo();
-
-        function exibirBonificacoes(){
-          $.ajax({
-            url:"http://localhost/recicle/bonificacao/index",
-            method:"POST",
-            success:function(data)
-            {
-              $('#bonificacao').html(data);
-            }
-          });
-        }
-        exibirBonificacoes();
-      });
-    </script>
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax.js"></script>
