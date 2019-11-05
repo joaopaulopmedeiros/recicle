@@ -295,3 +295,9 @@ function esconderInput()
 		}
 	})
 }
+
+function clearAlert()
+{
+    $('#alert-bonificacao').empty();
+    $('#alert-rsu').empty();
+}
