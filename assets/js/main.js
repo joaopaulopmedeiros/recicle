@@ -282,18 +282,34 @@ function previewImage()
 }
 
 
-function esconderInput()
+function desabilitarBonificacao()
 {
 	$(document).ready(function(){
 		if ($('#semBonificacao').is(':checked'))
 		{
-			$(".detalhamentoBonus").css("display", "none");
+			$("#bonificacao").prop("disabled", true);
+			$("#descricaoBonificacao").prop("disabled", true);
 		}
 		else
 		{
-			$(".detalhamentoBonus").css("display", "block");
+			$("#bonificacao").prop("disabled", false);
+			$("#descricaoBonificacao").prop("disabled", false);
 		}
-	})
+	});
+}
+
+function desabilitarDataLimite()
+{
+	$(document).ready(function(){
+		if ($('#semDataLimite').is(':checked'))
+		{
+			$("#data-limite").prop("disabled", true);
+		}
+		else
+		{
+			$("#data-limite").prop("disabled", false);
+		}
+	});
 }
 
 function clearAlert()
