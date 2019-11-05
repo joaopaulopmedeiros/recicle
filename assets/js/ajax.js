@@ -99,7 +99,7 @@ $(document).ready(function(){
   $(document).on('submit', '#add_desafio', function(event){
     event.preventDefault();
 
-    var dataDesafio = {
+  /*var dataDesafio = {
       nome : $('#nome').val(),
       login : $('#email').val(),
       doc : $('#doc').val(),
@@ -126,8 +126,34 @@ $(document).ready(function(){
           $('#alerta').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
-    })
+    })*/
   })
+
+  /* FUNÇÃO PARA EXIBIR OS TIPOS DE LIXO CADASTRADOS */
+  function exibirTiposDeLixo(){
+    $.ajax({
+      url:"http://localhost/recicle/rsu/index",
+      method:"POST",
+      success:function(data)
+      {
+        $('#lixo').html(data);
+      }
+    });
+  }
+  exibirTiposDeLixo();
+
+  /* FUNÇÃO PARA EXIBIR AS BONIFICAÇÕES CADASTRADAS */
+  function exibirBonificacoes(){
+    $.ajax({
+      url:"http://localhost/recicle/bonificacao/index",
+      method:"POST",
+      success:function(data)
+      {
+        $('#bonificacao').html(data);
+      }
+    });
+  }
+  exibirBonificacoes();
 
   /* ADICIONAR TIPO DE LIXO */
   $(document).on('submit', '#form_rsu', function(event){
@@ -136,8 +162,6 @@ $(document).ready(function(){
     var dataRSU = {
       tipo : $('#tipoRSU').val()
     };
-
-    console.log(tipo);
 
     $.ajax({
       url:"http://localhost/recicle/rsu/insert",
@@ -149,14 +173,47 @@ $(document).ready(function(){
         if(data.success)
         {
           $('#form_rsu')[0].reset();
+          $('#alert-rsu').empty();
           $('#ModalRSU').modal('hide');
           exibirTiposDeLixo();
-          console.log("deu certo :)");
+          $('#alert').html("<div class='alert alert-success alert-dismissible fade show' role='alert'>Tipo de resíduo cadastrado com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
         }
 
         if(data.error)
         {
-          $('#alert').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+          $('#alert-rsu').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+        }
+      }
+    })
+  })
+
+  /* ADICIONAR BONIFICAÇÃO */
+  $(document).on('submit', '#form_bonificacao', function(event){
+    event.preventDefault();
+
+    var dataBonificacao = {
+      nome : $('#tipoBonificacao').val()
+    };
+
+    $.ajax({
+      url:"http://localhost/recicle/bonificacao/insert",
+      method:"POST",
+      data:dataBonificacao,
+      dataType:"json",
+      success:function(data)
+      {
+        if(data.success)
+        {
+          $('#form_bonificacao')[0].reset();
+          $('#alert-bonificacao').empty();
+          $('#ModalBonificacao').modal('hide');
+          exibirBonificacoes();
+          $('#alert').html("<div class='alert alert-success alert-dismissible fade show' role='alert'>Bonificação cadastrada com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+        }
+
+        if(data.error)
+        {
+          $('#alert-bonificacao').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
     })
