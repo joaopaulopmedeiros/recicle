@@ -68,7 +68,14 @@ class Desafios extends CI_Controller {
         $api_url = "http://localhost/recicle-api/desafios/inserir";
       
         $form_data = array(
-            
+            'titulo' => $this->input->post('titulo'),
+            'descricao' => $this->input->post('descricao'),
+            'idCriadorDesafio' => $this->input->post('idCriadorDesafio'),
+            'idTipoBonificacao' => $this->input->post('idTipoBonificacao'),
+            'idTipoRSU' => $this->input->post('idTipoRSU'),
+            'qtdRSU' => $this->input->post('qtdRSU'),
+            'descricaoBonificacao' => $this->input->post('descricaoBonificacao'),
+            'dataLimite' => $this->input->post('dataLimite')
         );
       
         $client = curl_init($api_url);

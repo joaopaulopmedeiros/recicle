@@ -99,48 +99,83 @@ $(document).ready(function(){
   $(document).on('submit', '#add_desafio', function(event){
     event.preventDefault();
 
-  /*var dataDesafio = {
-      nome : $('#nome').val(),
-      login : $('#email').val(),
-      doc : $('#doc').val(),
-      cep : $('#cep').val(),
-      senha : $('#senha').val(),
-      confirmarSenha : $('#confirmarSenha').val(),
-      user_type : user 
+    var user = "<?= $this->session->criador['doc']?>";
+    var bonificacao;
+    var descBonificacao;
+    var qtd;
+    var data;
+    var imagem = null;
+
+    if($('#semBonificacao').is(":checked"))
+    {
+      bonificacao = null;
+      descBonificacao = null;
+      qtd = null;
+    }
+    else
+    {
+      bonificacao = $('#bonificacao').val();
+      descBonificacao = $('#descricaoBonificacao').val();
+      qtd = $('#qtdRSU').val();
+    }
+
+    if($('#semDataLimite').is(":checked"))
+    {
+      data = null;
+    }
+    else
+    {
+      data = $('#data-limite').val();
+    }
+
+    var dadosDesafio = {
+      titulo : $('#titulo').val(),
+      descricao : $('#descricao').val(),
+      idCriadorDesafio : user,
+      idTipoBonificacao : bonificacao,
+      idTipoRSU : $('#rsu').val(),
+      qtdRSU : qtd,
+      descricaoBonificacao : descBonificacao,
+      dataLimite : data
     };
+
+    console.log(dadosDesafio);
 
     $.ajax({
       url:"http://localhost/recicle/desafios/insert",
       method:"POST",
-      data:dataDesafio,
+      data:dadosDesafio,
       dataType:"json",
       success:function(data)
       {
         if(data.success)
         {
-          location.href = "http://localhost/recicle/user_criadordesafio/desafios";
+          console.log("deu certo!");
+          //location.href = "http://localhost/recicle/user_criadordesafio/desafios";
         }
 
         if(data.error)
         {
-          $('#alerta').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+          console.log("deu ruim krai");
+          console.log(data);
+          //$('#alert').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
-    })*/
+    })
   })
 
-  /* FUNÇÃO PARA EXIBIR OS TIPOS DE LIXO CADASTRADOS */
-  function exibirTiposDeLixo(){
+  /* FUNÇÃO PARA EXIBIR OS TIPOS DE RSU CADASTRADOS */
+  function exibirTiposDeRSU(){
     $.ajax({
       url:"http://localhost/recicle/rsu/index",
       method:"POST",
       success:function(data)
       {
-        $('#lixo').html(data);
+        $('#rsu').html(data);
       }
     });
   }
-  exibirTiposDeLixo();
+  exibirTiposDeRSU();
 
   /* FUNÇÃO PARA EXIBIR AS BONIFICAÇÕES CADASTRADAS */
   function exibirBonificacoes(){
@@ -155,7 +190,7 @@ $(document).ready(function(){
   }
   exibirBonificacoes();
 
-  /* ADICIONAR TIPO DE LIXO */
+  /* ADICIONAR TIPO DE RSU */
   $(document).on('submit', '#form_rsu', function(event){
     event.preventDefault();
 
@@ -175,7 +210,7 @@ $(document).ready(function(){
           $('#form_rsu')[0].reset();
           $('#alert-rsu').empty();
           $('#ModalRSU').modal('hide');
-          exibirTiposDeLixo();
+          exibirTiposDeRSU();
           $('#alert').html("<div class='alert alert-success alert-dismissible fade show' role='alert'>Tipo de resíduo cadastrado com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
         }
 

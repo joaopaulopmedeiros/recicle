@@ -22,14 +22,14 @@
 
               <div class="row">
                 <div class="col-md-3 mb-4 mb-md-0">
-                  <label for="lixo">Tipo de lixo <span class="text-danger">*</span></label>
-                  <select id="lixo" class="form-control">
+                  <label for="rsu">Tipo de RSU <span class="text-danger">*</span></label>
+                  <select id="rsu" class="form-control">
 
                   </select>
 
                   <!-- Botão para acionar modal do tipo de rsu -->
                   <a data-toggle="modal" href="#ModalRSU" class="small">
-                    Cadastrar novo tipo de lixo
+                    Cadastrar novo tipo de RSU
                   </a>
                 </div>
 
@@ -72,7 +72,7 @@
 
             <div class="col-md-3 mb-5 mb-md-0 justify-content-center">
               <label for="preview-img">Imagem do desafio</label>
-              <img src="<?= base_url()?>assets/images/desafio.png" class="img-fluid preview-img mb-3 border" alt="example placeholder">
+              <img id="img" src="<?= base_url()?>assets/images/desafio.png" class="img-fluid preview-img mb-3" alt="example placeholder">
               <div onclick="previewImage()" class="row justify-content-center file-button">
                 <input type="button" class="btn btn-primary py-2 px-3 text-white" value="Alterar imagem">
                 <input type="file" class="file-chooser" accept="image/*" hidden>
