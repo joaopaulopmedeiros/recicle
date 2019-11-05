@@ -99,27 +99,25 @@ $(document).ready(function(){
   $(document).on('submit', '#add_desafio', function(event){
     event.preventDefault();
 
-    var user = "<?= $this->session->criador['doc']?>";
     var bonificacao;
     var descBonificacao;
     var qtd;
     var data;
     var imagem = null;
 
-    if($('#semBonificacao').is(":checked"))
+    if($('#semBonificacao').is(':checked'))
     {
+      console.log("entrei no if");
       bonificacao = null;
       descBonificacao = null;
-      qtd = null;
     }
     else
     {
       bonificacao = $('#bonificacao').val();
       descBonificacao = $('#descricaoBonificacao').val();
-      qtd = $('#qtdRSU').val();
     }
 
-    if($('#semDataLimite').is(":checked"))
+    if($('#semDataLimite').is(':checked'))
     {
       data = null;
     }
@@ -131,15 +129,13 @@ $(document).ready(function(){
     var dadosDesafio = {
       titulo : $('#titulo').val(),
       descricao : $('#descricao').val(),
-      idCriadorDesafio : user,
+      idCriadorDesafio : $('#user_id').val(),
       idTipoBonificacao : bonificacao,
       idTipoRSU : $('#rsu').val(),
-      qtdRSU : qtd,
+      qtdRSU : $('#qtdRSU').val(),
       descricaoBonificacao : descBonificacao,
       dataLimite : data
     };
-
-    console.log(dadosDesafio);
 
     $.ajax({
       url:"http://localhost/recicle/desafios/insert",

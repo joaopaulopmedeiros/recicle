@@ -43,6 +43,7 @@
       $(document).ready(function(){
         function exibirDesafios(){
           var user = "<?= $this->session->criador['doc']?>";
+          
           $.ajax({
             url:"http://localhost/recicle/desafios/index",
             method:"POST",
