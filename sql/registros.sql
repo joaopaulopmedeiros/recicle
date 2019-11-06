@@ -9,7 +9,10 @@ VALUES ('98765432101234','cooperativa2@gmail.com','123456','Cooperativa 2','5988
 
 -- BONIFICAÇÃO
 INSERT INTO `bonificacao`(`id`, `nome`)
-VALUES ('1','Desconto na conta de luz');
+VALUES ('1','Sem bonificação');
+
+INSERT INTO `bonificacao`(`id`, `nome`)
+VALUES ('2','Desconto na conta de luz');
 
 
 -- TIPO DE RSU
