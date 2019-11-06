@@ -43,19 +43,11 @@
                   <a data-toggle="modal" href="#ModalBonificacao" class="small">
                     Cadastrar nova bonificação
                   </a>
-
-                  <div class="custom-control custom-checkbox mt-2">
-                    <input class="custom-control-input" type="checkbox" id="semBonificacao" name="semBonificacao" onclick="desabilitarBonificacao()">
-                    <label class="custom-control-label" for="semBonificacao">Sem bonificação</label>
-                  </div>
                 </div>
 
                 <div class="col-md-3 mb-4 mb-md-0">
                   <label for="qtdRSU">Quantidade (kg)</label>
-                  <input id="qtdRSU" type="number" name="qtdRSU" class="form-control">
-
-                  <label class="mt-2 detalhamentoBonus" for="descricaoBonificacao">Detalhamento da bonificação</label>
-                  <input id="descricaoBonificacao" type="text" name="descricaoBonificacao" class="form-control detalhamentoBonus">
+                  <input id="qtdRSU" type="number" name="qtdRSU" class="form-control" min="0">
                 </div>
 
                 <div class="col-md-3 mb-4 mb-md-0">
@@ -66,6 +58,13 @@
                     <input class="custom-control-input" type="checkbox" id="semDataLimite" name="semDataLimite" onclick="desabilitarDataLimite()">
                     <label class="custom-control-label" for="semDataLimite">Sem data limite</label>
                   </div>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-md-12 mb-4 mb-md-0">
+                  <label class="mt-2 detalhamentoBonus" for="descricaoBonificacao">Detalhamento da bonificação</label>
+                  <input id="descricaoBonificacao" type="text" name="descricaoBonificacao" class="form-control detalhamentoBonus">
                 </div>
               </div>
             </div>
