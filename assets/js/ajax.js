@@ -99,23 +99,7 @@ $(document).ready(function(){
   $(document).on('submit', '#add_desafio', function(event){
     event.preventDefault();
 
-    var bonificacao;
-    var descBonificacao;
-    var qtd;
     var data;
-    var imagem = null;
-
-    if($('#semBonificacao').is(':checked'))
-    {
-      console.log("entrei no if");
-      bonificacao = null;
-      descBonificacao = null;
-    }
-    else
-    {
-      bonificacao = $('#bonificacao').val();
-      descBonificacao = $('#descricaoBonificacao').val();
-    }
 
     if($('#semDataLimite').is(':checked'))
     {
@@ -130,10 +114,10 @@ $(document).ready(function(){
       titulo : $('#titulo').val(),
       descricao : $('#descricao').val(),
       idCriadorDesafio : $('#user_id').val(),
-      idTipoBonificacao : bonificacao,
+      idTipoBonificacao : $('#bonificacao').val(),
       idTipoRSU : $('#rsu').val(),
       qtdRSU : $('#qtdRSU').val(),
-      descricaoBonificacao : descBonificacao,
+      descricaoBonificacao : $('#descricaoBonificacao').val(),
       dataLimite : data
     };
 
@@ -146,7 +130,7 @@ $(document).ready(function(){
       {
         if(data.success)
         {
-          console.log("deu certo!");
+          console.log("deu certo!!!!!!!!!!!!!");
           //location.href = "http://localhost/recicle/user_criadordesafio/desafios";
         }
 
