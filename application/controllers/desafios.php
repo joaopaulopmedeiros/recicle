@@ -41,7 +41,7 @@ class Desafios extends CI_Controller {
                         <div class="h-entry">
                             <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
                             <a href="#" class="h4"><div class="text-primary">'.$row->titulo.'</div></a>
-                            <div class="meta mb-4">'.$row->nome.'<span class="mx-2">&bullet;</span>'.$row->tipo.'</div>
+                            <div class="meta mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
                         </div> 
                     </div>
                     ';
