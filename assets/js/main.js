@@ -281,23 +281,6 @@ function previewImage()
     };
 }
 
-
-function desabilitarBonificacao()
-{
-	$(document).ready(function(){
-		if ($('#semBonificacao').is(':checked'))
-		{
-			$("#bonificacao").prop("disabled", true);
-			$("#descricaoBonificacao").prop("disabled", true);
-		}
-		else
-		{
-			$("#bonificacao").prop("disabled", false);
-			$("#descricaoBonificacao").prop("disabled", false);
-		}
-	});
-}
-
 function desabilitarDataLimite()
 {
 	$(document).ready(function(){
