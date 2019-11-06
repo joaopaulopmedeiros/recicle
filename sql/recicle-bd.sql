@@ -79,3 +79,14 @@ CREATE TABLE IF NOT EXISTS recicle.desafioAceito(
     cumprido boolean,
     CONSTRAINT PK_desafioAceito PRIMARY KEY(id) -- identificador de chave primaria
 ) DEFAULT CHARSET = utf8;
+
+-- Adicao de chaves estrangeiras
+ALTER TABLE desafio ADD CONSTRAINT fk_criador_desafio FOREIGN KEY (idCriadorDesafio) REFERENCES criadordesafio (docCadastrado);
+ALTER TABLE desafio ADD CONSTRAINT fk_rsu FOREIGN KEY (idTipoRSU) REFERENCES rsu (id);
+ALTER TABLE desafio ADD CONSTRAINT fk_bonificacao FOREIGN KEY (idTipoBonificacao) REFERENCES bonificacao (id);
+
+ALTER TABLE desafioaceito ADD CONSTRAINT fk_id_criador_desafio FOREIGN KEY (idCriadorDesafio) REFERENCES criadordesafio (docCadastrado);
+ALTER TABLE desafioaceito ADD CONSTRAINT fk_id_rsu FOREIGN KEY (idTipoRSU) REFERENCES rsu (id);
+ALTER TABLE desafioaceito ADD CONSTRAINT fk_id_bonificacao FOREIGN KEY (idTipoBonificacao) REFERENCES bonificacao (id);
+ALTER TABLE desafioaceito ADD CONSTRAINT fk_cidadao FOREIGN KEY (idCidadao) REFERENCES cidadao (docCadastrado);
+ALTER TABLE desafioaceito ADD CONSTRAINT fk_desafio FOREIGN KEY (idDesafio) REFERENCES desafio (id);
