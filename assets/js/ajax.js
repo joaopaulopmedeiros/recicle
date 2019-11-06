@@ -118,7 +118,8 @@ $(document).ready(function(){
       idTipoRSU : $('#rsu').val(),
       qtdRSU : $('#qtdRSU').val(),
       descricaoBonificacao : $('#descricaoBonificacao').val(),
-      dataLimite : data
+      dataLimite : data,
+      img : $('#img').val()
     };
 
     $.ajax({

@@ -75,7 +75,8 @@ class Desafios extends CI_Controller {
             'idTipoRSU' => $this->input->post('idTipoRSU'),
             'qtdRSU' => $this->input->post('qtdRSU'),
             'descricaoBonificacao' => $this->input->post('descricaoBonificacao'),
-            'dataLimite' => $this->input->post('dataLimite')
+            'dataLimite' => $this->input->post('dataLimite'),
+            'img' => $this->input->post('img')
         );
       
         $client = curl_init($api_url);
