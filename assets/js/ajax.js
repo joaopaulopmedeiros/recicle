@@ -119,17 +119,19 @@ $(document).ready(function(){
       qtdRSU : $('#qtdRSU').val(),
       descricaoBonificacao : $('#descricaoBonificacao').val(),
       dataLimite : data,
-      img : $('#img-desafio').val()
+      img : $('#img-desafio')[0].files[0]
     };
+
+    console.log(dadosDesafio.img);
 
     $.ajax({
       url:"http://localhost/recicle/desafios/insert",
       method:"POST",
       data:dadosDesafio,
       dataType:"json",
+      processData: false,
       success:function(data)
       {
-        console.log(dadosDesafio.img);
         if(data.success)
         {
           console.log("deu certo!!!!!!!!!!!!!");
