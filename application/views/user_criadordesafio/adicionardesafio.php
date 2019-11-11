@@ -63,7 +63,7 @@
 
               <div class="row mb-4">
                 <div class="col-md-12 mb-4 mb-md-0">
-                  <label class="mt-2 detalhamentoBonus" for="descricaoBonificacao">Detalhamento da bonificação</label>
+                  <label class="mt-2 detalhamentoBonus" for="descricaoBonificacao">Detalhamento da bonificação (se houver)</label>
                   <input id="descricaoBonificacao" type="text" name="descricaoBonificacao" class="form-control detalhamentoBonus">
                 </div>
               </div>
@@ -74,7 +74,7 @@
               <img id="img" src="<?= base_url()?>assets/images/desafio.png" class="img-fluid preview-img mb-3" alt="example placeholder">
               <div onclick="previewImage()" class="row justify-content-center file-button">
                 <input type="button" class="btn btn-primary py-2 px-3 text-white" value="Alterar imagem">
-                <input type="file" class="file-chooser" accept="image/*" hidden>
+                <input type="file" id="img-desafio" name="img-desafio" class="file-chooser" accept="image/*" hidden>
               </div>
             </div>
           </div>

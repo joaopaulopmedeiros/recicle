@@ -119,7 +119,7 @@ $(document).ready(function(){
       qtdRSU : $('#qtdRSU').val(),
       descricaoBonificacao : $('#descricaoBonificacao').val(),
       dataLimite : data,
-      img : $('#img').val()
+      img : $('#img-desafio').val()
     };
 
     $.ajax({
@@ -129,6 +129,7 @@ $(document).ready(function(){
       dataType:"json",
       success:function(data)
       {
+        console.log(dadosDesafio.img);
         if(data.success)
         {
           console.log("deu certo!!!!!!!!!!!!!");
@@ -138,8 +139,7 @@ $(document).ready(function(){
         if(data.error)
         {
           console.log("deu ruim krai");
-          console.log(data);
-          //$('#alert').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+          $('#alert').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
     })

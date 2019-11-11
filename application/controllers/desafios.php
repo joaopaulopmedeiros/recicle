@@ -39,7 +39,7 @@ class Desafios extends CI_Controller {
                     $output .= '
                     <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="h-entry">
-                            <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
+                            <img src="'.base_url().'assets/images/'.$row->img.'" alt="Image" class="img-fluid">
                             <a href="#" class="h4"><div class="text-primary">'.$row->titulo.'</div></a>
                             <div class="meta mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
                         </div> 
