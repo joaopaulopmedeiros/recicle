@@ -12,7 +12,7 @@ INSERT INTO `bonificacao`(`id`, `nome`)
 VALUES ('1','Sem bonificação');
 
 INSERT INTO `bonificacao`(`id`, `nome`)
-VALUES ('2','Desconto na conta de luz');
+VALUES ('2','Desconto');
 
 
 -- TIPO DE RSU
