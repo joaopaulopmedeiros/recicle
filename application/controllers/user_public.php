@@ -52,4 +52,11 @@ class User_public extends CI_Controller {
 		$this->load->view('acessorestrito');
 		$this->load->view('footer');
 	}
+	public function desafio()
+	{
+		$data['title'] = 'Desafio';
+		$this->load->view('user_public/header', $data);
+		$this->load->view('ver_desafio');
+		$this->load->view('footer');
+	}
 }
