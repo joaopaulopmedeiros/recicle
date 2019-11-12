@@ -118,29 +118,23 @@ $(document).ready(function(){
       idTipoRSU : $('#rsu').val(),
       qtdRSU : $('#qtdRSU').val(),
       descricaoBonificacao : $('#descricaoBonificacao').val(),
-      dataLimite : data,
-      img : $('#img-desafio')[0].files[0]
+      dataLimite : data
     };
-
-    console.log(dadosDesafio.img);
 
     $.ajax({
       url:"http://localhost/recicle/desafios/insert",
       method:"POST",
       data:dadosDesafio,
       dataType:"json",
-      processData: false,
       success:function(data)
       {
         if(data.success)
         {
-          console.log("deu certo!!!!!!!!!!!!!");
-          //location.href = "http://localhost/recicle/user_criadordesafio/desafios";
+          location.href = "http://localhost/recicle/user_criadordesafio/desafios";
         }
 
         if(data.error)
         {
-          console.log("deu ruim krai");
           $('#alert').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }

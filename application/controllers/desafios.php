@@ -39,7 +39,7 @@ class Desafios extends CI_Controller {
                     $output .= '
                     <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="h-entry">
-                            <img src="'.base_url().'assets/images/'.$row->img.'" alt="Image" class="img-fluid">
+                            <img src="'.base_url().'assets/images/blog.jpg" alt="Image" class="img-fluid">
                             <a href="#" class="h4"><div class="text-primary">'.$row->titulo.'</div></a>
                             <div class="meta mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
                         </div> 
@@ -66,8 +66,6 @@ class Desafios extends CI_Controller {
     public function insert()
     {
         $api_url = "http://localhost/recicle-api/desafios/inserir";
-
-        $file_img = $_FILES['img'];
       
         $form_data = array(
             'titulo' => $this->input->post('titulo'),
@@ -77,8 +75,7 @@ class Desafios extends CI_Controller {
             'idTipoRSU' => $this->input->post('idTipoRSU'),
             'qtdRSU' => $this->input->post('qtdRSU'),
             'descricaoBonificacao' => $this->input->post('descricaoBonificacao'),
-            'dataLimite' => $this->input->post('dataLimite'),
-            'img' => "@$file_img;type=image"
+            'dataLimite' => $this->input->post('dataLimite')
         );
       
         $client = curl_init($api_url);
