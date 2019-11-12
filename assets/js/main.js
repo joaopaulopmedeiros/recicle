@@ -300,3 +300,11 @@ function clearAlert()
     $('#alert-bonificacao').empty();
     $('#alert-rsu').empty();
 }
+
+function idCidadao() {
+	document.getElementById('lblDoc').innerHTML = 'CPF';
+}
+  
+function idCriadorDesafio() {
+	document.getElementById('lblDoc').innerHTML = 'CPF ou CNPJ';
+}
