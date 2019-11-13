@@ -101,4 +101,4 @@
       </div>
     </div>
 
-    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax_desafios.js"></script>
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/desafios.js"></script>

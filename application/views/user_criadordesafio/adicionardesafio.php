@@ -156,6 +156,6 @@
       </div>
     </div>
 
-    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax_add_desafio.js"></script>
-    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax_bonificacao.js"></script>
-    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax_rsu.js"></script>
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/add_desafio.js"></script>
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/bonificacao.js"></script>
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/rsu.js"></script>
