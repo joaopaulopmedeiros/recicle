@@ -9,7 +9,7 @@ $(document).ready(function () {
 		var titleWindow = document.getElementsByTagName("TITLE")[0].text;
 		var titulo;
 
-		if (titleWindow == 'Ecopontos' || titleWindow == 'Minha Conta' || titleWindow == 'Acesso restrito' || titleWindow == 'Novo Desafio') {
+		if (titleWindow == 'Ecopontos' || titleWindow == 'Minha Conta' || titleWindow == 'Acesso restrito' || titleWindow == 'Novo Desafio' || titleWindow == 'Desafio') {
 			titulo = true;
 		}
 		else {
