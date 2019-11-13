@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function exibirDesafios(){
-        var user = "<?= $this->session->criador['doc']?>";
+        var user = $('#doc').val();
         
         $.ajax({
             url:"http://localhost/recicle/desafios/index",

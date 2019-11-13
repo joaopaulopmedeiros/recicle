@@ -34,7 +34,7 @@
         </div>
 
         <div class="row" id="desafios">
-          
+          <input id="doc" value="<?php echo $this->session->criador['doc']; ?>" hidden>
         </div>
       </div>
     </div>
