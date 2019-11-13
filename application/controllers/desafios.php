@@ -21,6 +21,21 @@ class Desafios extends CI_Controller {
             $data = array(
                 'user_id' => $this->input->post('user_id')
             );
+
+            $url = "";
+
+            if ($this->input->post('user') == 'user_public')
+            {
+                $url = base_url() . "user_public/desafio/";
+            }
+            if ($this->input->post('user') == 'user_cidadao')
+            {
+                $url = base_url() . "user_cidadao/desafio/";
+            }
+            if ($this->input->post('user') == 'user_criadordesafio')
+            {
+                $url = base_url() . "user_criadordesafio/desafio/";
+            }
     
             $client = curl_init($api_url);
             curl_setopt($client, CURLOPT_POST, true);
@@ -40,7 +55,7 @@ class Desafios extends CI_Controller {
                     <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="h-entry">
                             <img src="'.base_url().'assets/images/blog.jpg" alt="Image" class="img-fluid">
-                            <a href="'.base_url().'user_public/desafio/'.$row->id.'" class="h5"><div class="text-primary">'.$row->titulo.'</div></a>
+                            <a href="'.$url.$row->id.'" class="h5"><div class="text-primary">'.$row->titulo.'</div></a>
                             <div class="meta mt-1 mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
                         </div> 
                     </div>
@@ -151,7 +166,7 @@ class Desafios extends CI_Controller {
                     ';
 
                     
-                    if ($this->input->post('user_id'))
+                    if ($this->input->post('user') == 'user_cidadao')
                     {
                         $output .=
                         '
@@ -162,7 +177,7 @@ class Desafios extends CI_Controller {
                         </div>
                         ';
                     }
-                    else
+                    if ($this->input->post('user') == 'user_public')
                     {
                         $output .=
                         '
@@ -178,7 +193,7 @@ class Desafios extends CI_Controller {
             else
             {
                 $output .= '
-                <div class="col-12" role="alert">
+                <div class="col-12 my-5" role="alert">
                     <h4 class="text-center">Desafio não encontrado :/</h4>
                 </div>
                 ';
