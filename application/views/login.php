@@ -134,6 +134,6 @@
       </div>
     </div>
 
-    <script src="<?= base_url();?>assets/js/ajax_cadastro.js" type="text/javascript" language="javascript"></script>
-    <script src="<?= base_url();?>assets/js/ajax_login.js" type="text/javascript" language="javascript"></script>
+    <script src="<?= base_url();?>assets/js/ajax/cadastro.js" type="text/javascript" language="javascript"></script>
+    <script src="<?= base_url();?>assets/js/ajax/login.js" type="text/javascript" language="javascript"></script>
     
