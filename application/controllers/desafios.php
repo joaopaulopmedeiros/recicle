@@ -40,7 +40,7 @@ class Desafios extends CI_Controller {
                     <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="h-entry">
                             <img src="'.base_url().'assets/images/blog.jpg" alt="Image" class="img-fluid">
-                            <a href="#" class="h5"><div class="text-primary">'.$row->titulo.'</div></a>
+                            <a href="'.base_url().'user_public/desafio/'.$row->id.'" class="h5"><div class="text-primary">'.$row->titulo.'</div></a>
                             <div class="meta mt-1 mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
                         </div> 
                     </div>
@@ -86,5 +86,108 @@ class Desafios extends CI_Controller {
         curl_close($client);
       
         echo $response;
+    }
+
+    public function ver_desafio()
+    {
+        if($this->input->post('id_desafio'))
+        {
+            $data = array(
+                'id_desafio' => $this->input->post('id_desafio')
+            );
+
+            $api_url = "http://localhost/recicle-api/desafios/verdesafio";
+
+            $client = curl_init($api_url);
+            curl_setopt($client, CURLOPT_POST, true);
+            curl_setopt($client, CURLOPT_POSTFIELDS, $data);
+            curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+            $response = curl_exec($client);
+            curl_close($client);
+            $result = json_decode($response);
+
+            $output = '';
+
+            if(count($result) > 0)
+            {
+                foreach($result as $row)
+                {
+                    $output .= '
+                    <div class="row justify-content-center my-5">
+                        <div class="col-md-7 text-center border-primary">
+                            <h2 class="font-weight-light text-primary">'.$row->titulo.'</h2>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5 justify-content-around">
+                        <div class="col-md-5 mb-5">
+                            <img src="'.base_url().'assets/images/blog.jpg" alt="Image" class="img-fluid">
+                        </div>
+
+                        <div class="col-md-5 align-self-center">
+                            <h5 class="text-primary text-uppercase text-center font-weight-bold mb-5">Informações do desafio</h5>
+
+                            <div class="mb-3">
+                            <span class="icon-user"></span>&ensp;<div class="font-weight-bold d-inline-flex">Criador do desafio:</div>&ensp;'.$row->criador_desafio.'
+                            </div>
+
+                            <div class="mb-3">
+                            <span class="icon-trophy"></span>&ensp;<div class="font-weight-bold d-inline-flex">Bonificação:</div>&ensp;'.$row->tipo_bonificacao.'
+                            </div>
+
+                            <div class="mb-3">
+                            <span class="icon-trash"></span>&ensp;<div class="font-weight-bold d-inline-flex">Tipo do resíduo solido urbano:</div>&ensp;'.$row->tipo_rsu.'
+                            </div>
+
+                            <div class="mb-3">
+                            <span class="icon-date_range"></span>&ensp;<div class="font-weight-bold d-inline-flex">Data limite:</div>&ensp;'.$row->dataLimite.'
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-10 text-justify">'.$row->descricao.'</div>
+                    </div>
+                    ';
+
+                    
+                    if ($this->input->post('user_id'))
+                    {
+                        $output .=
+                        '
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>
+                            </div>
+                        </div>
+                        ';
+                    }
+                    else
+                    {
+                        $output .=
+                        '
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <p class="mb-0"><a href="<?php echo base_url();?>user_public/login" class="btn btn-primary py-3 px-5 text-white">Faça login para aceitar o desafio!</a></p>
+                            </div>
+                        </div>
+                        ';
+                    }
+                }
+            }
+            else
+            {
+                $output .= '
+                <div class="col-12" role="alert">
+                    <h4 class="text-center">Desafio não encontrado :/</h4>
+                </div>
+                ';
+            }
+            echo $output;
+        }
+        else 
+        {
+            redirect('user_public/desafios');
+        }
     }
 }
