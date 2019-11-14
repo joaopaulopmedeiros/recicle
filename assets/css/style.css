@@ -1281,7 +1281,7 @@ h1, h2, h3, h4, h5,
       border: 2px solid #fff; }
     .free-quote .form-control::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
-      color: #fff);
+      color: #fff;
       font-size: 13px;
       font-style: italic; }
     .free-quote .form-control::-moz-placeholder {
@@ -1296,7 +1296,7 @@ h1, h2, h3, h4, h5,
       font-style: italic; }
     .free-quote .form-control:-moz-placeholder {
       /* Firefox 18- */
-      color: #fff);
+      color: #fff;
       font-size: 13px;
       font-style: italic; }
 
@@ -1423,4 +1423,22 @@ h1, h2, h3, h4, h5,
   height:100%;
   width:100%;
   position:absolute;
+}
+
+/*Ícones*/
+.icon-desafio {
+  border: 2px solid #02A575;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.icon-desafio span {
+  position: absolute;
+  top: 25%;
+  left: 33%;
+  color: #02A575;
+  font-size: 18px;
 }

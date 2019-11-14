@@ -54,7 +54,7 @@ class Desafios extends CI_Controller {
                     $output .= '
                     <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="h-entry">
-                            <img src="'.base_url().'assets/images/blog.jpg" alt="Image" class="img-fluid">
+                            <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
                             <a href="'.$url.$row->id.'" class="h5"><div class="text-primary">'.$row->titulo.'</div></a>
                             <div class="meta mt-1 mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
                         </div> 
@@ -134,28 +134,36 @@ class Desafios extends CI_Controller {
                         </div>
                     </div>
 
-                    <div class="row mb-5 justify-content-around">
+                    <div class="row mb-5 justify-content-around align-items-center">
                         <div class="col-md-5 mb-5">
-                            <img src="'.base_url().'assets/images/blog.jpg" alt="Image" class="img-fluid">
+                            <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
                         </div>
 
-                        <div class="col-md-5 align-self-center">
+                        <div class="col-md-5">
                             <h5 class="text-primary text-uppercase text-center font-weight-bold mb-5">Informações do desafio</h5>
 
+                            <div class="mb-3 d-inline-flex">
+                                <div class="icon-desafio">
+                                    <span class="icon-user"></span>
+                                </div>
+                                <div style="line-height:40px;">&emsp;'.$row->criador_desafio.'</div>
+                            </div>
+
+                            <div class="mb-3 d-inline-flex">
+                                <div class="icon-desafio">
+                                    <span class="icon-trophy"></span>
+                                </div>
+                                <div style="line-height:40px;">&emsp;Tipo da bonificação: '.$row->tipo_bonificacao.'</div>
+                            </div>
+
+                            
+
                             <div class="mb-3">
-                            <span class="icon-user"></span>&ensp;<div class="font-weight-bold d-inline-flex">Criador do desafio:</div>&ensp;'.$row->criador_desafio.'
+                                <span class="icon-trash"></span>&ensp;<div class="font-weight-bold d-inline-flex">Tipo do resíduo solido urbano:</div>&ensp;'.$row->tipo_rsu.'
                             </div>
 
                             <div class="mb-3">
-                            <span class="icon-trophy"></span>&ensp;<div class="font-weight-bold d-inline-flex">Bonificação:</div>&ensp;'.$row->tipo_bonificacao.'
-                            </div>
-
-                            <div class="mb-3">
-                            <span class="icon-trash"></span>&ensp;<div class="font-weight-bold d-inline-flex">Tipo do resíduo solido urbano:</div>&ensp;'.$row->tipo_rsu.'
-                            </div>
-
-                            <div class="mb-3">
-                            <span class="icon-date_range"></span>&ensp;<div class="font-weight-bold d-inline-flex">Data limite:</div>&ensp;'.$row->dataLimite.'
+                                <span class="icon-date_range"></span>&ensp;<div class="font-weight-bold d-inline-flex">Data limite:</div>&ensp;'.$row->dataLimite.'
                             </div>
                         </div>
                     </div>
