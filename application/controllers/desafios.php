@@ -146,24 +146,28 @@ class Desafios extends CI_Controller {
                                 <div class="icon-desafio">
                                     <span class="icon-user"></span>
                                 </div>
-                                <div style="line-height:40px;">&emsp;'.$row->criador_desafio.'</div>
+                                <div style="line-height:40px;" class="ml-1">&emsp;Criador de desafios: '.$row->criador_desafio.'</div>
                             </div>
 
                             <div class="mb-3 d-inline-flex">
                                 <div class="icon-desafio">
                                     <span class="icon-trophy"></span>
                                 </div>
-                                <div style="line-height:40px;">&emsp;Tipo da bonificação: '.$row->tipo_bonificacao.'</div>
+                                <div style="line-height:40px;" class="ml-1">&emsp;Tipo da bonificação: '.$row->tipo_bonificacao.'</div>
                             </div>
 
-                            
-
-                            <div class="mb-3">
-                                <span class="icon-trash"></span>&ensp;<div class="font-weight-bold d-inline-flex">Tipo do resíduo solido urbano:</div>&ensp;'.$row->tipo_rsu.'
+                            <div class="mb-3 d-inline-flex">
+                                <div class="icon-desafio">
+                                    <span class="icon-trash"></span>
+                                </div>
+                                <div style="line-height:40px;" class="ml-1">&emsp;Tipo do resíduo sólido urbano: '.$row->tipo_rsu.'</div>
                             </div>
 
-                            <div class="mb-3">
-                                <span class="icon-date_range"></span>&ensp;<div class="font-weight-bold d-inline-flex">Data limite:</div>&ensp;'.$row->dataLimite.'
+                            <div class="mb-3 d-inline-flex">
+                                <div class="icon-desafio">
+                                    <span class="icon-calendar"></span>
+                                </div>
+                                <div style="line-height:40px;" class="ml-1">&emsp;Data limite: '.$row->dataLimite.'</div>
                             </div>
                         </div>
                     </div>
