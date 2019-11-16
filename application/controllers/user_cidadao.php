@@ -53,11 +53,34 @@ class User_cidadao extends CI_Controller
 	{
 		$this->verificarSessao();
 
+		$data['title'] = 'Desafios Disponíveis';
+		$data['footer'] = 'Logon';
+
+		$this->load->view('user_cidadao/header', $data);
+		$this->load->view('user_cidadao/desafios');
+		$this->load->view('footer', $data);
+	}
+	
+	public function meusdesafios()
+	{
+		$this->verificarSessao();
+
 		$data['title'] = 'Meus Desafios';
 		$data['footer'] = 'Logon';
 
 		$this->load->view('user_cidadao/header', $data);
 		$this->load->view('user_cidadao/desafios');
+		$this->load->view('footer', $data);
+
+	}
+
+	public function desafio($id)
+	{
+		$data['title'] = 'Desafio';
+		$data['footer'] = 'Logon';
+		
+		$this->load->view('user_cidadao/header', $data);
+		$this->load->view('ver_desafio');
 		$this->load->view('footer', $data);
 	}
 
@@ -84,15 +107,4 @@ class User_cidadao extends CI_Controller
 		$this->load->view('user_cidadao/minhaconta');
 		$this->load->view('footer', $data);
 	}  
-	  
-	public function desafio($id)
-	{
-		$data['title'] = 'Desafio';
-		$data['footer'] = 'Logon';
-		
-		$this->load->view('user_cidadao/header', $data);
-		$this->load->view('ver_desafio');
-		$this->load->view('footer', $data);
-	}
-
 }
