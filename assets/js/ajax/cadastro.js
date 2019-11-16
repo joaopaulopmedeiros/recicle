@@ -29,7 +29,7 @@ $(document).ready(function(){
         {
           if(data.success)
           {
-            location.href = "http://localhost/recicle/user_cidadao/index";
+            $('#alerta').html("<div class='alert alert-success' role='alert'>" + "Cadastro realizado com sucesso!" + "</div>");
           }
   
           if(data.error)
