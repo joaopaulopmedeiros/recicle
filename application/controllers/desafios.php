@@ -191,7 +191,7 @@ class Desafios extends CI_Controller {
                         '
                         <div class="row text-center">
                             <div class="col-md-12">
-                                <p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>
+                                <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>   
                             </div>
                         </div>
                         ';
@@ -223,5 +223,9 @@ class Desafios extends CI_Controller {
         {
             redirect('user_public/desafios');
         }
+    }
+
+    public function aceitar_desafio(){
+        
     }
 }
