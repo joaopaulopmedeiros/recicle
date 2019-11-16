@@ -129,51 +129,58 @@ class Desafios extends CI_Controller {
                 {
                     $output .= '
                     <div class="row justify-content-center my-5">
-                        <div class="col-md-7 text-center border-primary">
+                        <div class="col-md-7 col-10 mt-5 text-center border-primary">
                             <h2 class="font-weight-light text-primary">'.$row->titulo.'</h2>
                         </div>
                     </div>
 
                     <div class="row mb-5 justify-content-around align-items-center">
-                        <div class="col-md-5 mb-5">
+                        <div class="col-lg-6 col-10 mb-md-0 mb-5">
                             <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
                         </div>
 
-                        <div class="col-md-5">
-                            <h5 class="text-primary text-uppercase text-center font-weight-bold mb-5">Informações do desafio</h5>
+                        <div class="col-lg-5 col-10">
+                            <h5 class="text-primary text-center text-uppercase font-weight-bold mb-3">Informações do desafio</h5>
 
-                            <div class="mb-3 d-inline-flex">
+                            <div class="mb-2 row">
                                 <div class="icon-desafio">
                                     <span class="icon-user"></span>
                                 </div>
-                                <div style="line-height:40px;" class="ml-1">&emsp;Criador de desafios: '.$row->criador_desafio.'</div>
+                                <div style="line-height:40px;" class="ml-3">Criador do desafio: '.$row->criador_desafio.'</div>
                             </div>
 
-                            <div class="mb-3 d-inline-flex">
+                            <div class="mb-2 row">
                                 <div class="icon-desafio">
                                     <span class="icon-trophy"></span>
                                 </div>
-                                <div style="line-height:40px;" class="ml-1">&emsp;Tipo da bonificação: '.$row->tipo_bonificacao.'</div>
+                                <div style="line-height:40px;" class="ml-3">Tipo da bonificação: '.$row->tipo_bonificacao.'</div>
                             </div>
 
-                            <div class="mb-3 d-inline-flex">
+                            <div class="mb-2 row">
                                 <div class="icon-desafio">
                                     <span class="icon-trash"></span>
                                 </div>
-                                <div style="line-height:40px;" class="ml-1">&emsp;Tipo do resíduo sólido urbano: '.$row->tipo_rsu.'</div>
+                                <div style="line-height:40px;" class="ml-3">Tipo do resíduo sólido urbano: '.$row->tipo_rsu.'</div>
                             </div>
 
-                            <div class="mb-3 d-inline-flex">
+                            <div class="mb-2 row">
+                                <div class="icon-desafio">
+                                    <span class="icon-database"></span>
+                                </div>
+                                <div style="line-height:40px;" class="ml-3">Quantidade (kg): '.$row->qtdRSU.'</div>
+                            </div>
+
+                            <div class="mb-2 row">
                                 <div class="icon-desafio">
                                     <span class="icon-calendar"></span>
                                 </div>
-                                <div style="line-height:40px;" class="ml-1">&emsp;Data limite: '.$row->dataLimite.'</div>
+                                <div style="line-height:40px;" class="ml-3">Data limite: '.$row->dataLimite.'</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row justify-content-center mb-5">
-                        <div class="col-md-10 text-justify">'.$row->descricao.'</div>
+                        <div class="col-md-10 col-10 text-justify">'.$row->descricao.'</div>
                     </div>
                     ';
 
@@ -195,7 +202,7 @@ class Desafios extends CI_Controller {
                         '
                         <div class="row text-center">
                             <div class="col-md-12">
-                                <p class="mb-0"><a href="<?php echo base_url();?>user_public/login" class="btn btn-primary py-3 px-5 text-white">Faça login para aceitar o desafio!</a></p>
+                                <p class="mb-0"><a href="<?php echo base_url();?>user_public/login" class="btn btn-primary p-3 text-white">Faça login para aceitar o desafio!</a></p>
                             </div>
                         </div>
                         ';
