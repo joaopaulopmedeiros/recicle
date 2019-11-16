@@ -15,7 +15,6 @@ $(document).ready(function(){
             data:{id_desafio:desafio, user: tipo_user},
             success:function(data)
             {
-                console.log(tipo_user);
                 $('#desafio').html(data);
             }
         });
