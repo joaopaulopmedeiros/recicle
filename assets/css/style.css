@@ -1428,17 +1428,17 @@ h1, h2, h3, h4, h5,
 /*Ícones*/
 .icon-desafio {
   border: 2px solid #02A575;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  padding: 20px;
+  line-height: 20px;
   border-radius: 50%;
   position: relative;
 }
 
 .icon-desafio span {
   position: absolute;
-  top: 25%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #02A575;
   font-size: 18px;
 }
