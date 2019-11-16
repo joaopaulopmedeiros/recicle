@@ -23,6 +23,7 @@ class User_criadordesafio extends CI_Controller {
 		$this->load->view('user_criadordesafio/index');
 		$this->load->view('footer', $data);
 	}
+
 	public function about()
 	{
 		$this->verificarSessao();
@@ -34,6 +35,7 @@ class User_criadordesafio extends CI_Controller {
 		$this->load->view('about');
 		$this->load->view('footer', $data);
 	}	
+	
 	public function contact()
 	{
 		$this->verificarSessao();
@@ -45,17 +47,42 @@ class User_criadordesafio extends CI_Controller {
 		$this->load->view('contact');
 		$this->load->view('footer', $data);
 	}
+	
 	public function desafios()
 	{
 		$this->verificarSessao();
 
-		$data['title'] = 'Meus Desafios';
+		$data['title'] = 'Desafios Disponíveis';
 		$data['footer'] = 'Logon';
 		
 		$this->load->view('user_criadordesafio/header', $data);
 		$this->load->view('user_criadordesafio/desafios');
 		$this->load->view('footer', $data);
 	}
+	
+	public function meusdesafios()
+	{
+		$this->verificarSessao();
+
+		$data['title'] = 'Meus Desafios';
+		$data['footer'] = 'Logon';
+
+		$this->load->view('user_criadordesafio/header', $data);
+		$this->load->view('user_criadordesafio/desafios');
+		$this->load->view('footer', $data);
+
+	}
+
+	public function desafio($id)
+	{
+		$data['title'] = 'Desafio';
+		$data['footer'] = 'Logon';
+		
+		$this->load->view('user_criadordesafio/header', $data);
+		$this->load->view('ver_desafio');
+		$this->load->view('footer', $data);
+	}
+
 	public function ecopontos()
 	{
 		$this->verificarSessao();
@@ -67,6 +94,7 @@ class User_criadordesafio extends CI_Controller {
 		$this->load->view('ecopontos');
 		$this->load->view('footer', $data);
 	}
+	
 	public function minhaConta()
 	{
 		$this->verificarSessao();
@@ -78,6 +106,7 @@ class User_criadordesafio extends CI_Controller {
 		$this->load->view('user_criadordesafio/minhaconta');
 		$this->load->view('footer', $data);
 	}
+	
 	public function adicionarDesafio()
 	{
 		$this->verificarSessao();
@@ -87,15 +116,6 @@ class User_criadordesafio extends CI_Controller {
 		
 		$this->load->view('user_criadordesafio/header', $data);
 		$this->load->view('user_criadordesafio/adicionardesafio');
-		$this->load->view('footer', $data);
-	}
-	public function desafio($id)
-	{
-		$data['title'] = 'Desafio';
-		$data['footer'] = 'Logon';
-		
-		$this->load->view('user_criadordesafio/header', $data);
-		$this->load->view('ver_desafio');
 		$this->load->view('footer', $data);
 	}
 }
