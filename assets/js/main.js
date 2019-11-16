@@ -301,10 +301,35 @@ function clearAlert()
     $('#alert-rsu').empty();
 }
 
-function idCidadao() {
+function idCidadao() 
+{
 	document.getElementById('lblDoc').innerHTML = 'CPF';
 }
   
-function idCriadorDesafio() {
+function idCriadorDesafio() 
+{
 	document.getElementById('lblDoc').innerHTML = 'CPF ou CNPJ';
+}
+
+function editarForm()
+{
+	$("#nome").prop('readonly', false);
+	$("#email").prop('readonly', false);
+	$("#doc").prop('readonly', false);
+	$("#cep").prop('readonly', false);
+	$("#senha").prop('readonly', false);
+	$("#senha").val('');
+	$('#editar').val('Salvar alterações');
+	$('#cancelar').prop('hidden', false);
+}
+
+function fecharForm()
+{
+	$("#nome").prop('readonly', true);
+	$("#email").prop('readonly', true);
+	$("#doc").prop('readonly', true);
+	$("#cep").prop('readonly', true);
+	$("#senha").prop('readonly', true);
+	$('#editar').val('Editar informações');
+	$('#cancelar').prop('hidden', true);
 }
