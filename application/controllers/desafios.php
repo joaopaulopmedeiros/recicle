@@ -202,7 +202,7 @@ class Desafios extends CI_Controller {
                         '
                         <div class="row text-center">
                             <div class="col-md-12">
-                                <p class="mb-0"><a href="<?php echo base_url();?>user_public/login" class="btn btn-primary p-3 text-white">Faça login para aceitar o desafio!</a></p>
+                                <p class="mb-0"><a href="../login" class="btn btn-primary p-3 text-white">Faça login para aceitar o desafio!</a></p>
                             </div>
                         </div>
                         ';
