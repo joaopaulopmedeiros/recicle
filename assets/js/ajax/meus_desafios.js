@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function exibirDesafios(){
-        var user = $('#doc').val();
+        var user = id_user;
         
         $.ajax({
             url:"http://localhost/recicle/desafios/index",

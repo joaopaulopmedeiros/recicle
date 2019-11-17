@@ -2,7 +2,7 @@ function exibirInformacoes()
 {
     $(document).ready(function(){
         var data_user = {
-            docCadastrado : $('#user').val()
+            docCadastrado : id_user
         };
 
         $.ajax({
@@ -30,6 +30,7 @@ $(document).ready(function(){
         var dataUser = {
             nome : $('#nome').val(),
             login : $('#email').val(),
+            email_user : email_user,
             docCadastrado : $('#doc').val(),
             cep : $('#cep').val(),
             senha : $('#senha').val()
