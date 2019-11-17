@@ -34,11 +34,14 @@
         </div>
 
         <div class="row" id="desafios">
-          <input id="doc" value="<?php echo $this->session->criador['doc']; ?>" hidden>
+          
         </div>
       </div>
     </div>
 
+    <script>
+      var id_user = "<?php echo $this->session->criador['doc']?>";
+    </script>
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/meus_desafios.js"></script>
 
 
