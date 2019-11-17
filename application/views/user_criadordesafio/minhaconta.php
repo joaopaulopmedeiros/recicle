@@ -8,7 +8,7 @@
 
         <div class="row justify-content-around mb-5">
           <div class="col-10">
-            <div id="editar_conta">
+            <form id="editar_conta">
               <div id="alerta">
 
               </div>
@@ -44,12 +44,15 @@
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" id="editar" onclick="editarForm()" value="Editar informações" class="btn btn-primary py-2 px-4 text-white">
-                  <input type="submit" id="cancelar" onclick="fecharForm()" value="Cancelar" class="btn btn-secondary py-2 px-4" hidden>
+                  <input type="button" id="salvar" onclick="editarForm()" value="Editar informações" class="btn btn-primary py-2 px-4 text-white">
+                  <input type="text" id="user" value="<?php echo $this->session->criador['doc']?>" hidden>
+                  <input type="button" id="cancelar" onclick="fecharForm()" value="Cancelar" class="btn btn-secondary py-2 px-4" hidden>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/editar_conta_criador.js"></script>
