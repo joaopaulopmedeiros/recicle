@@ -319,17 +319,25 @@ function editarForm()
 	$("#cep").prop('readonly', false);
 	$("#senha").prop('readonly', false);
 	$("#senha").val('');
-	$('#editar').val('Salvar alterações');
+	$('#salvar').val('Salvar alterações');
+	$('#salvar').prop('type', 'submit');
 	$('#cancelar').prop('hidden', false);
 }
 
 function fecharForm()
 {
-	$("#nome").prop('readonly', true);
-	$("#email").prop('readonly', true);
-	$("#doc").prop('readonly', true);
-	$("#cep").prop('readonly', true);
-	$("#senha").prop('readonly', true);
-	$('#editar').val('Editar informações');
-	$('#cancelar').prop('hidden', true);
+	$(document).ready(function(){
+		$("#nome").prop('readonly', true);
+		$("#email").prop('readonly', true);
+		$("#doc").prop('readonly', true);
+		$("#cep").prop('readonly', true);
+		$("#senha").prop('readonly', true);
+		$('#salvar').val('Editar informações');
+		$('#salvar').prop('type', 'button');
+		$('#cancelar').prop('hidden', true);
+
+		$.getScript('http://localhost/recicle/assets/js/ajax/editar_conta_criador.js', function() {          
+			exibirInformacoes();
+		});
+	});
 }
