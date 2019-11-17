@@ -69,7 +69,7 @@ class User_cidadao extends CI_Controller
 		$data['footer'] = 'Logon';
 
 		$this->load->view('user_cidadao/header', $data);
-		$this->load->view('user_cidadao/desafios');
+		$this->load->view('user_cidadao/desafiosaceitos');
 		$this->load->view('footer', $data);
 
 	}
