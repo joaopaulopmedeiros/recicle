@@ -12,7 +12,6 @@ class Criador_Desafio extends CI_Controller {
         );
 
         $client = curl_init($api_url);
-        
         curl_setopt($client, CURLOPT_POST, true);
         curl_setopt($client, CURLOPT_POSTFIELDS, $data);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
@@ -29,6 +28,7 @@ class Criador_Desafio extends CI_Controller {
         $form_data = array(
             'nome' => $this->input->post('nome'),
             'login' => $this->input->post('login'),
+            'email_user' => $this->input->post('email_user'),
             'docCadastrado' => $this->input->post('docCadastrado'),
             'cep' => $this->input->post('cep'),
             'senha' => $this->input->post('senha')
