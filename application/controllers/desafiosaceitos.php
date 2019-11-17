@@ -22,8 +22,20 @@ class DesafiosAceitos extends CI_Controller
 
             $output = '';
 
-            if(count($result) > 0){
-                echo "Deu bom!";
+            if(count($result) > 0)
+            {
+                foreach($result as $row)
+                {
+                    $output .= '
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                        <div class="h-entry">
+                            <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
+                            <a href="" class="h5"><div class="text-primary">'.$row->titulo.'</div></a>
+                            <div class="meta mt-1 mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
+                        </div> 
+                    </div>
+                    ';
+                }
             }else{
                 echo "Você ainda não aceitou os desafios ofertados!";
             }
@@ -32,6 +44,7 @@ class DesafiosAceitos extends CI_Controller
             redirect("user_public/index");
         }
 
+        echo $output;
 
     } 
 
