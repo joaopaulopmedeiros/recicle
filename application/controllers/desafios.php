@@ -2,6 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Desafios extends CI_Controller {
+    public $idCriadorDesafio;
+    public $idCidadao;
+    public $idTipoRSU;
+    public $idTipoBonificacao;
+    public $idDesafio;
 
 	public function index() 
 	{
@@ -126,7 +131,7 @@ class Desafios extends CI_Controller {
             if(count($result) > 0)
             {
                 foreach($result as $row)
-                {
+                {   
                     $output .= '
                     <div class="row justify-content-center my-5">
                         <div class="col-md-7 col-10 mt-5 text-center border-primary">
@@ -182,8 +187,14 @@ class Desafios extends CI_Controller {
                     <div class="row justify-content-center mb-5">
                         <div class="col-md-10 col-10 text-justify">'.$row->descricao.'</div>
                     </div>
+                    
+                    <script type="text/javascript" language="javascript">
+                        var idDesafio = '.$row->id.';
+                        var idCriadorDesafio = '.$row->idCriadorDesafio.';
+                        var idTipoRSU = '.$row->idTipoRSU.';
+                        var idTipoBonificacao = '.$row->idTipoBonificacao.';
+                    </script>
                     ';
-
                     
                     if ($this->input->post('user') == 'user_cidadao')
                     {
@@ -225,7 +236,25 @@ class Desafios extends CI_Controller {
         }
     }
 
-    public function aceitar_desafio(){
-        
+    public function aceitar_desafio()
+    {
+        $api_url = "http://localhost/recicle-api/DesafiosAceitos/inserir";
+        $data = array(
+            "idCriadorDesafio" => $this->input->post("idCriadorDesafio"),
+            "idCidadao" => $this->input->post("id_user"),
+            "idTipoRSU" => $this->input->post("idTipoRSU"),
+            "idTipoBonificacao" => $this->input->post("idTipoBonificacao"),
+            "idDesafio" => $this->input->post("idDesafio"),
+            "cumprido" => 0
+        );
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_POST, true);
+        curl_setopt($client, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+      
+        echo $response;
     }
+
 }
