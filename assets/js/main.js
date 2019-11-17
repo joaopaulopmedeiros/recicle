@@ -315,12 +315,10 @@ function editarForm()
 {
 	$("#nome").prop('readonly', false);
 	$("#email").prop('readonly', false);
-	$("#doc").prop('readonly', false);
 	$("#cep").prop('readonly', false);
 	$("#senha").prop('readonly', false);
-	$("#senha").val('');
-	$('#salvar').val('Salvar alterações');
-	$('#salvar').prop('type', 'submit');
+	$("#editar").prop('hidden', true);
+	$('#salvar').prop('hidden', false);
 	$('#cancelar').prop('hidden', false);
 }
 
@@ -329,11 +327,10 @@ function fecharForm()
 	$(document).ready(function(){
 		$("#nome").prop('readonly', true);
 		$("#email").prop('readonly', true);
-		$("#doc").prop('readonly', true);
 		$("#cep").prop('readonly', true);
 		$("#senha").prop('readonly', true);
-		$('#salvar').val('Editar informações');
-		$('#salvar').prop('type', 'button');
+		$("#editar").prop('hidden', false);
+		$('#salvar').prop('hidden', true);
 		$('#cancelar').prop('hidden', true);
 
 		$.getScript('http://localhost/recicle/assets/js/ajax/editar_conta_criador.js', function() {          
