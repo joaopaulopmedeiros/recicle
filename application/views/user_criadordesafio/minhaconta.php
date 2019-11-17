@@ -38,14 +38,14 @@
 
                 <div class="col-md-4 mb-3">
                   <label class="text-black" for="senha">Senha</label> 
-                  <input type="password" id="senha" name="senha" value="aa" class="form-control" aria-describedby="passwordHelpBlock" readonly>
+                  <input type="password" id="senha" name="senha" class="form-control" aria-describedby="passwordHelpBlock" readonly>
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="button" id="salvar" onclick="editarForm()" value="Editar informações" class="btn btn-primary py-2 px-4 text-white">
-                  <input type="text" id="user" value="<?php echo $this->session->criador['doc']?>" hidden>
+                  <input type="button" id="editar" onclick="editarForm()" value="Editar informações" class="btn btn-primary py-2 px-4 text-white">
+                  <input type="submit" id="salvar" value="Salvar alterações" class="btn btn-primary py-2 px-4 text-white" hidden>
                   <input type="button" id="cancelar" onclick="fecharForm()" value="Cancelar" class="btn btn-secondary py-2 px-4" hidden>
                 </div>
               </div>
@@ -54,5 +54,10 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var id_user = "<?php echo $this->session->criador['doc']?>";
+      var email_user = "<?php echo $this->session->criador['login']?>"
+    </script>
 
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/editar_conta_criador.js"></script>
