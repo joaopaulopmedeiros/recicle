@@ -57,7 +57,7 @@
 
     <script>
       var id_user = "<?php echo $this->session->criador['doc']?>";
-      var email_user = "<?php echo $this->session->criador['login']?>"
+      var email_user = "<?php echo $this->session->criador['login']?>";
     </script>
 
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/editar_conta_criador.js"></script>
