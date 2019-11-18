@@ -69,12 +69,15 @@
               </div>
             </div>
 
-            <div class="col-md-3 mb-5 mb-md-0 justify-content-center">
+            <div class="col-md-3 mb-5 mb-md-0">
               <label for="preview-img">Imagem do desafio</label>
+
               <img id="img" src="<?= base_url()?>assets/images/desafio.png" class="img-fluid preview-img mb-3" alt="example placeholder">
-              <div onclick="previewImage()" class="row justify-content-center file-button">
-                <input type="button" class="btn btn-primary py-2 px-3 text-white" value="Alterar imagem">
-                <input type="file" id="img-desafio" name="img-desafio" class="file-chooser" accept="image/*" hidden>
+
+              <div class="row justify-content-center">
+                <label for="file-button" class="btn btn-primary py-2 px-3 text-white" onclick="previewImage()">Alterar imagem</label>
+                <input type="file" id="file-button" class="file-chooser d-none" accept="image/*">
+                <a href="#" onclick="previewImageDefault()" class="small mt-1">Definir imagem padrão</a>
               </div>
             </div>
           </div>
