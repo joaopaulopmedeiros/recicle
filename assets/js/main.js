@@ -332,9 +332,8 @@ function fecharForm()
 		$("#editar").prop('hidden', false);
 		$('#salvar').prop('hidden', true);
 		$('#cancelar').prop('hidden', true);
-
-		$.getScript('http://localhost/recicle/assets/js/ajax/editar_conta_criador.js', function() {          
-			exibirInformacoes();
-		});
+		if ($('.alert').hasClass("alert-danger")) {
+			$('#alerta').empty();
+		}
 	});
 }
