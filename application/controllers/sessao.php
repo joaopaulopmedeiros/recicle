@@ -32,6 +32,28 @@ class Sessao extends CI_Controller {
         }
     }
 
+    public function editSession()
+    {
+        $dataUser = array(
+            'nome' => $this->input->post('nome'),
+            'login' => $this->input->post('login'),
+            'doc' => $this->input->post('docCadastrado'),
+            'cep' => $this->input->post('cep'),
+            'senha' => $this->input->post('senha')
+	    );
+
+        if ($this->input->post('tipo_user') == 'criador')
+        {
+            $this->session->set_userdata('criador', $dataUser);
+            $this->session->set_flashdata('success', true);
+        }
+        else if ($this->input->post('tipo_user') == 'cidadao')
+        {
+            $this->session->set_userdata('cidadao', $dataUser);
+            $this->session->set_flashdata('success', true);
+        }
+    }
+
     public function logout()
     {
         $this->session->sess_destroy();
