@@ -77,7 +77,7 @@
               <div class="row justify-content-center">
                 <label for="file-button" class="btn btn-primary py-2 px-3 text-white" onclick="previewImage()">Alterar imagem</label>
                 <input type="file" id="file-button" class="file-chooser d-none" accept="image/*">
-                <a href="#" onclick="previewImageDefault()" class="small mt-1">Definir imagem padrão</a>
+                <a href="#" id="img-default" class="small mt-1">Definir imagem padrão</a>
               </div>
             </div>
           </div>
