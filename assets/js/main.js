@@ -278,10 +278,12 @@ function previewImage()
     };
 }
 
-function previewImageDefault()
-{
-	$('#img').prop('src', "http://localhost/recicle/assets/images/desafio.png");	
-}
+$(document).ready(function () {
+    $("#img-default").click(function (event) {
+		event.preventDefault();
+        $('#img').prop('src', "http://localhost/recicle/assets/images/desafio.png");
+    });
+});
 
 function desabilitarDataLimite()
 {
