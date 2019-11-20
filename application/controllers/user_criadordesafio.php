@@ -79,7 +79,7 @@ class User_criadordesafio extends CI_Controller {
 		$data['footer'] = 'Logon';
 		
 		$this->load->view('user_criadordesafio/header', $data);
-		$this->load->view('ver_desafio');
+		$this->load->view('user_criadordesafio/ver_desafio');
 		$this->load->view('footer', $data);
 	}
 
