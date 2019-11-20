@@ -257,4 +257,92 @@ class Desafios extends CI_Controller {
         echo $response;
     }
 
+    public function ver_concorrentes_desafio()
+    {
+        $api_url = "http://localhost/recicle-api/DesafiosAceitos/ver_concorrentes_desafio";   
+        
+        $data = array(
+            "idDesafio" => $this->input->post("idDesafio")
+        );
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_POST, true);
+        curl_setopt($client, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+        $result = json_decode($response);
+
+        $output = '';
+        
+        if(count($result) > 0)
+        {
+            $output = '
+                <br>
+                <table class="table">
+                    <thead>
+                        <th>id</th>
+                        <th>Desafio</th>
+                        <th>Cidadão</th>
+                        <th>Tipo de RSU</th>
+                        <th>Tipo de Bonificação</th>
+                        <th>Status</th>
+                    </thead>';
+            foreach($result as $row)
+            {
+                if($row->cumprido == 0){
+                    $output .= '
+                    <tbody>
+                        <td>'.$row->idDesafioAceito.'</td>
+                        <td>'.$row->desafio.'</td>
+                        <td>'.$row->cidadao.'</td>
+                        <td>'.$row->tipoRSU.'</td>
+                        <td>'.$row->bonificacao.'</td>
+                        <td><button onclick="cumprirDesafio('.$row->idDesafioAceito.')" type="button" class="btn btn-success">Confirmar</button></td>       
+                    </tbody>';
+                }
+                if($row->cumprido == 1){
+                    $output .= '
+                    <tbody>
+                        <td>'.$row->idDesafio.'</td>
+                        <td>'.$row->desafio.'</td>
+                        <td>'.$row->cidadao.'</td>
+                        <td>'.$row->tipoRSU.'</td>
+                        <td>'.$row->bonificacao.'</td>
+                        <td>Cumprido</td>       
+                    </tbody>';
+                }
+                
+            }
+            $output .= '</table>';
+        }else{
+            echo "Ainda não há concorrentes para este desafio!";
+        }
+
+        echo $output;
+
+    }
+
+    public function cumprir_desafio()
+    {
+        $api_url = "http://localhost/recicle-api/DesafiosAceitos/cumprirDesafio";
+
+        $idDesafioAceito = $this->input->post("idDesafioAceito");
+        $status = $this->input->post("status");
+        
+        $data = array(
+            "idDesafioAceito" => $idDesafioAceito,
+            "status" => $status
+        );
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_POST, true);
+        curl_setopt($client, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+      
+        echo $response;
+
+    }
 }
