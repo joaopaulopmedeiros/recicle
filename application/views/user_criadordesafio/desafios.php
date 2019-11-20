@@ -40,7 +40,7 @@
     </div>
 
     <script>
-      var id_user = "<?php echo $this->session->criador['doc']?>";
+      var user_id = "<?php echo $this->session->criador['doc']?>";
     </script>
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/meus_desafios.js"></script>
 
