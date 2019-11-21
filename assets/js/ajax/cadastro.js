@@ -29,9 +29,27 @@ $(document).ready(function(){
         {
           if(data.success)
           {
-            $('#alerta').html("<div class='alert alert-success' role='alert'>" + "Cadastro realizado com sucesso!" + "</div>");
-          }
+            
+            var token = data['Token'];
   
+            function redirectPost()
+            {
+              var form = document.createElement('form');
+              document.body.appendChild(form);
+              form.method = 'post';
+              form.action = 'http://localhost/recicle/sessao/decode';
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = 'token';
+              input.value = token;
+              form.appendChild(input);
+              form.submit();
+              document.body.removeChild(form);
+            }
+            
+            redirectPost();
+          }
+
           if(data.error)
           {
             $('#alerta').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
