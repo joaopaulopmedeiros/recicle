@@ -1,0 +1,30 @@
+$(document).ready(function(){
+    function exibirDadosCamposFiltro()
+    {
+      $.ajax({
+        url:"http://localhost/recicle/rsu/index",
+        method:"POST",
+        success:function(data)
+        {
+          $('#lixo').html(data);
+        }
+      });
+      $.ajax({
+        url:"http://localhost/recicle/bonificacao/index",
+        method:"POST",
+        success:function(data)
+        {
+          $('#bonificacao').html(data);
+        }
+      });
+      $.ajax({
+        url:"http://localhost/recicle/criador_desafio/fetch_all",
+        method:"POST",
+        success:function(data)
+        {
+          $('#ecoponto').html(data);
+        }
+      });
+    }
+    exibirDadosCamposFiltro();
+  });
