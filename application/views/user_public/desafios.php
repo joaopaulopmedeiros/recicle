@@ -25,31 +25,21 @@
             <div class="col-md-3 mb-3 mb-md-0">
               <label for="ecoponto">Ecoponto/Empresa</label>
               <select id="ecoponto" class="form-control">
-                <option selected>Escolher...</option>
-                <option>...</option>
+              <!--dados-->
               </select>
             </div>
       
             <div class="col-md-3 mb-3 mb-md-0">
               <label for="lixo">Tipo de lixo</label>
               <select id="lixo" class="form-control">
-                <option selected>Escolher...</option>
-                <option>Papel e papelão</option>
-                <option>Óleo de cozinha</option>
-                <option>Lixo eletrônico</option>
-                <option>Pilhas e baterias</option>
-                <option>Metal</option>
-                <option>Vidro</option>
+              <!--dados-->
               </select>
             </div>
       
             <div class="col-md-3 mb-3 mb-md-0">
               <label for="bonificacao">Tipo da bonificação</label>
               <select id="bonificacao" class="form-control">
-                <option selected>Escolher...</option>
-                <option>Em dinheiro</option>
-                <option>Spotify</option>
-                <option>Netflix</option>
+                <!--dados-->
               </select>
             </div>
             
@@ -102,3 +92,5 @@
     </div>
 
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/desafios.js"></script>
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/filtro.js"></script>
+   
