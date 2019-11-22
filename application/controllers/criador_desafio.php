@@ -20,6 +20,29 @@ class Criador_Desafio extends CI_Controller {
 
         echo $response;
     }
+    
+    public function fetch_all(){
+        $api_url = "http://localhost/recicle-api/criadordesafio/index";
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+        $result = json_decode($response);
+
+        $output = '<option selected>Escolher...</option>';
+
+        if(count($result) > 0)
+        {
+            foreach($result as $row)
+            {
+                $output .= '
+                <option value="'.$row->id.'">'.$row->nome.'</option>
+                ';
+            }
+        }
+        echo $output;
+    }
 
     public function update()
     {
