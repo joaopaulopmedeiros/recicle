@@ -304,7 +304,7 @@ class Desafios extends CI_Controller {
                 if($row->cumprido == 1){
                     $output .= '
                     <tbody>
-                        <td>'.$row->idDesafio.'</td>
+                        <td>'.$row->idDesafioAceito.'</td>
                         <td>'.$row->desafio.'</td>
                         <td>'.$row->cidadao.'</td>
                         <td>'.$row->tipoRSU.'</td>
