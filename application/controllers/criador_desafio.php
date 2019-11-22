@@ -37,7 +37,7 @@ class Criador_Desafio extends CI_Controller {
             foreach($result as $row)
             {
                 $output .= '
-                <option value="'.$row->id.'">'.$row->nome.'</option>
+                <option value="'.$row->docCadastrado.'">'.$row->nome.'</option>
                 ';
             }
         }
