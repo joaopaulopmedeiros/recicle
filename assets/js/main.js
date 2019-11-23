@@ -265,13 +265,10 @@ jQuery(document).ready(function ($) {
 
 function previewImage()
 {
-    const $ = document.querySelector.bind(document);
+	const $ = document.querySelector.bind(document);
 
     const previewImg = $('.preview-img');
     const fileChooser = $('.file-chooser');
-    const fileButton = $('.file-button');
-
-    fileButton.onclick = () => fileChooser.click();
 
     fileChooser.onchange = e => {
         const fileToUpload = e.target.files.item(0);
@@ -280,6 +277,13 @@ function previewImage()
         reader.readAsDataURL(fileToUpload);
     };
 }
+
+$(document).ready(function () {
+    $("#img-default").click(function (event) {
+		event.preventDefault();
+        $('#img').prop('src', "http://localhost/recicle/assets/images/desafio.png");
+    });
+});
 
 function desabilitarDataLimite()
 {
