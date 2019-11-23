@@ -64,7 +64,6 @@ CREATE TABLE IF NOT EXISTS recicle.desafio(
     qtdRSU int NULL,
     descricaoBonificacao varchar(50) NULL,
     dataLimite DATE NULL,
-    img varchar(50) NULL,
     CONSTRAINT PK_desafio PRIMARY KEY(id) -- identificador de chave primaria
 )ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
