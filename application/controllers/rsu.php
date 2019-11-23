@@ -13,7 +13,7 @@ class RSU extends CI_Controller {
         curl_close($client);
         $result = json_decode($response);
 
-        $output = '<option selected>Escolher...</option>';
+        $output = '<option selected value="">Escolher...</option>';
 
         if(count($result) > 0)
         {
