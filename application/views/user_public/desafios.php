@@ -20,7 +20,7 @@
           </div>
         </div>
       
-        <form action="#">
+        <form>
           <div class="form-row justify-content-around">
             <div class="col-md-3 mb-3 mb-md-0">
               <label for="ecoponto">Ecoponto/Empresa</label>
