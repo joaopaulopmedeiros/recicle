@@ -7,78 +7,60 @@
         </div>
 
         <form id="add_desafio">
-          <div class="form-row justify-content-around">
+          <div class="form-row">
             <div id="alert">
 
             </div>
+          </div>
             
-            <div class="col-md-9 mb-3 mb-md-0">
-              <div class="row">
-                <div class="col-md-12 mb-4">
-                  <label for="titulo">Titulo <span class="text-danger">*</span></label>
-                  <input type="text" id="titulo" class="form-control" maxlength="50" placeholder="Digite o título do desafio (máximo de 50 caracteres)">
-                </div>
-              </div>
+          <div class="form-row">
+            <div class="col-md-12 mb-4">
+              <label for="titulo">Titulo <span class="text-danger">*</span></label>
+              <input type="text" id="titulo" class="form-control" maxlength="100" placeholder="Digite o título do desafio (máximo de 100 caracteres)">
+            </div>
+          </div>
 
-              <div class="row">
-                <div class="col-md-3 mb-4 mb-md-0">
-                  <label for="rsu">Tipo de RSU <span class="text-danger">*</span></label>
-                  <select id="rsu" class="form-control">
+          <div class="form-row">
+            <div class="col-md-3 mb-4 mb-md-0">
+              <label for="rsu">Tipo de RSU <span class="text-danger">*</span> <span class="icon-question-circle color-tooltip" data-toggle="tooltip" data-placement="right" title="RSU é a sigla para Resíduo Sólido Urbano e siginifica o rejeito que ainda pode ser reaproveitado."></span></label>
+              <select id="rsu" class="form-control">
 
-                  </select>
+              </select>
 
-                  <!-- Botão para acionar modal do tipo de rsu -->
-                  <a data-toggle="modal" href="#ModalRSU" class="small">
-                    Cadastrar novo tipo de RSU
-                  </a>
-                </div>
-
-                <div class="col-md-3 mb-4 mb-md-0">
-                  <label for="bonificacao">Tipo da bonificação <span class="text-danger">*</span></label>
-                  <select id="bonificacao" class="form-control">
-                    
-                  </select>
-
-                  <!-- Botão para acionar modal da bonificação -->
-                  <a data-toggle="modal" href="#ModalBonificacao" class="small">
-                    Cadastrar nova bonificação
-                  </a>
-                </div>
-
-                <div class="col-md-3 mb-4 mb-md-0">
-                  <label for="qtdRSU">Quantidade (kg)</label>
-                  <input id="qtdRSU" type="number" name="qtdRSU" class="form-control" min="0">
-                </div>
-
-                <div class="col-md-3 mb-4 mb-md-0">
-                  <label for="data-limite">Data limite <span class="text-danger">*</span></label>
-                  <input id="data-limite" type="date" name="data-limite" class="form-control">
-                  
-                  <div class="custom-control custom-checkbox mt-2">
-                    <input class="custom-control-input" type="checkbox" id="semDataLimite" name="semDataLimite" onclick="desabilitarDataLimite()">
-                    <label class="custom-control-label" for="semDataLimite">Sem data limite</label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row mb-4">
-                <div class="col-md-12 mb-4 mb-md-0">
-                  <label class="mt-2 detalhamentoBonus" for="descricaoBonificacao">Detalhamento da bonificação (se houver)</label>
-                  <input id="descricaoBonificacao" type="text" name="descricaoBonificacao" class="form-control detalhamentoBonus">
-                </div>
-              </div>
+              <!-- Botão para acionar modal do tipo de rsu -->
+              <a data-toggle="modal" href="#ModalRSU" class="small">Cadastrar novo tipo de RSU</a>
             </div>
 
-            <div class="col-md-3 mb-5 mb-md-0">
-              <label for="preview-img">Imagem do desafio</label>
+            <div class="col-md-3 mb-4 mb-md-0">
+              <label for="bonificacao">Tipo da bonificação <span class="text-danger">*</span></label>
+              <select id="bonificacao" class="form-control">
+                    
+              </select>
 
-              <img id="img" src="<?= base_url()?>assets/images/desafio.png" class="img-fluid preview-img mb-3">
+              <!-- Botão para acionar modal da bonificação -->
+              <a data-toggle="modal" href="#ModalBonificacao" class="small">Cadastrar nova bonificação</a>
+            </div>
 
-              <div class="row justify-content-center">
-                <label for="file-button" class="btn btn-primary py-2 px-3 text-white" onclick="previewImage()">Alterar imagem</label>
-                <input type="file" name="file-button" id="file-button" class="file-chooser d-none" accept="image/x-png,image/gif,image/jpeg">
-                <a href="#" id="img-default" class="col-12 small mt-1 text-center">Definir imagem padrão</a>
+            <div class="col-md-3 mb-4 mb-md-0">
+              <label for="qtdRSU">Quantidade (kg)</label>
+              <input id="qtdRSU" type="number" name="qtdRSU" class="form-control" min="0">
+            </div>
+
+            <div class="col-md-3 mb-4 mb-md-0">
+              <label for="data-limite">Data limite <span class="text-danger">*</span></label>
+              <input id="data-limite" type="date" name="data-limite" class="form-control">
+                  
+              <div class="custom-control custom-checkbox mt-2">
+                <input class="custom-control-input" type="checkbox" id="semDataLimite" name="semDataLimite" onclick="desabilitarDataLimite()">
+                <label class="custom-control-label" for="semDataLimite">Sem data limite</label>
               </div>
+            </div>
+          </div>
+
+          <div class="form-row mb-4">
+            <div class="col-md-12 mb-4 mb-md-0">
+              <label class="mt-2 detalhamentoBonus" for="descricaoBonificacao">Detalhamento da bonificação (se houver) <span class="icon-question-circle" data-toggle="tooltip" data-placement="right" title="Preencha este campo detalhando a bonificação do desafio, caso haja. Por exemplo, 'R$ 20,00' se a bonificação for em dinheiro."></span></label>
+              <input id="descricaoBonificacao" type="text" name="descricaoBonificacao" class="form-control detalhamentoBonus">
             </div>
           </div>
 
@@ -160,6 +142,12 @@
 
     <script>
       var user_id = "<?php echo $this->session->criador['doc'] ?>";
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+      });
     </script>
 
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/add_desafio.js"></script>
