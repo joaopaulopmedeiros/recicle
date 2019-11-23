@@ -12,7 +12,7 @@
 
     
 
-    <div class="site-section">
+    <div class="site-section" style="background-color: #F5F5F5;">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
@@ -25,14 +25,14 @@
             <div class="col-md-3 mb-3 mb-md-0">
               <label for="ecoponto">Ecoponto/Empresa</label>
               <select id="ecoponto" class="form-control">
-              <!--dados-->
+                <!--dados-->
               </select>
             </div>
       
             <div class="col-md-3 mb-3 mb-md-0">
-              <label for="lixo">Tipo de lixo</label>
+              <label for="lixo">Tipo de RSU</label>
               <select id="lixo" class="form-control">
-              <!--dados-->
+                <!--dados-->
               </select>
             </div>
       
@@ -53,7 +53,7 @@
 
   
 
-    <div class="site-section" style="background-color: #F5F5F5;">
+    <div class="site-section">
       <div class="container">
 
         <div class="row justify-content-center mb-5">
