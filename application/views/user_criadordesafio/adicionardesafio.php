@@ -72,12 +72,12 @@
             <div class="col-md-3 mb-5 mb-md-0">
               <label for="preview-img">Imagem do desafio</label>
 
-              <img id="img" src="<?= base_url()?>assets/images/desafio.png" class="img-fluid preview-img mb-3" alt="example placeholder">
+              <img id="img" src="<?= base_url()?>assets/images/desafio.png" class="img-fluid preview-img mb-3">
 
               <div class="row justify-content-center">
                 <label for="file-button" class="btn btn-primary py-2 px-3 text-white" onclick="previewImage()">Alterar imagem</label>
-                <input type="file" id="file-button" class="file-chooser d-none" accept="image/*">
-                <a href="#" id="img-default" class="small mt-1">Definir imagem padrão</a>
+                <input type="file" name="file-button" id="file-button" class="file-chooser d-none" accept="image/x-png,image/gif,image/jpeg">
+                <a href="#" id="img-default" class="col-12 small mt-1 text-center">Definir imagem padrão</a>
               </div>
             </div>
           </div>
@@ -95,7 +95,6 @@
             </div>
 
             <div class="col-md-12 mb-4 mb-md-0">
-              <input type="text" value="<?= $this->session->criador['doc']?>" id="user_id" hidden>
               <input type="submit" class="btn btn-primary py-2 px-3 text-white file-button" value="Adicionar desafio">
             </div>
           </div>
@@ -158,6 +157,10 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var user_id = "<?php echo $this->session->criador['doc'] ?>";
+    </script>
 
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/add_desafio.js"></script>
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/bonificacao.js"></script>
