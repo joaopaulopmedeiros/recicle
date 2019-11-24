@@ -20,25 +20,25 @@
           </div>
         </div>
       
-        <form>
+        <form id="filtro">
           <div class="form-row justify-content-around">
             <div class="col-md-3 mb-3 mb-md-0">
-              <label for="ecoponto">Ecoponto/Empresa</label>
-              <select id="ecoponto" class="form-control">
+              <label for="ecoponto">Criador de desafio</label>
+              <select id="ecoponto" class="form-control" required>
                 <!--dados-->
               </select>
             </div>
       
             <div class="col-md-3 mb-3 mb-md-0">
               <label for="lixo">Tipo de RSU</label>
-              <select id="lixo" class="form-control">
+              <select id="lixo" class="form-control" required>
                 <!--dados-->
               </select>
             </div>
       
             <div class="col-md-3 mb-3 mb-md-0">
               <label for="bonificacao">Tipo da bonificação</label>
-              <select id="bonificacao" class="form-control">
+              <select id="bonificacao" class="form-control" required>
                 <!--dados-->
               </select>
             </div>
@@ -48,6 +48,10 @@
             </div>
           </div>
         </form>
+
+        <div id="desafios-filtrados">
+          
+        </div>
       </div>
     </div>
 
