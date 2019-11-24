@@ -5,7 +5,7 @@
 
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             <h1 class="text-white font-weight-light text-uppercase font-weight-bold">Login/Cadastro</h1>
-            <p class="breadcrumb-custom"><a href="index.html">Home</a> <span class="mx-2">&gt;</span> <span>Entrar</span></p>
+            <p class="breadcrumb-custom"><a href="<?= base_url()?>">Home</a> <span class="mx-2">&gt;</span> <span>Entrar</span></p>
           </div>
         </div>
       </div>
