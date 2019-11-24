@@ -5,7 +5,7 @@ class Filtro extends CI_Controller {
 
 	public function index() 
 	{
-        $api_url = "http://localhost/recicle-api/filtro/index";
+        $api_url = "http://localhost/recicle-api/desafios/filtrar_desafios";
 
         $data = array(
             'idCriadorDesafio' => $this->input->post('idCriadorDesafio'),
@@ -18,32 +18,51 @@ class Filtro extends CI_Controller {
         curl_setopt($client, CURLOPT_POSTFIELDS, $data);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($client);
-
         curl_close($client);
         $result = json_decode($response);
+
+        $url = "";
+        if ($this->input->post('user') == 'user_public'){
+            $url = base_url() . "user_public/desafio/";
+        }
+        if ($this->input->post('user') == 'user_cidadao'){
+            $url = base_url() . "user_cidadao/desafio/";
+        }
 
         $output = '';
 
         if(count($result) > 0)
         {
+            $output .= '
+            <div class="row justify-content-center my-5">
+                <div class="col-md-7 text-center border-primary">
+                    <h2 class="font-weight-light text-primary">Desafios filtrados</h2>
+                </div>
+            </div>
+
+            <div class="row">
+            ';
             foreach($result as $row)
             {
                 $output .= '
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                     <div class="h-entry">
                         <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
-                        <a href="'.$url.$row->id.'" class="h5"><div class="text-primary">'.$row->titulo.'</div></a>
+                        <a href="'.$url.$row->id.'" class="h4 font-weight-bold"><div class="text-primary">'.$row->titulo.'</div></a>
                         <div class="meta mt-1 mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
                     </div> 
                 </div>
                 ';
             }
+            $output .= '
+            </div>
+            ';
         }
         else
         {
             $output .= '
-            <div class="col-12" role="alert">
-                <h4 class="text-center">Ainda não há desafios cadastrados :(</h4>
+            <div class="col-12 mt-5" role="alert">
+                <h4 class="text-center">Nenhum desafio encontrado :(</h4>
             </div>
             ';
         }
