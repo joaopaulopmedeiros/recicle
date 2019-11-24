@@ -51,6 +51,9 @@
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="doc" id="lblDoc">Documento de identificação</label>
                     <input type="text" id="doc" name="doc" class="form-control">
+                    <small class="form-text">
+                      Digite somente os números.
+                    </small>
                   </div>
                 </div>
 
@@ -58,6 +61,9 @@
                   <div class="col-md-12 mb-3 mb-md-0">
                     <label class="text-black" for="cep">CEP</label>
                     <input type="text" id="cep" name="cep" class="form-control">
+                    <small class="form-text">
+                      Digite somente os números.
+                    </small>
                   </div>
                 </div>
 
@@ -72,18 +78,6 @@
                   <div class="col-md-6">
                     <label class="text-black" for="confirmarSenha">Confirmar senha</label> 
                     <input type="password" id="confirmarSenha" name="confirmarSenha" class="form-control">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" value="OK" id="termos" name="termos" required>
-                    <label class="custom-control-label" for="termos">
-                      Concordo com os <a href="">termos e condições</a>
-                    </label>
-                    <div class="invalid-feedback">
-                      Você deve concordar, antes de continuar.
-                    </div>
                   </div>
                 </div>
 
