@@ -113,7 +113,8 @@ class Desafios extends CI_Controller {
         if($this->input->post('id_desafio'))
         {
             $data = array(
-                'id_desafio' => $this->input->post('id_desafio')
+                'id_desafio' => $this->input->post('id_desafio'),
+                'user' => $this->input->post('user')
             );
 
             $api_url = "http://localhost/recicle-api/desafios/verdesafio";
@@ -322,49 +323,42 @@ class Desafios extends CI_Controller {
         if(count($result) > 0)
         {
             $output = '
-                <br>
                 <table class="table">
                     <thead>
-                        <th>id</th>
-                        <th>Desafio</th>
+                        <th>ID</th>
                         <th>Cidadão</th>
-                        <th>Tipo de RSU</th>
-                        <th>Tipo de Bonificação</th>
+                        <th>CPF</th>
                         <th>Status</th>
                     </thead>';
+
             foreach($result as $row)
             {
                 if($row->cumprido == 0){
                     $output .= '
                     <tbody>
                         <td>'.$row->idDesafioAceito.'</td>
-                        <td>'.$row->desafio.'</td>
                         <td>'.$row->cidadao.'</td>
-                        <td>'.$row->tipoRSU.'</td>
-                        <td>'.$row->bonificacao.'</td>
-                        <td><button onclick="cumprirDesafio('.$row->idDesafioAceito.')" type="button" class="btn btn-success">Confirmar</button></td>       
+                        <td>'.$row->cpfCidadao.'</td>
+                        <td id="btn-status-desafio"><button onclick="cumprirDesafio('.$row->idDesafioAceito.')" type="button" class="btn btn-primary">Confirmar</button></td>       
                     </tbody>';
                 }
                 if($row->cumprido == 1){
                     $output .= '
                     <tbody>
                         <td>'.$row->idDesafioAceito.'</td>
-                        <td>'.$row->desafio.'</td>
                         <td>'.$row->cidadao.'</td>
-                        <td>'.$row->tipoRSU.'</td>
-                        <td>'.$row->bonificacao.'</td>
-                        <td>Cumprido</td>       
+                        <td>'.$row->cpfCidadao.'</td>
+                        <td>OK</td>       
                     </tbody>';
                 }
                 
             }
             $output .= '</table>';
-        }else{
-            echo "Ainda não há concorrentes para este desafio!";
+        } else {
+            $output .= '<p class="text-center">Ainda não há concorrentes para este desafio!</p>';
         }
 
         echo $output;
-
     }
 
     public function cumprir_desafio()
