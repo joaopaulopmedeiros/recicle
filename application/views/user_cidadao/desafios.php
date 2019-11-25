@@ -12,7 +12,7 @@
 
 
 
-    <div class="site-section">
+    <div class="site-section" style="background-color: #F5F5F5;">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
@@ -20,36 +20,26 @@
           </div>
         </div>
       
-        <form action="">
+        <form id="filtro">
           <div class="form-row justify-content-around">
             <div class="col-md-3 mb-3 mb-md-0">
-              <label for="ecoponto">Ecoponto/Empresa</label>
+              <label for="ecoponto">Criador de desafio</label>
               <select id="ecoponto" class="form-control">
-                <option selected>Escolher...</option>
-                <option>...</option>
+              
               </select>
             </div>
       
             <div class="col-md-3 mb-3 mb-md-0">
-              <label for="lixo">Tipo de lixo</label>
+              <label for="lixo">Tipo do resíduo sólido urbano</label>
               <select id="lixo" class="form-control">
-                <option selected>Escolher...</option>
-                <option>Papel e papelão</option>
-                <option>Óleo de cozinha</option>
-                <option>Lixo eletrônico</option>
-                <option>Pilhas e baterias</option>
-                <option>Metal</option>
-                <option>Vidro</option>
+
               </select>
             </div>
       
             <div class="col-md-3 mb-3 mb-md-0">
               <label for="bonificacao">Tipo da bonificação</label>
               <select id="bonificacao" class="form-control">
-                <option selected>Escolher...</option>
-                <option>Em dinheiro</option>
-                <option>Spotify</option>
-                <option>Netflix</option>
+
               </select>
             </div>
             
@@ -58,10 +48,14 @@
             </div>
           </div>
         </form>
+
+        <div id="desafios-filtrados">
+        
+        </div>
       </div>
     </div>
   
-    <div class="site-section" style="background-color: #F5F5F5;">
+    <div class="site-section">
       <div class="container">
 
         <div class="row justify-content-center mb-5">
@@ -71,6 +65,7 @@
         </div>
 
         <div class="row" id="desafios">
+        
         </div>
       </div>
     </div>
@@ -89,3 +84,4 @@
     </div>
 
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/desafios.js"></script>
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/filtro.js"></script>
