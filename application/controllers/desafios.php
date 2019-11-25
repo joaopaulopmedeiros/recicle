@@ -245,7 +245,7 @@ class Desafios extends CI_Controller {
                         </div>
                         ';
                     }
-                //}
+                }
             }
             else
             {
