@@ -11,7 +11,7 @@ $(document).ready(function(){
             data:{idDesafio:desafio},
             success:function(data)
             {
-            $('#desafio').html(data);
+                $('#tabela-desafio').html(data);
             }
         });
     }
