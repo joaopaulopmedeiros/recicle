@@ -5,7 +5,6 @@ class DesafiosAceitos extends CI_Controller
 {
     public function index()
     {
-        
         if($this->input->post("id_user")){
 
             $api_url = "http://localhost/recicle-api/DesafiosAceitos/index";
@@ -30,7 +29,7 @@ class DesafiosAceitos extends CI_Controller
                     <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="h-entry">
                             <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
-                            <a href="" class="h5"><div class="text-primary">'.$row->titulo.'</div></a>
+                            <a href="'.base_url().'user_cidadao/desafio/'.$row->id.'" class="h4 font-weight-bold"><div class="text-primary">'.$row->titulo.'</div></a>
                             <div class="meta mt-1 mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
                         </div> 
                     </div>
