@@ -13,6 +13,7 @@ $(document).ready(function(){
             url:"http://localhost/recicle/desafios/ver_desafio",
             method:"POST",
             data:{id_desafio:desafio, user: tipo_user},
+            dataType:"JSON",
             success:function(data)
             {
                 $('#desafio').html(data);
