@@ -58,7 +58,7 @@
             <nav class="d-flex site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav ml-auto d-none d-md-block">
-                <li class="active"><a href="<?php echo base_url();?>user_cidadao/index">Home</a></li>
+                <li><a href="<?php echo base_url();?>user_cidadao/index">Home</a></li>
                 <li><a href="<?php echo base_url();?>user_cidadao/desafios">Desafios</a></li>
                 <li><a href="<?php echo base_url();?>user_cidadao/contact">Contato</a></li>
                 <li><a href="<?php echo base_url();?>user_cidadao/about" class="mb-4 mb-md-0">Sobre</a></li>

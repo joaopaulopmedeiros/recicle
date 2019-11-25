@@ -57,7 +57,7 @@
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="<?php echo base_url();?>user_public/index">Home</a></li>
+                <li><a href="<?php echo base_url();?>user_public/index">Home</a></li>
                 <li><a href="<?php echo base_url();?>user_public/desafios">Desafios</a></li>
                 <li><a href="<?php echo base_url();?>user_public/contact">Contato</a></li>
                 <li><a href="<?php echo base_url();?>user_public/about">Sobre</a></li>
