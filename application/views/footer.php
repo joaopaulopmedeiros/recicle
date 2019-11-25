@@ -5,25 +5,16 @@
         <div class="row justify-content-around">
           <div class="col-md-3">
             <h2 class="mb-4">Recicle</h2>
-            <p>O projeto Recicle consiste em um sistema que visa estimular o descarte consciente de materiais recicláveis de forma a remunerar cidadãos e empresas participantes, como também auxiliar desenvolvimento bioeconomico no município de Natal (RN).</p>
+            <p>O projeto Recicle consiste em um sistema que visa estimular o descarte consciente de materiais recicláveis de forma a remunerar cidadãos e empresas participantes, como também auxiliar no desenvolvimento bioeconômico do município de Natal (RN).</p>
           </div>
 
           <div class="col-md-2">
             <h2 class="mb-4">Menu</h2>
             <ul class="list-unstyled">
-              <?php
-                if (isset($footer)) {
-                  if ($footer == 'Logon') {
-                    echo '<li><a href="' . base_url() . 'user_cidadao/ecopontos">Ecopontos</a></li>';
-                  }
-                }
-                else {
-                  echo '<li><a href="login">Entrar</a></li>';
-                }
-              ?>
-              <li><a href="<?php echo base_url();?>user_public/desafios">Desafios</a></li>
-              <li><a href="<?php echo base_url();?>user_public/contact">Contato</a></li>
-              <li><a href="<?php echo base_url();?>user_public/about">Sobre</a></li>
+              <li><a href="./ecopontos">Ecopontos</a></li>
+              <li><a href="./desafios">Desafios</a></li>
+              <li><a href="./contact">Contato</a></li>
+              <li><a href="./about">Sobre</a></li>
             </ul>
           </div>
           <div class="col-md-3">
