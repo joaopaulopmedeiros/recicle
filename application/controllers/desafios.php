@@ -198,14 +198,41 @@ class Desafios extends CI_Controller {
                     
                     if ($this->input->post('user') == 'user_cidadao')
                     {
-                        $output .=
-                        '
-                        <div class="row text-center">
-                            <div class="col-md-12">
-                                <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>   
+                        if (isset($row->cumprido)) {
+                            if($row->cumprido == 1)
+                            {
+                                $output .=
+                                '
+                                <div class="row text-center">
+                                    <div class="col-md-12" id="botao">
+                                    <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Quero participar novamente!</a></p>   
+                                    </div>
+                                </div>
+                                ';
+                            }
+                            if($row->cumprido == 0)
+                            {
+                                $output .=
+                                '
+                                <div class="row text-center">
+                                    <div class="col-md-12" id="botao">
+                                        <p class="mb-0"><a onclick="cancelarDesafio()" class="btn btn-danger py-3 px-5 text-white">Não quero participar</a></p>   
+                                    </div>
+                                </div>
+                                ';
+                            }
+                        }
+                        else
+                        {
+                            $output .=
+                            '
+                            <div class="row text-center">
+                                <div class="col-md-12" id="botao">
+                                    <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>   
+                                </div>
                             </div>
-                        </div>
-                        ';
+                            ';
+                        }
                     }
                     if ($this->input->post('user') == 'user_public')
                     {
@@ -218,7 +245,7 @@ class Desafios extends CI_Controller {
                         </div>
                         ';
                     }
-                }
+                //}
             }
             else
             {
@@ -246,6 +273,23 @@ class Desafios extends CI_Controller {
             "idTipoBonificacao" => $this->input->post("idTipoBonificacao"),
             "idDesafio" => $this->input->post("idDesafio"),
             "cumprido" => 0
+        );
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_POST, true);
+        curl_setopt($client, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+      
+        echo $response;
+    }
+
+    public function cancelar_desafio()
+    {
+        $api_url = "http://localhost/recicle-api/DesafiosAceitos/deletar";
+        $data = array(
+            "idDesafio" => $this->input->post("idDesafio"),
+            "idCidadao" => $this->input->post("id_user")
         );
         $client = curl_init($api_url);
         curl_setopt($client, CURLOPT_POST, true);
