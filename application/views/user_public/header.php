@@ -61,7 +61,7 @@
                 <li><a href="<?php echo base_url();?>user_public/desafios">Desafios</a></li>
                 <li><a href="<?php echo base_url();?>user_public/contact">Contato</a></li>
                 <li><a href="<?php echo base_url();?>user_public/about">Sobre</a></li>
-                <li><a href="<?php echo base_url();?>user_public/login" class="btn btn-primary px-4 py-2 text-white">Entrar</a></li>
+                <li><a href="<?php echo base_url();?>user_public/login" class="btn btn-primary px-4 py-2 mt-lg-0 mt-3 text-white">Entrar</a></li>
               </ul>
             </nav>
           </div>
