@@ -14,12 +14,10 @@ class Desafios extends CI_Controller {
             $data_action = $this->input->post('data_action');
             $api_url = "";
 
-            if ($data_action == "all")
-            {
+            if ($data_action == "all"){
                 $api_url = "http://localhost/recicle-api/desafios/exibirTodosOsDesafios";
             }
-            elseif($data_action == "meus-desafios")
-            {
+            elseif($data_action == "meus-desafios"){
                 $api_url = "http://localhost/recicle-api/desafios/exibirMeusDesafios";
             }
 
@@ -29,16 +27,13 @@ class Desafios extends CI_Controller {
 
             $url = "";
 
-            if ($this->input->post('user') == 'user_public')
-            {
+            if ($this->input->post('user') == 'user_public'){
                 $url = base_url() . "user_public/desafio/";
             }
-            if ($this->input->post('user') == 'user_cidadao')
-            {
+            if ($this->input->post('user') == 'user_cidadao'){
                 $url = base_url() . "user_cidadao/desafio/";
             }
-            if ($this->input->post('user') == 'user_criadordesafio')
-            {
+            if ($this->input->post('user') == 'user_criadordesafio'){
                 $url = base_url() . "user_criadordesafio/desafio/";
             }
     
@@ -141,7 +136,7 @@ class Desafios extends CI_Controller {
 
                     <div class="row mb-5 justify-content-around align-items-center">
                         <div class="col-lg-6 col-10 mb-md-0 mb-5">
-                            <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
+                            <img src="'.base_url().'assets/images/desafio.png" alt="Imagem do desafio" class="img-fluid">
                         </div>
 
                         <div class="col-lg-5 col-10">
@@ -195,46 +190,63 @@ class Desafios extends CI_Controller {
                         var idTipoBonificacao = '.$row->idTipoBonificacao.';
                     </script>
                     ';
-                    
-                    if ($this->input->post('user') == 'user_cidadao')
+                    if ($this->input->post('user') == 'cidadao')
                     {
-                        if (isset($row->cumprido)) {
-                            if($row->cumprido == 1)
-                            {
-                                $output .=
-                                '
-                                <div class="row text-center">
-                                    <div class="col-md-12" id="botao">
-                                    <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Quero participar novamente!</a></p>   
-                                    </div>
-                                </div>
-                                ';
-                            }
-                            if($row->cumprido == 0)
-                            {
-                                $output .=
-                                '
-                                <div class="row text-center">
-                                    <div class="col-md-12" id="botao">
-                                        <p class="mb-0"><a onclick="cancelarDesafio()" class="btn btn-danger py-3 px-5 text-white">Não quero participar</a></p>   
-                                    </div>
-                                </div>
-                                ';
-                            }
-                        }
-                        else
+                        $data2 = array(
+                            'id_user' => $this->session->cidadao['doc']
+                        );
+            
+                        $api_url2 = "http://localhost/recicle-api/desafiosaceitos/index";
+            
+                        $client2 = curl_init($api_url2);
+                        curl_setopt($client2, CURLOPT_POST, true);
+                        curl_setopt($client2, CURLOPT_POSTFIELDS, $data2);
+                        curl_setopt($client2, CURLOPT_RETURNTRANSFER, true);
+                        $response2 = curl_exec($client2);
+                        curl_close($client2);
+                        $result2 = json_decode($response2);
+                        if(count($result2) > 0)
                         {
-                            $output .=
-                            '
-                            <div class="row text-center">
-                                <div class="col-md-12" id="botao">
-                                    <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>   
-                                </div>
-                            </div>
-                            ';
-                        }
+                            foreach($result2 as $row2){
+                                if (isset($row2->cumprido)) {
+                                    if($row2->cumprido == 1)
+                                    {
+                                        $output .=
+                                        '
+                                        <div class="row text-center">
+                                            <div class="col-md-12" id="botao">
+                                            <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Quero participar novamente!</a></p>   
+                                            </div>
+                                        </div>
+                                        ';
+                                    }
+                                    if($row2->cumprido == 0)
+                                    {
+                                        $output .=
+                                        '
+                                        <div class="row text-center">
+                                            <div class="col-md-12" id="botao">
+                                                <p class="mb-0"><a onclick="cancelarDesafio()" class="btn btn-danger py-3 px-5 text-white">Não quero participar</a></p>   
+                                            </div>
+                                        </div>
+                                        ';
+                                    }
+                                }
+                                else
+                                {
+                                    $output .=
+                                    '
+                                    <div class="row text-center">
+                                        <div class="col-md-12" id="botao">
+                                            <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>   
+                                        </div>
+                                    </div>
+                                    ';
+                                }
+                            }
+                        }else{echo "resultado nulo";}
                     }
-                    if ($this->input->post('user') == 'user_public')
+                    else
                     {
                         $output .=
                         '

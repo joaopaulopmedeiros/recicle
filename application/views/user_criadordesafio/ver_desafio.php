@@ -20,6 +20,10 @@
     </div>
 </div>
 
+<script>
+    var tipo_user = "<?php echo $this->session->criador['tipo']?>";
+</script>
+
 <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/ver_desafio.js"></script>
 <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/concorrentes_meus_desafios.js"></script>
 <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/cumprir_desafio.js"></script>
