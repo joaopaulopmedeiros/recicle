@@ -1453,3 +1453,12 @@ h1, h2, h3, h4, h5,
   border-right-color: #E0E0E0 !important;
   color: black;
 }
+
+/* Transição do menu */
+.site-navbar {
+  -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, -webkit-box-shadow 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, -webkit-box-shadow 0.35s ease-in-out;
+  -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out, -webkit-box-shadow 0.35s ease-in-out;
+}
