@@ -113,8 +113,7 @@ class Desafios extends CI_Controller {
         if($this->input->post('id_desafio'))
         {
             $data = array(
-                'id_desafio' => $this->input->post('id_desafio'),
-                'user' => $this->input->post('user')
+                'id_desafio' => $this->input->post('id_desafio')
             );
 
             $api_url = "http://localhost/recicle-api/desafios/verdesafio";
