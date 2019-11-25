@@ -64,35 +64,24 @@
                 <li><a href="<?php echo base_url();?>user_criadordesafio/about" class="mb-4 mb-md-0">Sobre</a></li>
               </ul>
 
-              <div class="btn-group">
-                <button type="button" class="dropdown-toggle bg-transparent border-0 text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="icon-user-circle"></i>
-                </button>
-  
-                <div class="dropdown-menu dropdown-menu-right">
-                  <div class="dropdown-item-text"><?php echo $this->session->criador['nome']; ?></div>
-                  <div class="dropdown-item-text"><?php echo $this->session->criador['login']; ?></div>
-                  <hr style="border-top: 2px solid #1EBFA1">
-                  <a href="<?php echo base_url();?>user_criadordesafio/desafios" class="dropdown-item">Meus desafios</a>
-                  <a href="<?php echo base_url();?>user_criadordesafio/minhaConta" class="dropdown-item">Minha conta</a>
-                  <a href="<?php echo base_url()?>sessao/logout" class="dropdown-item">Sair</a>
-                </div>
-              </div>
+              <ul class="site-menu js-clone-nav pl-0">
+                <li class="has-children">
+                  <a>
+                    <i class="icon-user-circle"></i>&nbsp;
+                    <span class="text-uppercase font-weight-light"><?php echo $this->session->criador['nome']; ?></span>
+                  </a>
+                  <ul class="dropdown">
+                    <li><a href="<?php echo base_url();?>user_cidadao/meusdesafios" class="dropdown-item">Meus desafios</a></li>
+                    <li><a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a></li>
+                    <li><a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a></li>
+                  </ul>
+                </li>
+              </ul>
             </nav>
           </div>
 
 
           <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
-          <nav class="d-md-none">
-            <ul class="site-menu js-clone-nav mx-auto d-none">
-              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1"><?php echo $this->session->criador['nome']; ?></li>
-              <li class="dropdown-item-text"><?php echo $this->session->criador['login']; ?></li>
-              <li><a href="<?php echo base_url();?>user_criadordesafio/desafios" class="dropdown-item">Meus desafios</a></li>
-              <li><a href="<?php echo base_url();?>user_criadordesafio/minhaConta" class="dropdown-item">Minha conta</a></li>
-              <li><a href="<?php echo base_url()?>sessao/logout" class="dropdown-item">Sair</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
     </header>

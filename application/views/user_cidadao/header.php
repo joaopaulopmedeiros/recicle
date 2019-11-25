@@ -47,16 +47,14 @@
     </div>
     
     <header class="site-navbar py-2" role="banner">
-
       <div class="container">
         <div class="row align-items-center">
-          
           <div class="col-11 col-md-2">
             <h1 class="mb-0"><a href="<?php echo base_url();?>user_cidadao/index" class="text-white h2 mb-0">Recicle</a></h1>
           </div>
+
           <div class="col-12 col-md-10 d-none d-md-block">
             <nav class="d-flex site-navigation position-relative text-right" role="navigation">
-
               <ul class="site-menu js-clone-nav ml-auto d-none d-md-block">
                 <li><a href="<?php echo base_url();?>user_cidadao/index">Home</a></li>
                 <li><a href="<?php echo base_url();?>user_cidadao/desafios">Desafios</a></li>
@@ -64,35 +62,24 @@
                 <li><a href="<?php echo base_url();?>user_cidadao/about" class="mb-4 mb-md-0">Sobre</a></li>
               </ul>
 
-              <div class="btn-group">
-                <button type="button" class="dropdown-toggle bg-transparent border-0 text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="icon-user-circle"></i>
-                </button>
-  
-                <div class="dropdown-menu dropdown-menu-right">
-                  <div class="dropdown-item-text"><?php echo $this->session->cidadao['nome']; ?></div>
-                  <div class="dropdown-item-text"><?php echo $this->session->cidadao['login']; ?></div>
-                  <hr style="border-top: 2px solid #1EBFA1">
-                  <a href="<?php echo base_url();?>user_cidadao/meusdesafios" class="dropdown-item">Meus desafios</a>
-                  <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
-                  <a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a>
-                </div>
-              </div>
+              <ul class="site-menu js-clone-nav pl-0">
+                <li class="has-children">
+                  <a>
+                    <i class="icon-user-circle"></i>&nbsp;
+                    <span class="text-uppercase font-weight-light"><?php echo $this->session->cidadao['nome']; ?></span>
+                  </a>
+                  <ul class="dropdown">
+                    <li><a href="<?php echo base_url();?>user_cidadao/meusdesafios" class="dropdown-item">Meus desafios</a></li>
+                    <li><a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a></li>
+                    <li><a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a></li>
+                  </ul>
+                </li>
+              </ul>
             </nav>
           </div>
 
 
           <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
-          <nav class="d-md-none">
-            <ul class="site-menu js-clone-nav mx-auto d-none">
-              <li class="dropdown-item-text pt-4" style="border-top: 2px solid #1EBFA1"><?php echo $this->session->cidadao['nome']; ?></li>
-              <li class="dropdown-item-text"><?php echo $this->session->cidadao['login']; ?></li>
-              <li><a href="<?php echo base_url();?>user_cidadao/desafios" class="dropdown-item">Meus desafios</a></li>
-              <li><a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a></li>
-              <li><a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
     </header>
