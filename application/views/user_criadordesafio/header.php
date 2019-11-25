@@ -71,8 +71,8 @@
                     <span class="text-uppercase font-weight-light"><?php echo $this->session->criador['nome']; ?></span>
                   </a>
                   <ul class="dropdown">
-                    <li><a href="<?php echo base_url();?>user_cidadao/meusdesafios" class="dropdown-item">Meus desafios</a></li>
-                    <li><a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a></li>
+                    <li><a href="<?php echo base_url();?>user_criadordesafio/meusdesafios" class="dropdown-item">Meus desafios</a></li>
+                    <li><a href="<?php echo base_url();?>user_criadordesafio/minhaconta" class="dropdown-item">Minha conta</a></li>
                     <li><a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a></li>
                   </ul>
                 </li>
