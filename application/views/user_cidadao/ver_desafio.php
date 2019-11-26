@@ -6,7 +6,6 @@
 
     <script>
       var id_user = "<?php echo $this->session->cidadao['doc']?>";
-      var tipo_user = "<?php echo $this->session->cidadao['tipo']?>";
     </script>
 
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/ver_desafio.js"></script>
