@@ -111,11 +111,11 @@
                 </div>
               </div>
 
-              <div class="row form-group">
+              <!--<div class="row form-group">
                 <div class="col-md-12">
                   <a href="#">Esqueceu sua senha?</a>
                 </div>
-              </div>
+              </div>-->
 
               <div class="row form-group">
                 <div class="col-md-12">
