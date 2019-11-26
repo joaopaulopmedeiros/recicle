@@ -5,10 +5,14 @@ $(document).ready(function(){
         var idx = url.indexOf("desafio");
         var desafio;
 
-        if (tipo_user == 'cidadao') {
+        var url2 = window.location.href;
+        var idx2 = url2.indexOf("recicle");
+        var tipo_user = url2.substring(idx2).split("/")[1];
+
+        if (tipo_user == 'user_cidadao' || tipo_user == 'user_public') {
             desafio = url.substring(idx).split("/")[1];
         }
-        if (tipo_user == 'criador') {
+        if (tipo_user == 'user_criadordesafio') {
             desafio = url.substring(idx).split("/")[2];
         }
 
