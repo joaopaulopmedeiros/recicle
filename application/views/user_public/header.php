@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
     <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/icomoon/style.css">
 
+    <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/magnific-popup.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/jquery-ui.css">
