@@ -63,7 +63,7 @@
 
           <div class="col-md-5 align-self-center">
             <div>
-              <p align = "justify">Você pode ganhar vários prêmios descartando de forma consciente! Cadastre já para participar dos desafios lançados pelas cooperativas e pontos de coleta próximas de você. Essas premiações podem ser  Gift Cards, dinheiro e descontos em faturas. </p>
+              <p class="text-justify">Você pode cadastrar vários prêmios para os seus desafios! Essas premiações podem ser Gift Cards, dinheiro ou descontos em faturas. Além de adquirir os materiais de que precisa, você estará incentivando o descarte consciente! <a href="<?= base_url()?>user_criadordesafio/adicionardesafio"> Cadastre um desafio</a> agora mesmo!</p>
             </div>
           </div>
 
