@@ -5,11 +5,10 @@ class DesafiosAceitos extends CI_Controller
 {
     public function index()
     {
-        if($this->input->post("id_user")){
-
-            $api_url = "http://localhost/recicle-api/DesafiosAceitos/index";
-            $id_user = $this->input->post("id_user");
-            $data = array("id_user" => $id_user);
+        if($this->input->post("id_user"))
+        {
+            $api_url = "http://localhost/recicle-api/DesafiosAceitos/ver_meus_desafios";
+            $data = array("id_user" => $this->input->post("id_user"));
 
             $client = curl_init($api_url);
             curl_setopt($client, CURLOPT_POST, true);
@@ -35,16 +34,17 @@ class DesafiosAceitos extends CI_Controller
                     </div>
                     ';
                 }
-            }else{
-                echo "Você ainda não aceitou os desafios ofertados!";
             }
-
-        }else{
+            else
+            {
+                $output .= '<p class="text-center">Você ainda não aceitou os desafios ofertados!</p>';
+            }
+        }
+        else
+        {
             redirect("user_public/index");
         }
 
         echo $output;
-
-    } 
-
+    }
 }
