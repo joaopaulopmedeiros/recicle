@@ -190,10 +190,12 @@ class Desafios extends CI_Controller {
                         var idTipoBonificacao = '.$row->idTipoBonificacao.';
                     </script>
                     ';
+
                     if ($this->input->post('user') == 'cidadao')
                     {
                         $data2 = array(
-                            'id_user' => $this->session->cidadao['doc']
+                            'id_user' => $this->session->cidadao['doc'],
+                            'id_desafio' => $this->input->post('id_desafio')
                         );
             
                         $api_url2 = "http://localhost/recicle-api/desafiosaceitos/index";
@@ -205,11 +207,14 @@ class Desafios extends CI_Controller {
                         $response2 = curl_exec($client2);
                         curl_close($client2);
                         $result2 = json_decode($response2);
+
                         if(count($result2) > 0)
                         {
-                            foreach($result2 as $row2){
-                                if (isset($row2->cumprido)) {
-                                    if($row2->cumprido == 1)
+                            for ($i=0; $i < count($result2); $i++)
+                            {
+                                if (isset($result2[$i]->cumprido))
+                                {
+                                    if($result2[$i]->cumprido == 1 && (!isset($result2[$i+1])))
                                     {
                                         $output .=
                                         '
@@ -220,7 +225,7 @@ class Desafios extends CI_Controller {
                                         </div>
                                         ';
                                     }
-                                    if($row2->cumprido == 0)
+                                    else if($result2[$i]->cumprido == 0)
                                     {
                                         $output .=
                                         '
@@ -232,21 +237,21 @@ class Desafios extends CI_Controller {
                                         ';
                                     }
                                 }
-                                else
-                                {
-                                    $output .=
-                                    '
-                                    <div class="row text-center">
-                                        <div class="col-md-12" id="botao">
-                                            <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>   
-                                        </div>
-                                    </div>
-                                    ';
-                                }
                             }
-                        }else{echo "resultado nulo";}
+                        }
+                        else
+                        {
+                            $output .=
+                            '
+                            <div class="row text-center">
+                                <div class="col-md-12" id="botao">
+                                    <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>   
+                                </div>
+                            </div>
+                            ';
+                        }
                     }
-                    else
+                    else if ($this->input->post('user') != 'criador')
                     {
                         $output .=
                         '
