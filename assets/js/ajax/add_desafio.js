@@ -30,8 +30,7 @@ $(document).ready(function(e){
       {
         if(data.success)
         {
-          console.log('supostamente deu certo');
-          //location.href = "http://localhost/recicle/user_criadordesafio/desafios";
+          location.href = "http://localhost/recicle/user_criadordesafio/desafios";
         }
 
         if(data.error)
