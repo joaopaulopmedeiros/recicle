@@ -191,7 +191,7 @@ class Desafios extends CI_Controller {
                     </script>
                     ';
 
-                    if ($this->input->post('user') == 'cidadao')
+                    if ($this->input->post('user') == 'user_cidadao')
                     {
                         $data2 = array(
                             'id_user' => $this->session->cidadao['doc'],
@@ -251,7 +251,7 @@ class Desafios extends CI_Controller {
                             ';
                         }
                     }
-                    else if ($this->input->post('user') != 'criador')
+                    else if ($this->input->post('user') == 'user_public')
                     {
                         $output .=
                         '
