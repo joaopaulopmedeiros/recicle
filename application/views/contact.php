@@ -66,9 +66,9 @@
               <p class="mb-0 font-weight-bold">Email </p>
               <p class="mb-0"><a href="#">recicle.software@gmail.com</a></p>
             </div>
-            
+
             <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3"> RECICLE - LOGO</h3>
+              <img class="img-fluid mb-3" alt="Logo do Recicle" src="<?= base_url();?>assets/images/recicle.png">
             </div>
           </div>
         </div>
