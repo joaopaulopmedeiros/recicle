@@ -1,4 +1,4 @@
-<body onload="initialize()">
+<body onload="initMap()">
 <div class="site-section pb-0">
       <div class="container">
         <div class="row justify-content-center my-5">
@@ -44,6 +44,7 @@
           </form>
         </div>
         <div class="col-md-9 px-0">
+          
           <!--Google map-->
           <div id="map_canvas" class="z-depth-1-half map-container bg-white" style="height: 500px;">
             
@@ -80,15 +81,5 @@
     </div>
 </body>
 <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/desafios.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaQKvNgunPZz03UzYx6SaNxldOA5TAlo0&format=png&maptype=roadmap&size=480x360"></script>
-<script type="text/javascript">
-function initialize() {
-  var myLatlng = new google.maps.LatLng(-5.748844, -35.260378);
-  var mapOptions = {
-    center: myLatlng,
-    zoom: 14,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-}
-</script>
+<script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ecopontos/maps.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaQKvNgunPZz03UzYx6SaNxldOA5TAlo0&callback=initMap"></script>
