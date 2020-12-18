@@ -52,3 +52,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'user_public';
 $route['404_override'] = 'page_not_found';
 $route['translate_uri_dashes'] = FALSE;
+
+/* Rotas para ocultar nome do controller user_public */
+$route['index'] = 'user_public/index';
+$route['login'] = 'user_public/login';
+$route['desafios'] = 'user_public/desafios';
+$route['ecopontos'] = 'user_public/ecopontos';
+$route['about'] = 'user_public/about';
+$route['contact'] = 'user_public/contact';
+$route['acesso_restrito'] = 'user_public/acesso_restrito';

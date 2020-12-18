@@ -27,14 +27,14 @@ class Desafios extends CI_Controller {
 
             $url = "";
 
-            if ($this->input->post('user') == 'user_public'){
-                $url = base_url() . "user_public/desafio/";
-            }
             if ($this->input->post('user') == 'user_cidadao'){
                 $url = base_url() . "user_cidadao/desafio/";
             }
-            if ($this->input->post('user') == 'user_criadordesafio'){
+            else if ($this->input->post('user') == 'user_criadordesafio'){
                 $url = base_url() . "user_criadordesafio/desafio/";
+            }
+            else {
+                $url = base_url() . "user_public/desafio/";
             }
     
             $client = curl_init($api_url);

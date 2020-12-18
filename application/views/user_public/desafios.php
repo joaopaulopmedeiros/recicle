@@ -4,7 +4,7 @@
 
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             <h1 class="text-white font-weight-light text-uppercase font-weight-bold">Desafios</h1>
-            <p class="breadcrumb-custom"><a href="<?= base_url()?>user_public/index">Home</a> <span class="mx-2">&gt;</span> <span>Desafios</span></p>
+            <p class="breadcrumb-custom"><a href="<?= base_url()?>index">Home</a> <span class="mx-2">&gt;</span> <span>Desafios</span></p>
           </div>
         </div>
       </div>
