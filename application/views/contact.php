@@ -63,12 +63,17 @@
 
           <div class="col-md-5">
             <div class="p-4 mb-3 bg-white">
-              <p class="mb-0 font-weight-bold">Email </p>
-              <p class="mb-0"><a href="#">recicle.software@gmail.com</a></p>
+              <h4 class="mb-2 font-weight-bold">Nosso e-mail</h4>
+              <p class="mb-0"><a href="#">sistema.recicle@gmail.com</a></p>
             </div>
 
             <div class="p-4 mb-3 bg-white">
-              <img class="img-fluid mb-3" alt="Logo do Recicle" src="<?= base_url();?>assets/images/recicle.png">
+              <h4 class="mb-2 font-weight-bold">Nossas redes sociais</h4>
+              <p class="mb-0">
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              </p>
             </div>
           </div>
         </div>
