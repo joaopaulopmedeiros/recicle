@@ -61,3 +61,4 @@ $route['ecopontos'] = 'user_public/ecopontos';
 $route['about'] = 'user_public/about';
 $route['contact'] = 'user_public/contact';
 $route['acesso_restrito'] = 'user_public/acesso_restrito';
+$route['desafio/(:num)'] = 'user_public/desafio/$1';
