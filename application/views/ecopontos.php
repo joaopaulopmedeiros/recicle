@@ -1,4 +1,4 @@
-<body onload="initMap()">
+<body>
 <div class="site-section pb-0">
       <div class="container">
         <div class="row justify-content-center my-5">
