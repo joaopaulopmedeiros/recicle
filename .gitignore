@@ -1,5 +1,7 @@
 .DS_Store
 
+node_modules/*
+
 application/cache/*
 !application/cache/index.html
 
