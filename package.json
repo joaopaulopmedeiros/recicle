@@ -1,0 +1,26 @@
+{
+  "name": "recicle",
+  "version": "1.0.0",
+  "description": "Bonus system for trash disposal.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopaulopmedeiros/recicle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaopaulopmedeiros/recicle/issues"
+  },
+  "homepage": "https://github.com/joaopaulopmedeiros/recicle#readme",
+  "dependencies": {
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
