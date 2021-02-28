@@ -10,6 +10,8 @@ body {
   --background-navbar: #EDEEF0;
   --green: #4EBA71;
   --green-light: #61DA83;
+  --footer-bg: #1C1C1C;
+  --text-footer: #606060;
 }
 
 ::-moz-selection {
@@ -162,7 +164,7 @@ h1, h2, h3, h4, h5,
   border-top: 1px solid #edf0f5 !important; }
 
 .site-footer {
-  background: #333333; }
+  background: var(--footer-bg); }
   @media (min-width: 768px) {
     .site-footer {
       padding: 4em 0; } }
@@ -1565,4 +1567,8 @@ h1, h2, h3, h4, h5,
 .btn-green:hover {
   background-color: #fff;
   color: var(--green-light);
+}
+
+.text-footer {
+  color: var(--text-footer);
 }
