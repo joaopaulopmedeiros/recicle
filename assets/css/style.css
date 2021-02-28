@@ -5,6 +5,12 @@ body {
   font-weight: 300;
   font-size: 1rem; }
 
+:root {
+  --text: #9198B5;
+  --background-navbar: #EDEEF0;
+  --green: #4EBA71;
+}
+
 ::-moz-selection {
   background: #000;
   color: #fff; }
@@ -12,12 +18,7 @@ body {
 ::selection {
   background: #000;
   color: #fff; }
-.site-navbar.color{
-  background-color:#333333;
-  /*transition: background-color 2s linear;*/
-  -webkit-animation: fade-in-fwd 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-          animation: fade-in-fwd 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
@@ -66,7 +67,6 @@ h1, h2, h3, h4, h5,
   transition: .3s all ease-in-out;
   background: rgba(0, 0, 0, 0.6);
   content: "";
-  position: fixed;
   z-index: 2000;
   top: 0;
   left: 0;
@@ -294,7 +294,6 @@ h1, h2, h3, h4, h5,
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
-  position: fixed;
   width: 100%; }
   .site-navbar.transparent {
     background: transparent; }
@@ -325,7 +324,8 @@ h1, h2, h3, h4, h5,
       padding: 10px 10px; }
       .site-navbar .site-navigation .site-menu > li > a {
         padding: 10px 0px;
-        color: #fff;
+        color: var(--green);
+        font-weight: 700;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
           color: #44BF76; }
@@ -419,6 +419,17 @@ h1, h2, h3, h4, h5,
           margin-top: 0px;
           visibility: visible;
           opacity: 1; }
+
+.site-navbar .site-menu .btn {
+  border: 3px solid var(--green);
+  color: var(--green);
+  border-radius: 10px;
+}
+
+.site-navbar .site-menu .btn:hover {
+  background-color: var(--green);
+  color: white !important;
+}
 
 .site-mobile-menu {
   width: 300px;
@@ -569,6 +580,7 @@ h1, h2, h3, h4, h5,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  background-attachment: fixed;
   background-position: center center; }
   .site-blocks-cover.overlay {
     position: relative; }
@@ -593,7 +605,7 @@ h1, h2, h3, h4, h5,
   .site-blocks-cover h1 {
     font-size: 4rem;
     font-weight: 900;
-    color: #fff; }
+    color: var(--text); }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
         font-size: 2rem; } }
@@ -1461,4 +1473,9 @@ h1, h2, h3, h4, h5,
   -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
   transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
   transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out, -webkit-box-shadow 0.35s ease-in-out;
+}
+
+.dropdown-menu-right {
+  font-size: 14px;
+  top: 5px !important;
 }
