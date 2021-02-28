@@ -6,7 +6,7 @@ body {
   font-size: 1rem; }
 
 :root {
-  --text: #9198B5;
+  --gray: #9198B5;
   --background-navbar: #EDEEF0;
   --green: #4EBA71;
   --green-light: #61DA83;
@@ -608,7 +608,7 @@ h1, h2, h3, h4, h5,
   .site-blocks-cover h1 {
     font-size: 4rem;
     font-weight: 900;
-    color: var(--text); }
+    color: var(--gray); }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
         font-size: 2rem; } }
@@ -1516,7 +1516,7 @@ h1, h2, h3, h4, h5,
 .text-section {
   font-size: 16px;
   font-weight: 600;
-  color: var(--text);
+  color: var(--gray);
 }
 
 .tipo-rsu {
@@ -1532,7 +1532,7 @@ h1, h2, h3, h4, h5,
 .tipo-rsu > p {
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--gray);
   font-size: 1.3rem;
   margin-bottom: 0;
 }
@@ -1549,7 +1549,7 @@ h1, h2, h3, h4, h5,
   flex-direction: column;
 }
 
-.desafio p {
+.desafio p, .desafio-item h5 {
   font-weight: 600;
 }
 
@@ -1571,4 +1571,34 @@ h1, h2, h3, h4, h5,
 
 .text-footer {
   color: var(--text-footer);
+}
+
+.form-row label {
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.form-row select {
+  border-radius: 10px;
+  border: 3px solid var(--gray);
+}
+
+.form-row select:focus {
+  border: 3px solid var(--green-light);
+}
+
+.desafio-item {
+  background-color: #EFF4FA;
+}
+
+.status-desafio {
+  display: flex;
+  font-size: 0.6rem;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.status-desafio .ativo {
+  color: var(--green-light) !important;
+  margin-left: 2px;
 }

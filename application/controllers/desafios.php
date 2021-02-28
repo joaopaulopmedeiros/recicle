@@ -52,11 +52,16 @@ class Desafios extends CI_Controller {
                 foreach($result as $row)
                 {
                     $output .= '
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                        <div class="h-entry">
-                            <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
-                            <a href="'.$url.$row->id.'" class="h4 font-weight-bold"><div class="text-primary">'.$row->titulo.'</div></a>
-                            <div class="meta mt-1 mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
+                    <div class="col-10 col-md-6 col-lg-4 mb-4 mb-lg-4">
+                        <div class="desafio-item p-4">
+                            <div class="text-uppercase status-desafio mb-3">
+                                Situação:
+                                <div class="ativo">Ativo</div>
+                            </div>
+                            <img src="'.base_url().'assets/images/challenges/desafio.svg" alt="Image" class="img-fluid mb-3">
+                            <h5>'.$row->titulo.'</h5>
+                            <div class="meta mt-1 mb-3">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
+                            <a href="'.$url.$row->id.'" class="btn btn-green py-1 px-3">Saber mais</a>
                         </div> 
                     </div>
                     ';
@@ -136,7 +141,7 @@ class Desafios extends CI_Controller {
 
                     <div class="row mb-5 justify-content-around align-items-center">
                         <div class="col-lg-6 col-10 mb-md-0 mb-5">
-                            <img src="'.base_url().'assets/images/desafio.png" alt="Imagem do desafio" class="img-fluid">
+                            <img src="'.base_url().'assets/images/desafio.svg" alt="Imagem do desafio" class="img-fluid">
                         </div>
 
                         <div class="col-lg-5 col-10">
