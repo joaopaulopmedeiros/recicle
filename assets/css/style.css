@@ -12,6 +12,7 @@ body {
   --green-light: #61DA83;
   --footer-bg: #1C1C1C;
   --text-footer: #606060;
+  --red: #FF6D5E;
 }
 
 ::-moz-selection {
@@ -1466,7 +1467,7 @@ h1, h2, h3, h4, h5,
 
 /*Ícones*/
 .icon-desafio {
-  border: 2px solid #02A575;
+  border: 2px solid var(--green);
   padding: 20px;
   line-height: 20px;
   border-radius: 50%;
@@ -1478,7 +1479,7 @@ h1, h2, h3, h4, h5,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #02A575;
+  color: var(--green);
   font-size: 18px;
 }
 
@@ -1567,6 +1568,22 @@ h1, h2, h3, h4, h5,
 .btn-green:hover {
   background-color: #fff;
   color: var(--green-light);
+}
+
+.btn-red {
+  background-color: var(--red);
+  color: #fff;
+  border: 3px solid var(--red);
+  border-radius: 10px;
+  text-transform: uppercase;
+  width: fit-content;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.btn-red:hover {
+  background-color: #fff;
+  color: var(--red);
 }
 
 .text-footer {
