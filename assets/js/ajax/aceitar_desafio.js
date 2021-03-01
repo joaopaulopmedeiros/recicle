@@ -7,7 +7,7 @@ function adicionarDesafio()
             data: {idCriadorDesafio,id_user,idTipoRSU,idTipoBonificacao,idDesafio},
             dataType:"JSON",
             success:function(data){
-                $('#botao').html('<p class="mb-0"><a onclick="cancelarDesafio()" class="btn btn-danger py-3 px-5 text-white">Não quero participar</a></p>');
+                $('#botao').html('<p class="mb-0"><a onclick="cancelarDesafio()" class="btn btn-red py-3 px-5">Não quero participar</a></p>');
             }
         });
     });
@@ -23,7 +23,7 @@ function cancelarDesafio()
             dataType:"JSON",
             success:function(data){
                 if (data.success) {
-                    $('#botao').html('<p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar desafio</a></p>');
+                    $('#botao').html('<p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-green py-3 px-5">Aceitar desafio</a></p>');
                 }
             }
         });

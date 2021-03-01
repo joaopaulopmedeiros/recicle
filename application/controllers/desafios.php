@@ -360,7 +360,7 @@ class Desafios extends CI_Controller {
                         <td>'.$row->idDesafioAceito.'</td>
                         <td>'.$row->cidadao.'</td>
                         <td>'.$row->cpfCidadao.'</td>
-                        <td id="btn-status-desafio"><button onclick="cumprirDesafio('.$row->idDesafioAceito.')" type="button" class="btn btn-primary">Confirmar</button></td>       
+                        <td id="btn-status-desafio"><button onclick="cumprirDesafio('.$row->idDesafioAceito.')" type="button" class="btn btn-green">Confirmar</button></td>       
                     </tbody>';
                 }
                 if($row->cumprido == 1){

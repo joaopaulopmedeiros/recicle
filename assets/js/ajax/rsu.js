@@ -33,12 +33,12 @@ $(document).ready(function(){
           $('#alert-rsu').empty();
           $('#ModalRSU').modal('hide');
           exibirTiposDeRSU();
-          $('#alert').html("<div class='alert alert-success alert-dismissible fade show' role='alert'>Tipo de resíduo cadastrado com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+          $('#alert').html("<div class='alert alert-green alert-dismissible fade show' role='alert'>Tipo de resíduo cadastrado com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
         }
 
         if(data.error)
         {
-          $('#alert-rsu').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+          $('#alert-rsu').html("<div class='alert alert-red' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
     })

@@ -60,12 +60,12 @@ $(document).ready(function(){
                 {
                     alterarDadosSessao(dataUser);
                     fecharForm();
-                    $('#alerta').html("<div class='alert alert-success' role='alert'>Os dados foram salvos com sucesso!</div>");
+                    $('#alerta').html("<div class='alert alert-green' role='alert'>Os dados foram salvos com sucesso!</div>");
                     exibirInformacoes();
                 }
                 if(data.error)
                 {
-                    $('#alerta').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+                    $('#alerta').html("<div class='alert alert-red' role='alert'>" + data['msg_erro'] + "</div>");
                 }
             }
         })
