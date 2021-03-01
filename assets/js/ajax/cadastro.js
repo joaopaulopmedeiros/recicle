@@ -52,7 +52,7 @@ $(document).ready(function(){
 
           if(data.error)
           {
-            $('#alerta').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+            $('#alerta').html("<div class='alert alert-red' role='alert'>" + data['msg_erro'] + "</div>");
           }
         }
       })

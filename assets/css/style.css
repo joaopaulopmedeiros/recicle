@@ -1567,6 +1567,23 @@ h1, h2, h3, h4, h5,
   color: var(--green-light);
 }
 
+.btn-outline-green {
+  background-color: #fff;
+  color: var(--green-light);
+  border: 3px solid var(--green-light);
+  border-radius: 10px;
+  text-transform: uppercase;
+  width: fit-content;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.btn-outline-green:hover,
+.btn-outline-green.active {
+  background-color: var(--green-light);
+  color: #fff;
+}
+
 .btn-red {
   background-color: var(--red);
   color: #fff;
@@ -1583,12 +1600,25 @@ h1, h2, h3, h4, h5,
   color: var(--red);
 }
 
+.alert-red {
+  color: #fff;
+  border: 0;
+  background-color: var(--red);
+}
+
+.alert-green {
+  color: #fff;
+  border: 0;
+  background-color: var(--green-light);
+}
+
 .text-footer {
   color: var(--text-footer);
 }
 
 .form-row label,
-.form-group label {
+.form-group label,
+.text-label {
   font-weight: 600;
   color: var(--gray);
 }
