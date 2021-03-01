@@ -83,6 +83,42 @@ class Desafios extends CI_Controller {
         }
     }
 
+    public function showRecentChallenges() 
+	{
+        $api_url = "http://localhost/recicle-api/desafios/exibirTodosOsDesafios";
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+        $result = json_decode($response);
+
+        $output = '';
+
+        if($result != null)
+        {
+            for ($i=0; $i < 3; $i++)
+            {
+                $output .= '
+                <div class="col-8 col-md-5 col-lg-3 p-4 mb-3 mb-lg-0 desafio">
+                    <img src="'.base_url().'assets/images/challenges/desafio.svg" alt="Imagem do desafio" class="img-fluid mb-3">
+                    <p>'.$result[$i]->titulo.'</p>
+                    <a href="./desafio/'.$result[$i]->id.'" class="btn btn-green py-1 px-3">Saber mais</a>
+                </div>
+                ';
+            }
+        }
+        else
+        {
+            $output .= '
+            <div class="col-12" role="alert">
+                <h4 class="text-center">Ainda não há desafios cadastrados :(</h4>
+            </div>
+            ';
+        }
+        echo $output;
+    }
+
     public function insert()
     {
         $api_url = "http://localhost/recicle-api/desafios/inserir";

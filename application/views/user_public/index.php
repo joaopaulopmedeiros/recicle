@@ -60,24 +60,8 @@
         </div>
       </div>
 
-      <div class="row justify-content-around mb-5">
-        <div class="col-8 col-md-5 col-lg-3 p-4 mb-3 mb-lg-0 desafio">
-          <img src="<?=base_url()?>assets/images/challenges/desafio.svg" alt="Imagem do desafio" class="img-fluid mb-3">
-          <p>Título do desafio</p>
-          <a href="" class="btn btn-green py-1 px-3">Saber mais</a>
-        </div>
-
-        <div class="col-8 col-md-5 col-lg-3 p-4 mb-3 mb-lg-0 desafio">
-          <img src="<?=base_url()?>assets/images/challenges/desafio.svg" alt="Imagem do desafio" class="img-fluid mb-3">
-          <p>Título do desafio</p>
-          <a href="" class="btn btn-green py-1 px-3">Saber mais</a>
-        </div>
-
-        <div class="col-8 col-md-5 col-lg-3 p-4 mb-3 mb-lg-0 desafio">
-          <img src="<?=base_url()?>assets/images/challenges/desafio.svg" alt="Imagem do desafio" class="img-fluid mb-3">
-          <p>Título do desafio</p>
-          <a href="" class="btn btn-green py-1 px-3">Saber mais</a>
-        </div>
+      <div class="row justify-content-around mb-5" id="desafios">
+        
       </div>
 
       <div class="row justify-content-center">
@@ -139,3 +123,4 @@
       </div>
     </div>
 
+    <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/desafios.js"></script>
