@@ -49,7 +49,7 @@ function success(pos) {
 	//instanciação do mapa na div map_canvas
 	map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
-	google.maps.event.addListener(map, "mouseover", function (event) {
+	google.maps.event.addListener(map, "dragend", function (event) {
 		carregarEcopontos();
 	});
 	
@@ -63,5 +63,5 @@ function success(pos) {
 }
 
 function error(err) {
-	console.warn("ERROR(" + err.code + "): " + err.message);
+	alert("É preciso permitir que o site acesse a sua localização");
 }

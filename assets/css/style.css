@@ -1625,14 +1625,16 @@ h1, h2, h3, h4, h5,
 
 .form-row select,
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-select {
   border-radius: 10px;
   border: 3px solid var(--gray);
 }
 
 .form-row select:focus,
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-select:focus {
   border-color: var(--green-light);
 }
 
