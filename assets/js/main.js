@@ -5,7 +5,6 @@ AOS.init({
 });
 $(document).ready(function () {
 	$(window).scroll(function () {
-		var height = ($('.site-blocks-cover').height())-185;
 		var titleWindow = document.getElementsByTagName("TITLE")[0].text;
 		var titulo;
 
@@ -15,14 +14,7 @@ $(document).ready(function () {
 		else {
 			titulo = false;
 		}
-
-		if ($(window).scrollTop() > height || titulo == true) {
-			$('.site-navbar').addClass('color');
-		} else {
-			$('.site-navbar').removeClass('color');
-		}
-	}
-	)
+	})
 });
 
 jQuery(document).ready(function ($) {
@@ -31,7 +23,7 @@ jQuery(document).ready(function ($) {
 
 
 
-	var siteMenuClone = function () {
+	/*var siteMenuClone = function () {
 
 		$('.js-clone-nav').each(function () {
 			var $this = $(this);
@@ -109,7 +101,7 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	};
-	siteMenuClone();
+	siteMenuClone();*/
 
 
 	var sitePlusMinus = function () {
@@ -281,7 +273,7 @@ function previewImage()
 $(document).ready(function () {
     $("#img-default").click(function (event) {
 		event.preventDefault();
-        $('#img').prop('src', "http://localhost/recicle/assets/images/desafio.png");
+        $('#img').prop('src', "http://localhost/recicle/assets/images/desafio.svg");
     });
 });
 

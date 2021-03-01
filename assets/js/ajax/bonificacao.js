@@ -33,12 +33,12 @@ $(document).ready(function(){
           $('#alert-bonificacao').empty();
           $('#ModalBonificacao').modal('hide');
           exibirBonificacoes();
-          $('#alert').html("<div class='alert alert-success alert-dismissible fade show' role='alert'>Bonificação cadastrada com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+          $('#alert').html("<div class='alert alert-green alert-dismissible fade show' role='alert'>Bonificação cadastrada com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
         }
 
         if(data.error)
         {
-          $('#alert-bonificacao').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+          $('#alert-bonificacao').html("<div class='alert alert-red' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
     })

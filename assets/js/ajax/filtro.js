@@ -52,7 +52,7 @@ $(document).ready(function(){
       data:dataFiltro,
       success:function(data)
       {
-        $('#desafios-filtrados').html(data);
+        $('#desafios').html(data);
       }
     });
   });

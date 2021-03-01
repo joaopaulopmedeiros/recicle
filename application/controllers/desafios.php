@@ -52,11 +52,16 @@ class Desafios extends CI_Controller {
                 foreach($result as $row)
                 {
                     $output .= '
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                        <div class="h-entry">
-                            <img src="'.base_url().'assets/images/desafio.png" alt="Image" class="img-fluid">
-                            <a href="'.$url.$row->id.'" class="h4 font-weight-bold"><div class="text-primary">'.$row->titulo.'</div></a>
-                            <div class="meta mt-1 mb-4">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
+                    <div class="col-10 col-md-6 col-lg-4 mb-4 mb-lg-4">
+                        <div class="desafio-item p-4">
+                            <div class="text-uppercase status-desafio mb-3">
+                                Situação:
+                                <div class="ativo">Ativo</div>
+                            </div>
+                            <img src="'.base_url().'assets/images/challenges/desafio.svg" alt="Image" class="img-fluid mb-3">
+                            <h5>'.$row->titulo.'</h5>
+                            <div class="meta mt-1 mb-3">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
+                            <a href="'.$url.$row->id.'" class="btn btn-green py-1 px-3">Saber mais</a>
                         </div> 
                     </div>
                     ';
@@ -76,6 +81,42 @@ class Desafios extends CI_Controller {
         {
             redirect('user_criadordesafio/index');
         }
+    }
+
+    public function showRecentChallenges() 
+	{
+        $api_url = "http://localhost/recicle-api/desafios/exibirTodosOsDesafios";
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+        $result = json_decode($response);
+
+        $output = '';
+
+        if($result != null)
+        {
+            for ($i=0; $i < 3; $i++)
+            {
+                $output .= '
+                <div class="col-8 col-md-5 col-lg-3 p-4 mb-3 mb-lg-0 desafio">
+                    <img src="'.base_url().'assets/images/challenges/desafio.svg" alt="Imagem do desafio" class="img-fluid mb-3">
+                    <p>'.$result[$i]->titulo.'</p>
+                    <a href="./desafio/'.$result[$i]->id.'" class="btn btn-green py-1 px-3">Saber mais</a>
+                </div>
+                ';
+            }
+        }
+        else
+        {
+            $output .= '
+            <div class="col-12" role="alert">
+                <h4 class="text-center">Ainda não há desafios cadastrados :(</h4>
+            </div>
+            ';
+        }
+        echo $output;
     }
 
     public function insert()
@@ -123,54 +164,52 @@ class Desafios extends CI_Controller {
 
             $output = '';
 
-            if(count($result) > 0)
+            if($result != null)
             {
                 foreach($result as $row)
                 {   
                     $output .= '
-                    <div class="row justify-content-center my-5">
-                        <div class="col-md-7 col-10 mt-5 text-center border-primary">
-                            <h2 class="font-weight-light text-primary">'.$row->titulo.'</h2>
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-10 col-md-8 text-center text-uppercase">
+                            <h2 class="title-section">'.$row->titulo.'</h2>
                         </div>
                     </div>
 
-                    <div class="row mb-5 justify-content-around align-items-center">
-                        <div class="col-lg-6 col-10 mb-md-0 mb-5">
-                            <img src="'.base_url().'assets/images/desafio.png" alt="Imagem do desafio" class="img-fluid">
+                    <div class="row mb-5 justify-content-center align-items-center">
+                        <div class="col-lg-5 col-10 mb-5 mb-lg-0 d-flex justify-content-center">
+                            <img src="'.base_url().'assets/images/challenges/desafio.svg" alt="Imagem do desafio" class="img-fluid">
                         </div>
 
-                        <div class="col-lg-5 col-10">
-                            <h5 class="text-primary text-center text-uppercase font-weight-bold mb-3">Informações do desafio</h5>
-
-                            <div class="mb-2 row">
+                        <div class="col-lg-6 col-10">
+                            <div class="mb-2 row align-items-center">
                                 <div class="icon-desafio">
                                     <span class="icon-user"></span>
                                 </div>
                                 <div style="line-height:40px;" class="ml-3">Criador do desafio: '.$row->criador_desafio.'</div>
                             </div>
 
-                            <div class="mb-2 row">
+                            <div class="mb-2 row align-items-center">
                                 <div class="icon-desafio">
                                     <span class="icon-trophy"></span>
                                 </div>
                                 <div style="line-height:40px;" class="ml-3">Tipo da bonificação: '.$row->tipo_bonificacao.'</div>
                             </div>
 
-                            <div class="mb-2 row">
+                            <div class="mb-2 row align-items-center">
                                 <div class="icon-desafio">
                                     <span class="icon-trash"></span>
                                 </div>
                                 <div style="line-height:40px;" class="ml-3">Tipo do resíduo sólido urbano: '.$row->tipo_rsu.'</div>
                             </div>
 
-                            <div class="mb-2 row">
+                            <div class="mb-2 row align-items-center">
                                 <div class="icon-desafio">
                                     <span class="icon-database"></span>
                                 </div>
                                 <div style="line-height:40px;" class="ml-3">Quantidade (kg): '.$row->qtdRSU.'</div>
                             </div>
 
-                            <div class="mb-2 row">
+                            <div class="mb-2 row align-items-center">
                                 <div class="icon-desafio">
                                     <span class="icon-calendar"></span>
                                 </div>
@@ -180,7 +219,7 @@ class Desafios extends CI_Controller {
                     </div>
 
                     <div class="row justify-content-center mb-5">
-                        <div class="col-md-10 col-10 text-justify">'.$row->descricao.'</div>
+                        <div class="col-10 text-justify">'.$row->descricao.'</div>
                     </div>
                     
                     <script type="text/javascript" language="javascript">
@@ -219,8 +258,8 @@ class Desafios extends CI_Controller {
                                         $output .=
                                         '
                                         <div class="row text-center">
-                                            <div class="col-md-12" id="botao">
-                                            <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Quero participar novamente!</a></p>   
+                                            <div class="col-12" id="botao">
+                                            <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-green py-2 px-5">Quero participar novamente!</a></p>   
                                             </div>
                                         </div>
                                         ';
@@ -230,8 +269,8 @@ class Desafios extends CI_Controller {
                                         $output .=
                                         '
                                         <div class="row text-center">
-                                            <div class="col-md-12" id="botao">
-                                                <p class="mb-0"><a onclick="cancelarDesafio()" class="btn btn-danger py-3 px-5 text-white">Não quero participar</a></p>   
+                                            <div class="col-12" id="botao">
+                                                <p class="mb-0"><a onclick="cancelarDesafio()" class="btn btn-red py-2 px-5">Não quero participar</a></p>   
                                             </div>
                                         </div>
                                         ';
@@ -244,8 +283,8 @@ class Desafios extends CI_Controller {
                             $output .=
                             '
                             <div class="row text-center">
-                                <div class="col-md-12" id="botao">
-                                    <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-primary py-3 px-5 text-white">Aceitar o desafio</a></p>   
+                                <div class="col-12" id="botao">
+                                    <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-green py-2 px-5">Aceitar o desafio</a></p>   
                                 </div>
                             </div>
                             ';
@@ -256,8 +295,8 @@ class Desafios extends CI_Controller {
                         $output .=
                         '
                         <div class="row text-center">
-                            <div class="col-md-12">
-                                <p class="mb-0"><a href="../login" class="btn btn-primary p-3 text-white">Faça login para aceitar o desafio!</a></p>
+                            <div class="col-12">
+                                <p class="mb-0"><a href="../login" class="btn btn-green py-2 px-5">Faça login para aceitar o desafio!</a></p>
                             </div>
                         </div>
                         ';
@@ -267,8 +306,10 @@ class Desafios extends CI_Controller {
             else
             {
                 $output .= '
-                <div class="col-12 my-5" role="alert">
-                    <h4 class="text-center">Desafio não encontrado :/</h4>
+                <div class="row justify-content-center">
+                    <div class="col-10" role="alert">
+                        <h4 class="text-center font-weight-bold" style="color: var(--red);">Desafio não encontrado :/</h4>
+                    </div>
                 </div>
                 ';
             }
@@ -355,7 +396,7 @@ class Desafios extends CI_Controller {
                         <td>'.$row->idDesafioAceito.'</td>
                         <td>'.$row->cidadao.'</td>
                         <td>'.$row->cpfCidadao.'</td>
-                        <td id="btn-status-desafio"><button onclick="cumprirDesafio('.$row->idDesafioAceito.')" type="button" class="btn btn-primary">Confirmar</button></td>       
+                        <td id="btn-status-desafio"><button onclick="cumprirDesafio('.$row->idDesafioAceito.')" type="button" class="btn btn-green">Confirmar</button></td>       
                     </tbody>';
                 }
                 if($row->cumprido == 1){

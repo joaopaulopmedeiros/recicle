@@ -35,7 +35,7 @@ $(document).ready(function(e){
 
         if(data.error)
         {
-          $('#alert').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+          $('#alert').html("<div class='alert alert-red' role='alert'>" + data['msg_erro'] + "</div>");
         }
       }
     })

@@ -1,42 +1,28 @@
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?php echo base_url();?>assets/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
-
-          <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-            <h1 class="text-white font-weight-light text-uppercase font-weight-bold">Desafios</h1>
-            <p class="breadcrumb-custom"><a href="<?= base_url()?>index">Home</a> <span class="mx-2">&gt;</span> <span>Desafios</span></p>
-          </div>
-        </div>
-      </div>
-    </div>  
-
-    
-
-    <div class="site-section" style="background-color: #F5F5F5;">
+    <div class="site-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center border-primary">
-            <h2 class="font-weight-light text-primary">Filtrar Desafios</h2>
+          <div class="col-10 col-md-8 text-center text-uppercase">
+            <h2 class="title-section">Desafios disponíveis</h2>
           </div>
         </div>
       
-        <form id="filtro">
+        <form id="filtro" class="mb-5">
           <div class="form-row justify-content-around">
-            <div class="col-md-3 mb-3 mb-md-0">
+            <div class="col-9 col-md-3 mb-3 mb-md-0">
               <label for="ecoponto">Criador de desafio</label>
               <select id="ecoponto" class="form-control" required>
                 <!--dados-->
               </select>
             </div>
       
-            <div class="col-md-3 mb-3 mb-md-0">
+            <div class="col-9 col-md-3 mb-3 mb-md-0">
               <label for="lixo">Tipo de RSU</label>
               <select id="lixo" class="form-control" required>
                 <!--dados-->
               </select>
             </div>
       
-            <div class="col-md-3 mb-3 mb-md-0">
+            <div class="col-9 col-md-3 mb-4 mb-md-0">
               <label for="bonificacao">Tipo da bonificação</label>
               <select id="bonificacao" class="form-control" required>
                 <!--dados-->
@@ -44,32 +30,17 @@
             </div>
             
             <div class="col-auto align-self-end">
-              <button type="submit" class="btn btn-primary">Filtrar</button>
+              <button type="submit" class="btn btn-green px-4 py-2">Filtrar</button>
             </div>
           </div>
         </form>
 
-        <div id="desafios-filtrados">
+        <div class="row justify-content-center justify-content-md-start" id="desafios">
           
         </div>
       </div>
     </div>
 
-  
-
-    <div class="site-section">
-      <div class="container">
-
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center border-primary">
-            <h2 class="font-weight-light text-primary">Desafios Disponíveis</h2>
-          </div>
-        </div>
-
-        <div class="row" id="desafios">
-          
-        </div>
-      </div>
 
       <!--<div class="container text-center pb-1">
         <div class="row">
@@ -82,18 +53,6 @@
           </div>
         </div>
       </div>-->
-    </div>
-
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(<?php echo base_url();?>assets/images/hero_bg_2.jpg); background-attachment: fixed;">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
-            <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-single-big mb-4 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
-            <h2 class="text-white font-weight-light mb-5 h1">Veja como participar do Recicle</h2>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/desafios.js"></script>
     <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/filtro.js"></script>

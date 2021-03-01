@@ -19,13 +19,13 @@ $(document).ready(function(e){
         {
           if(data.success)
           {
-            $('#alert').html("<div class='alert alert-success alert-dismissible fade show' role='alert'>Mensagem enviada com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+            $('#alert').html("<div class='alert alert-green alert-dismissible fade show' role='alert'>Mensagem enviada com sucesso!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
             $('#add_mensagem')[0].reset();
           }
   
           if(data.error)
           {
-            $('#alert').html("<div class='alert alert-danger' role='alert'>" + data['msg_erro'] + "</div>");
+            $('#alert').html("<div class='alert alert-red' role='alert'>" + data['msg_erro'] + "</div>");
           }
         }
       })
