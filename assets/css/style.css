@@ -1406,9 +1406,6 @@ h1, h2, h3, h4, h5,
 .how-it-work-item p {
   color: white; }
 
-.person h3 {
-  font-size: 18px; }
-
 .ul-social-circle {
   list-style: none;
   padding: 0;
@@ -1627,4 +1624,41 @@ h1, h2, h3, h4, h5,
 
 .icons-redes-sociais span {
   font-size: 24px;
+}
+
+.equipe {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.person {
+  flex-direction: column;
+}
+
+.person > div {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .equipe .img-fluid {
+    width: 25vw;
+  }
+
+  .person .info-person {
+    text-align: left;
+    margin-left: 30px;
+  }
 }
