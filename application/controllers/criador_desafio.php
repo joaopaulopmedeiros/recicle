@@ -44,6 +44,17 @@ class Criador_Desafio extends CI_Controller {
         echo $output;
     }
 
+    public function getEcopontos() {
+        $api_url = "http://localhost/recicle-api/criadordesafio/get_ecopontos";
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+
+        echo $response;
+    }
+
     public function update()
     {
         $api_url = "http://localhost/recicle-api/criadordesafio/update";

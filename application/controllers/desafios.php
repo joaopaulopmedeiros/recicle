@@ -83,6 +83,18 @@ class Desafios extends CI_Controller {
         }
     }
 
+    public function indexDesafiosEcopontos() 
+	{
+        $api_url = "http://localhost/recicle-api/desafios/exibirTodosOsDesafios";
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+
+        echo $response;
+    }
+
     public function showRecentChallenges() 
 	{
         $api_url = "http://localhost/recicle-api/desafios/exibirTodosOsDesafios";

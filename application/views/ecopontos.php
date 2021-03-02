@@ -1,4 +1,3 @@
-  <body>
     <div class="site-section pb-0 pt-3">
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -21,17 +20,8 @@
             </div>
 
             <div class="mb-4">
-              <label for="lixo" class="text-label">Tipo de RSU</label>
-              <select id="lixo" class="form-control form-select">
-                <!-- dados -->
-              </select>
-            </div>
-
-            <div class="mb-4">
-              <label for="bonificacao" class="text-label">Tipo da bonificação</label>
-              <select id="bonificacao" class="form-control form-select">
-                <!-- dados -->
-              </select>
+              <label class="text-label">Cidade</label>
+              <input type="text" class="form-control form-select" placeholder="Digite a cidade..." aria-label="Search" aria-describedby="search">
             </div>
 
             <div class="mb-4">
@@ -42,16 +32,12 @@
 
         <div class="col-md-9 px-0">
           <!--Google map-->
-          <div id="map_canvas" class="z-depth-1-half map-container" style="height: 500px;">
-            
+          <div id="mapid">
+          
           </div>
           <!--Google Maps-->
         </div>
       </div>
     </div>
-  </body>
 
-<script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/desafios.js"></script>
-<script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ajax/filtro.js"></script>
 <script type="text/javascript" language="javascript" src="<?= base_url()?>assets/js/ecopontos/maps.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaQKvNgunPZz03UzYx6SaNxldOA5TAlo0&callback=initMap"></script>

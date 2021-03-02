@@ -273,7 +273,7 @@ function previewImage()
 $(document).ready(function () {
     $("#img-default").click(function (event) {
 		event.preventDefault();
-        $('#img').prop('src', "http://localhost/recicle/assets/images/desafio.svg");
+        $('#img').prop('src', "http://localhost/recicle/assets/images/challenges/desafio.svg");
     });
 });
 
