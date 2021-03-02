@@ -54,10 +54,6 @@ class Desafios extends CI_Controller {
                     $output .= '
                     <div class="col-10 col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="desafio-item p-4">
-                            <div class="text-uppercase status-desafio mb-3">
-                                Situação:
-                                <div class="ativo">Ativo</div>
-                            </div>
                             <img src="'.base_url().'assets/images/challenges/desafio.svg" alt="Image" class="img-fluid mb-3">
                             <h5>'.$row->titulo.'</h5>
                             <div class="meta mt-1 mb-3">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
