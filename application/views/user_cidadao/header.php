@@ -45,7 +45,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-4 col-lg-2">
-            <a href="<?php echo base_url();?>user_public/index" class="mb-0">
+            <a href="<?php echo base_url();?>user_cidadao/index" class="mb-0">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/recicle-green.svg" alt="Recicle">
             </a>
           </div>
@@ -53,10 +53,10 @@
           <div class="col-12 col-md-10 d-none d-lg-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="<?php echo base_url();?>user_public/index">Home</a></li>
-                <li><a href="<?php echo base_url();?>user_public/desafios">Desafios</a></li>
-                <li><a href="<?php echo base_url();?>user_public/contact">Contato</a></li>
-                <li><a href="<?php echo base_url();?>user_public/about">Sobre</a></li>
+                <li><a href="<?php echo base_url();?>user_cidadao/index">Home</a></li>
+                <li><a href="<?php echo base_url();?>user_cidadao/desafios">Desafios</a></li>
+                <li><a href="<?php echo base_url();?>user_cidadao/contact">Contato</a></li>
+                <li><a href="<?php echo base_url();?>user_cidadao/about">Sobre</a></li>
                 <li class="dropdown" style="cursor: pointer;">
                   <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="text-uppercase">Olá, <?php echo $this->session->cidadao['nome']; ?></span>
@@ -73,16 +73,16 @@
           </div>
 
           <div class="col-8 d-flex d-lg-none ml-md-0 py-3 justify-content-end" style="position: relative;">
-            <a href="<?php echo base_url();?>user_public/index" class="ml-3">
+            <a href="<?php echo base_url();?>user_cidadao/index" class="ml-3">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/menu-home.svg" alt="Home">
             </a>
-            <a href="<?php echo base_url();?>user_public/desafios" class="ml-3">
+            <a href="<?php echo base_url();?>user_cidadao/desafios" class="ml-3">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/menu-desafios.svg" alt="Desafios">
             </a>
-            <a href="<?php echo base_url();?>user_public/contact" class="ml-3">
+            <a href="<?php echo base_url();?>user_cidadao/contact" class="ml-3">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/menu-contato.svg" alt="Contato">
             </a>
-            <a href="<?php echo base_url();?>user_public/about" class="ml-3">
+            <a href="<?php echo base_url();?>user_cidadao/about" class="ml-3">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/menu-sobre.svg" alt="Sobre">
             </a>
 
