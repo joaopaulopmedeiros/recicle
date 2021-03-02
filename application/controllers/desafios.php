@@ -267,7 +267,7 @@ class Desafios extends CI_Controller {
                                         '
                                         <div class="row text-center">
                                             <div class="col-12" id="botao">
-                                            <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-green py-2 px-5">Quero participar novamente!</a></p>   
+                                                <p class="mb-0"><a href="#" onclick="adicionarDesafio()" class="btn btn-green py-2 px-5">Quero participar novamente!</a></p>   
                                             </div>
                                         </div>
                                         ';
@@ -278,7 +278,7 @@ class Desafios extends CI_Controller {
                                         '
                                         <div class="row text-center">
                                             <div class="col-12" id="botao">
-                                                <p class="mb-0"><a onclick="cancelarDesafio()" class="btn btn-red py-2 px-5">Não quero participar</a></p>   
+                                                <p class="mb-0"><a href="#" onclick="cancelarDesafio()" class="btn btn-red py-2 px-5">Não quero participar</a></p>   
                                             </div>
                                         </div>
                                         ';
@@ -292,7 +292,7 @@ class Desafios extends CI_Controller {
                             '
                             <div class="row text-center">
                                 <div class="col-12" id="botao">
-                                    <p class="mb-0"><a onclick="adicionarDesafio()" class="btn btn-green py-2 px-5">Aceitar o desafio</a></p>   
+                                    <p class="mb-0"><a href="#" onclick="adicionarDesafio()" class="btn btn-green py-2 px-5">Aceitar o desafio</a></p>   
                                 </div>
                             </div>
                             ';
