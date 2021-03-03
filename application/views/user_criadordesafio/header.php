@@ -48,7 +48,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-4 col-lg-2">
-            <a href="<?php echo base_url();?>user_public/index" class="mb-0">
+            <a href="<?php echo base_url();?>user_criadordesafio/index" class="mb-0">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/recicle-green.svg" alt="Recicle">
             </a>
           </div>
@@ -56,18 +56,18 @@
           <div class="col-12 col-md-10 d-none d-lg-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="<?php echo base_url();?>user_public/index">Home</a></li>
-                <li><a href="<?php echo base_url();?>user_public/desafios">Desafios</a></li>
-                <li><a href="<?php echo base_url();?>user_public/contact">Contato</a></li>
-                <li><a href="<?php echo base_url();?>user_public/about">Sobre</a></li>
+                <li><a href="<?php echo base_url();?>user_criadordesafio/index">Home</a></li>
+                <li><a href="<?php echo base_url();?>user_criadordesafio/desafios">Desafios</a></li>
+                <li><a href="<?php echo base_url();?>user_criadordesafio/contact">Contato</a></li>
+                <li><a href="<?php echo base_url();?>user_criadordesafio/about">Sobre</a></li>
                 <li class="dropdown" style="cursor: pointer;">
                   <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="text-uppercase">Olá, <?php echo $this->session->criador['nome']; ?></span>
                   </a>
 
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a href="<?php echo base_url();?>user_cidadao/meusdesafios" class="dropdown-item">Meus desafios</a>
-                    <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
+                    <a href="<?php echo base_url();?>user_criadordesafio/meusdesafios" class="dropdown-item">Meus desafios</a>
+                    <a href="<?php echo base_url();?>user_criadordesafio/minhaConta" class="dropdown-item">Minha conta</a>
                     <a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a>
                   </div>
                 </li>
@@ -76,16 +76,16 @@
           </div>
 
           <div class="col-8 d-flex d-lg-none ml-md-0 py-3 justify-content-end" style="position: relative;">
-            <a href="<?php echo base_url();?>user_public/index" class="ml-3">
+            <a href="<?php echo base_url();?>user_criadordesafio/index" class="ml-3">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/menu-home.svg" alt="Home">
             </a>
-            <a href="<?php echo base_url();?>user_public/desafios" class="ml-3">
+            <a href="<?php echo base_url();?>user_criadordesafio/desafios" class="ml-3">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/menu-desafios.svg" alt="Desafios">
             </a>
-            <a href="<?php echo base_url();?>user_public/contact" class="ml-3">
+            <a href="<?php echo base_url();?>user_criadordesafio/contact" class="ml-3">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/menu-contato.svg" alt="Contato">
             </a>
-            <a href="<?php echo base_url();?>user_public/about" class="ml-3">
+            <a href="<?php echo base_url();?>user_criadordesafio/about" class="ml-3">
               <img height="24" src="<?php echo base_url();?>assets/images/icons/menu-sobre.svg" alt="Sobre">
             </a>
 
@@ -95,8 +95,8 @@
               </a>
 
               <div class="dropdown-menu dropdown-menu-right text-uppercase" aria-labelledby="dropdownMenuButton">
-                <a href="<?php echo base_url();?>user_cidadao/meusdesafios" class="dropdown-item">Meus desafios</a>
-                <a href="<?php echo base_url();?>user_cidadao/minhaConta" class="dropdown-item">Minha conta</a>
+                <a href="<?php echo base_url();?>user_criadordesafio/meusdesafios" class="dropdown-item">Meus desafios</a>
+                <a href="<?php echo base_url();?>user_criadordesafio/minhaConta" class="dropdown-item">Minha conta</a>
                 <a href="<?php echo base_url();?>sessao/logout" class="dropdown-item">Sair</a>
               </div>
             </div>
