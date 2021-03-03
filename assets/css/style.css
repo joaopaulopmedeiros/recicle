@@ -1629,7 +1629,7 @@ h1, h2, h3, h4, h5,
 }
 
 .form-row select,
-.form-group input,
+.form-group input:not(input[type="button"]):not(input[type="submit"]),
 .form-group textarea,
 .form-select {
   border-radius: 10px;
@@ -1641,6 +1641,10 @@ h1, h2, h3, h4, h5,
 .form-group textarea:focus,
 .form-select:focus {
   border-color: var(--green-light);
+}
+
+input:read-only {
+  background-color: #ebedf2 !important;
 }
 
 .desafio-item {
