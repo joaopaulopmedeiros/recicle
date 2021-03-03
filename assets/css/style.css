@@ -1589,6 +1589,22 @@ h1, h2, h3, h4, h5,
   color: var(--red);
 }
 
+.btn-gray {
+  background-color: var(--gray);
+  color: #fff;
+  border: 3px solid var(--gray);
+  border-radius: 10px;
+  text-transform: uppercase;
+  width: fit-content;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.btn-gray:hover {
+  background-color: #fff;
+  color: var(--gray);
+}
+
 .alert-red {
   color: #fff;
   border: 0;

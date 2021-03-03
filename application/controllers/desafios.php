@@ -261,7 +261,7 @@ class Desafios extends CI_Controller {
                             {
                                 if (isset($result2[$i]->cumprido))
                                 {
-                                    if($result2[$i]->cumprido == 1 && (!isset($result2[$i+1])))
+                                    if($result2[$i]->cumprido == 1 && (!isset($result2[$i+1])) && $result2[$i]->premio_resgatado == 1)
                                     {
                                         $output .=
                                         '
@@ -272,13 +272,44 @@ class Desafios extends CI_Controller {
                                         </div>
                                         ';
                                     }
-                                    else if($result2[$i]->cumprido == 0)
+                                    else if($result2[$i]->cumprido == 0 && $result2[$i]->premio_resgatado == 0)
                                     {
                                         $output .=
                                         '
                                         <div class="row text-center">
                                             <div class="col-12" id="botao">
                                                 <p class="mb-0"><a href="#" onclick="cancelarDesafio()" class="btn btn-red py-2 px-5">Não quero participar</a></p>   
+                                            </div>
+                                        </div>
+                                        ';
+                                    }
+                                    else if($result2[$i]->cumprido == 1 && $result2[$i]->premio_resgatado == 0) {
+                                        $output .=
+                                        '
+                                        <div class="row text-center">
+                                            <div class="col-12" id="botao">
+                                                <p class="mb-0"><a data-toggle="modal" href="#ModalResgatarPremio" class="btn btn-green py-2 px-5">Resgatar prêmio</a></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Modal da bonificação -->
+                                        <div class="modal fade" id="ModalResgatarPremio" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title text-primary font-weight-bold" id="TituloModalCentralizado">Parabéns, você venceu o desafio!</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body d-flex justify-content-center">
+                                                        <img src="'.base_url().'assets/images/icons/trofeu.svg" alt="Image" class="img-fluid my-4">
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-gray" data-dismiss="modal">Resgatar depois</button>
+                                                        <button type="button" class="btn btn-green" onClick="resgatarPremio('. $result2[$i]->id .')">Resgatar agora</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         ';
@@ -446,6 +477,27 @@ class Desafios extends CI_Controller {
         curl_close($client);
       
         echo $response;
+    }
 
+    public function resgatar_premio()
+    {
+        $api_url = "http://localhost/recicle-api/DesafiosAceitos/resgatarPremio";
+
+        $idDesafioAceito = $this->input->post("idDesafioAceito");
+        $status = $this->input->post("status");
+        
+        $data = array(
+            "idDesafioAceito" => $idDesafioAceito,
+            "status" => $status
+        );
+
+        $client = curl_init($api_url);
+        curl_setopt($client, CURLOPT_POST, true);
+        curl_setopt($client, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($client);
+        curl_close($client);
+      
+        echo $response;
     }
 }

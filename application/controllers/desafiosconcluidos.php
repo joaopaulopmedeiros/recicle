@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DesafiosAceitos extends CI_Controller
+class DesafiosConcluidos extends CI_Controller
 {
     public function index()
     {
         if($this->input->post("id_user"))
         {
-            $api_url = "http://localhost/recicle-api/DesafiosAceitos/ver_meus_desafios";
+            $api_url = "http://localhost/recicle-api/DesafiosAceitos/ver_meus_desafios_concluidos";
             $data = array("id_user" => $this->input->post("id_user"));
 
             $client = curl_init($api_url);
@@ -27,10 +27,10 @@ class DesafiosAceitos extends CI_Controller
                     $output .= '
                     <div class="col-10 col-md-6 col-lg-4 mb-4 mb-lg-4">
                         <div class="desafio-item p-4">
-                            <img src="'.base_url().'assets/images/challenges/desafio.svg" alt="Image" class="img-fluid mb-3">
+                            <img src="'.base_url().'assets/images/icons/trofeu.svg" alt="Image" class="img-fluid mb-3">
                             <h5>'.$row->titulo.'</h5>
-                            <div class="meta mt-1 mb-3">'.$row->tipo_rsu.'<span class="mx-2">&bullet;</span>'.$row->tipo_bonificacao.'</div>
-                            <a href="'.base_url().'user_cidadao/desafio/'.$row->id_desafio.'" class="btn btn-green py-1 px-3">Saber mais</a>
+                            <div class="meta mt-1 mb-3">Status: Desafio vencido</div>
+                            <a href="'.base_url().'user_cidadao/desafio/'.$row->id_desafio.'" class="btn btn-green py-1 px-3">Acessar desafio</a>
                         </div> 
                     </div>
                     ';
@@ -40,13 +40,14 @@ class DesafiosAceitos extends CI_Controller
             {
                 $output .= '
                 <div class="col-12" role="alert">
-                    <h4 class="text-center">Nenhum desafio aceito...</h4>
-                </div>';
+                    <h4 class="text-center">Nenhum desafio concluído</h4>
+                </div>
+                ';
             }
         }
         else
         {
-            redirect("user_public/index");
+            redirect("user_cidadao/index");
         }
 
         echo $output;
