@@ -1639,7 +1639,7 @@ h1, h2, h3, h4, h5,
 }
 
 .form-row select:focus,
-.form-row input:not(input[type="button"]):not(input[type="submit"]):focus,
+.form-row input:focus,
 .form-row textarea:focus,
 .form-group input:focus,
 .form-group textarea:focus,
