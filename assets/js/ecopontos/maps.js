@@ -2,6 +2,14 @@ var criadores_desafios = [];
 var markers = [];
 var map;
 
+var markerIcon = L.icon({
+	iconUrl: 'http://localhost/recicle/assets/images/icons/marcador.svg',
+
+	iconSize:     [27, 41], // size of the icon
+	iconAnchor:   [14, 39], // point of the icon which will correspond to marker's location
+	popupAnchor:  [-1, -35] // point from which the popup should open relative to the iconAnchor
+});
+
 async function initMap() {
 	await navigator.geolocation.getCurrentPosition(success, error);
 }
@@ -80,12 +88,8 @@ function carregarEcopontos(endereco) {
 
 function adicionarMarcador(ecoponto) {
 	markers.push(
-		L.marker(ecoponto.crd).addTo(map)
+		L.marker(ecoponto.crd, {icon: markerIcon}).addTo(map).bindPopup(`<b class="text-popup-map">${ecoponto.nome_criador_desafio}</b>`)
 	);
-
-	markers.map(marker => {
-		marker.bindPopup(`<b style="font-family: Montserrat">${ecoponto.nome_criador_desafio}</b>`)
-	});
 }
 
 function apagarEcopontos() {
