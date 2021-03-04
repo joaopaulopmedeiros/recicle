@@ -444,10 +444,9 @@ class Desafios extends CI_Controller {
                         <td>'.$row->idDesafioAceito.'</td>
                         <td>'.$row->cidadao.'</td>
                         <td>'.$row->cpfCidadao.'</td>
-                        <td>OK</td>       
+                        <td>Desafio cumprido</td>       
                     </tbody>';
                 }
-                
             }
             $output .= '</table>';
         } else {

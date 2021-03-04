@@ -1,4 +1,4 @@
-<div class="site-section" style="background-color:#f5f5f5">
+<div class="site-section">
     <div class="container">
         <div id="desafio">
         
@@ -6,11 +6,11 @@
     </div>
 </div>
 
-<div class="site-section">
+<div class="site-section pt-0">
     <div class="container">
         <div class="row justify-content-center mb-5">
-            <div class="col-md-7 col-10 mt-5 text-center border-primary">
-                <h2 class="font-weight-light text-primary">Usuários Participantes</h2>
+            <div class="col-10 col-md-8 text-center text-uppercase">
+                <h2 class="title-section">Usuários participantes</h2>
             </div>
         </div>
 
