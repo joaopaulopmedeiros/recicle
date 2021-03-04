@@ -14,6 +14,10 @@
       </div>
 
       <form id="filtro_ecoponto" action="#">
+        <div class="mb-4" id="alerta">
+
+        </div>
+
         <div class="mb-4">
           <label class="text-label">Endereço</label>
           <input type="text" id="endereco" class="form-control form-select" placeholder="Digite um endereço..." aria-label="Search" aria-describedby="search" required>

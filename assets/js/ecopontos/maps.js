@@ -142,14 +142,12 @@ function filtrarEcoponto() {
 			dataType: "json",
 			success:function(data)
 			{
-				let pos = {
-					crd : {
-						lat: data[0].lat,
-						lng: data[0].lon
-					}
+				try {
+					map.setView([data[0].lat, data[0].lon], 15);
 				}
-				
-				carregarMapa(pos);
+				catch {
+					$('#alerta').html("<div class='alert alert-red' role='alert'>Não foi possível localizar o endereço digitado.</div>")
+				}
 			}
 		});
 	});
