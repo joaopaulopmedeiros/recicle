@@ -7,7 +7,7 @@ function cumprirDesafio(idDesafioAceito){
         dataType:"JSON",
         success:function(data)
         {
-            $('#btn-status-desafio').html('OK');
+            $('#btn-status-desafio').html('Desafio cumprido');
         }
     });
 }
