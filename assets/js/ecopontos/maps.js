@@ -1,6 +1,4 @@
 var criadores_desafios = [];
-//var enderecos = [];
-//var ecopontos = [];
 var markers = [];
 var map;
 
@@ -17,14 +15,12 @@ function carregarCriadoresDesafios() {
 	xhr.send();
 
 	xhr.onreadystatechange = function(){
-		if(xhr.readyState == 4 && xhr.status == 200){
-			console.log(criadores_desafios)
+		if (xhr.readyState == 4 && xhr.status == 200){
 			criadores_desafios = xhr.response;
 			carregarEnderecos()
 		}
 	}
 }
-carregarCriadoresDesafios();
 
 function carregarEnderecos() {
 	criadores_desafios.map(criador_desafio => {
@@ -37,15 +33,7 @@ function carregarEnderecos() {
 		request.send();
 
 		request.onreadystatechange = function(){
-			if(request.readyState == 4 && request.status == 200){
-				/*enderecos.push({
-					localizacao: {
-						endereco: request.response.logradouro,
-						cidade: request.response.localidade,
-						cep: cep
-					},
-					nome: criador_desafio.nome
-				})*/
+			if (request.readyState == 4 && request.status == 200){
 				let endereco = {
 					localizacao: {
 						endereco: request.response.logradouro,
@@ -55,8 +43,6 @@ function carregarEnderecos() {
 					nome_criador_desafio: criador_desafio.nome
 				}
 
-				console.log(endereco)
-
 				carregarEcopontos(endereco)
 			}
 		}
@@ -64,17 +50,17 @@ function carregarEnderecos() {
 }
 
 function carregarEcopontos(endereco) {
-	//enderecos.map(endereco => {
-		let localizacao = endereco.localizacao;
+	let localizacao = endereco.localizacao;
 
-		let request = new XMLHttpRequest();
-	
-		request.open('GET', `https://nominatim.openstreetmap.org/search?city=${localizacao.cidade}&street=${localizacao.endereco}&format=json`);
-		request.responseType = 'json';
-		request.send();
+	let request = new XMLHttpRequest();
 
-		request.onreadystatechange = function(){
-			if(request.readyState == 4 && request.status == 200){
+	request.open('GET', `https://nominatim.openstreetmap.org/search?city=${localizacao.cidade}&street=${localizacao.endereco}&format=json`);
+	request.responseType = 'json';
+	request.send();
+
+	request.onreadystatechange = function() {
+		if (request.readyState == 4 && request.status == 200) {
+			try {
 				let ecoponto = {
 					nome_criador_desafio: endereco.nome_criador_desafio,
 					crd : {
@@ -82,25 +68,15 @@ function carregarEcopontos(endereco) {
 						lng: request.response[0].lon
 					}
 				}
-				console.log(ecoponto)
+
 				adicionarMarcador(ecoponto);
-				/*ecopontos.push({
-					nome_criador_desafio: endereco.nome_criador_desafio,
-					crd : {
-						lat: request.response[0].lat,
-						lng: request.response[0].lon
-					}
-				})*/
+			}
+			catch {
+				console.log("Erro na localização do ecoponto.");
 			}
 		}
-	//})
-}
-
-/*function percorrerEcopontos() {
-	for (var i = 0; i < ecopontos.length; i++) {
-		adicionarMarcadores(ecopontos[i]);
 	}
-}*/
+}
 
 function adicionarMarcador(ecoponto) {
 	markers.push(
@@ -108,8 +84,8 @@ function adicionarMarcador(ecoponto) {
 	);
 
 	markers.map(marker => {
-		marker.bindPopup(`<b style="font-family: Montserrat">${ecoponto.nome_criador_desafio}</b>`);
-	})
+		marker.bindPopup(`<b style="font-family: Montserrat">${ecoponto.nome_criador_desafio}</b>`)
+	});
 }
 
 function apagarEcopontos() {
@@ -120,6 +96,23 @@ function apagarEcopontos() {
 }
 
 async function success(pos) {
+	carregarMapa(pos);
+}
+
+function error(err) {
+	alert("Não foi possível acessar sua localização.");
+
+	let pos = {
+		coords: {
+			latitude: -5.7490999,
+			longitude: -35.2604103
+		}
+	}
+
+	carregarMapa(pos);
+}
+
+function carregarMapa(pos) {
 	var crd = pos.coords;
 
 	map = L.map('mapid').setView([crd.latitude, crd.longitude], 15);
@@ -132,8 +125,32 @@ async function success(pos) {
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoiZmFiaWFuYXBkdWFydGUiLCJhIjoiY2tscW96MGt5MDJ4dTJ1cDlmZTN1MzJiZyJ9.eMVZE9TTibMliutxnPWfvg'
 	}).addTo(map);
+
+	carregarCriadoresDesafios();
 }
 
-function error(err) {
-	alert("Não foi possível acessar sua localização.");
+function filtrarEcoponto() {
+	$(document).on('submit', '#filtro_ecoponto', function(event){
+		event.preventDefault();
+		
+		let endereco = encodeURI($("#endereco").val());
+		let cidade = encodeURI($("#cidade").val());
+
+		$.ajax({
+			url: `https://nominatim.openstreetmap.org/search?city=${cidade}&street=${endereco}&format=json`,
+			method: "GET",
+			dataType: "json",
+			success:function(data)
+			{
+				let pos = {
+					crd : {
+						lat: data[0].lat,
+						lng: data[0].lon
+					}
+				}
+				
+				carregarMapa(pos);
+			}
+		});
+	});
 }
